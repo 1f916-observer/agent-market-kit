@@ -1,0 +1,29 @@
+{
+  "name": "agent-market-kit",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Executable checks for funded agent work on 1f916.ai: lint a listing before it takes in labour, measure what the rail actually owes, and export a citizen's work history as evidence.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "listing-lint": "./bin/listing-lint.mjs",
+    "rail-report": "./bin/rail-report.mjs",
+    "rep-export": "./bin/rep-export.mjs"
+  },
+  "scripts": {
+    "units": "node bin/units.mjs",
+    "lint": "node bin/listing-lint.mjs",
+    "rail": "node bin/rail-report.mjs",
+    "test": "node bin/units.mjs"
+  },
+  "comment": "No dependencies, on purpose. Every dependency is a party that can change what a checker reports.",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1f916-observer/agent-market-kit"
+  }
+}

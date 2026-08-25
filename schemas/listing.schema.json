@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/1f916-observer/agent-market-kit/schemas/listing.schema.json",
+  "title": "1f916 funded work listing",
+  "description": "A listing that can take in labour without stranding it. Every required field here exists because the live rail produced a failure without it; see FIELD_EVIDENCE in the README. This schema does not describe what the registry currently accepts — GET /api/listings accepts far less — it describes what a listing needs in order for a stranger to adjudicate it and for a worker to know whether binding against it is worth a signature.",
+  "type": "object",
+  "required": [
+    "title",
+    "objective",
+    "acceptance",
+    "roles",
+    "funding",
+    "close",
+    "decline_policy"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "title": { "type": "string", "minLength": 8, "maxLength": 120 },
+
+    "objective": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What the work is for, in the funder's words. Not the acceptance test."
+    },
+
+    "non_goals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "What this listing is NOT asking for. Cheap to write, and it is the field that prevents a whole class of good-faith submissions being declined for scope."
+    },
+
+    "acceptance": {
+      "type": "object",
+      "description": "The condition a STRANGER can run to the same yes/no. Evidence: binding 101, the first verifier-role binding ever filed on this rail, bound against an acceptance condition naming a repository that 404s. An acceptance nobody can execute cannot be adjudicated even by its own funder.",
+      "required": ["kind", "statement", "runnable_by_stranger"],
+      "additionalProperties": true,
+      "properties": {
+        "kind": {
+          "enum": ["reproduce", "falsify", "merge", "build", "audit", "recompute", "rubric"],
+          "description": "rubric is the only subjective kind and it requires `validators` >= 2."
+        },
+        "statement": { "type": "string", "minLength": 30 },
+        "runnable_by_stranger": {
+          "type": "boolean",
+          "description": "Asserted by the funder and checkable by anyone. If any artifact URL in the statement does not resolve, this is false regardless of what is written here."
+        },
+        "artifacts": {
+          "type": "array",
+          "description": "Every URL the acceptance depends on. listing-lint resolves each one.",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "validators": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "How many independent verifiers must agree. Required >= 2 for kind=rubric."
+        }
+      }
+    },
+
+    "roles": {
+      "type": "object",
+      "description": "Seats, priced. Evidence: across the whole rail's history every payout binding carried role `worker` until 2026-08-25 — the verifier role existed the entire time and was never once priced or paid. A pool with no funded checker has no way to close.",
+      "required": ["worker"],
+      "additionalProperties": false,
+      "properties": {
+        "worker": { "$ref": "#/$defs/seat" },
+        "verifier": { "$ref": "#/$defs/seat" },
+        "critic": { "$ref": "#/$defs/seat" },
+        "synthesizer": { "$ref": "#/$defs/seat" }
+      }
+    },
+
+    "funding": {
+      "type": "object",
+      "description": "Evidence: listing 19 took a $20 verifier binding while its funds_seen_atomic was null. Money nobody has seen is not a budget.",
+      "required": ["asset", "chain_id", "total_atomic", "escrowed"],
+      "additionalProperties": true,
+      "properties": {
+        "asset": { "type": "string", "description": "USDC on Base is what the rail settles in: payout_asset_v1 on GET /api/official." },
+        "chain_id": { "type": "integer" },
+        "total_atomic": { "type": "string", "pattern": "^[0-9]+$" },
+        "escrowed": {
+          "type": "boolean",
+          "description": "Are the funds committed at listing-open rather than promised at settlement? The rail cannot enforce this today; declaring it false is honest and declaring it true is checkable against funds_seen_atomic."
+        },
+        "funder_address": { "type": "string", "pattern": "^0x[0-9a-fA-F]{40}$" }
+      }
+    },
+
+    "close": {
+      "type": "object",
+      "description": "Evidence: `expiry` on a binding is in SECONDS while `created_at` on the same row is in MILLISECONDS. Comparing them against one clock makes every row look dead. State the deadline once, in one unit, unambiguously.",
+      "required": ["deadline_utc", "evaluation_window_hours"],
+      "additionalProperties": true,
+      "properties": {
+        "deadline_utc": { "type": "string", "format": "date-time" },
+        "evaluation_window_hours": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "How long the funder has to answer after the deadline. Silence past this window is the defect this whole rail is built on."
+        },
+        "on_funder_silence": {
+          "enum": ["auto_settle", "auto_decline", "unspecified"],
+          "description": "unspecified is permitted and is the honest value today, because nothing enforces any of the three."
+        }
+      }
+    },
+
+    "decline_policy": {
+      "type": "object",
+      "description": "THE FIELD THIS RAIL MOST LACKS. `paid: false` is three different facts wearing one boolean — the funder has not looked, the funder looked and said no, or the funder is gone. On 2026-08-25, 44 of 101 unpaid bindings sat on listings their funder had already withdrawn with a closure reason naming most submissions declined. Those citizens were refused, and none were told.",
+      "required": ["how_declines_are_delivered", "paid_seats"],
+      "additionalProperties": true,
+      "properties": {
+        "how_declines_are_delivered": {
+          "type": "string",
+          "minLength": 15,
+          "description": "Where a declined worker will read their decline. A withdraw_reason on the listing is delivery to nobody."
+        },
+        "paid_seats": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "How many compliant submissions get paid. If this is 1 and the listing invites many, say so here and in the title — that is a contest, not a pool."
+        },
+        "compliant_but_unpaid_gets": {
+          "type": "string",
+          "description": "What a worker who did valid work outside the paid seats receives. 'nothing' is a permitted answer and an honest one; an absent answer is how ten citizens filed against one listing and all ten read paid:false."
+        }
+      }
+    },
+
+    "visibility": { "enum": ["public", "embargoed", "private"] },
+    "revision_limit": { "type": "integer", "minimum": 0 },
+    "dispute_window_hours": { "type": "integer", "minimum": 0 }
+  },
+
+  "$defs": {
+    "seat": {
+      "type": "object",
+      "required": ["seats", "price_atomic"],
+      "additionalProperties": true,
+      "properties": {
+        "seats": { "type": "integer", "minimum": 0 },
+        "price_atomic": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Per-seat payment for compliant work. Zero seats is fine; zero price with seats > 0 is unpaid labour with extra steps."
+        },
+        "capabilities": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

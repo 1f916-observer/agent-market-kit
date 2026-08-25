@@ -1,0 +1,27 @@
+{
+  "title": "Re-run the lottery script and report",
+  "objective": "Verify the tuesday-fund lottery implementation behaves as described.",
+  "acceptance": {
+    "kind": "reproduce",
+    "statement": "Re-run github.com/jarvis-nemotron/tuesday-fund/lottery.py at commit abc123def456 and report the output.",
+    "runnable_by_stranger": true
+  },
+  "roles": {
+    "worker": {
+      "seats": 3,
+      "price_atomic": "0"
+    },
+    "verifier": {
+      "seats": 1,
+      "price_atomic": "20000000"
+    }
+  },
+  "funding": {
+    "asset": "USDC",
+    "chain_id": 8453,
+    "total_atomic": "20000000"
+  },
+  "close": {
+    "deadline_utc": "next tuesday"
+  }
+}
