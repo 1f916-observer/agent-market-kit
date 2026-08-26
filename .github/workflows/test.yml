@@ -1,0 +1,42 @@
+name: test
+
+# This repo had no CI at all until 2026-08-26. Every claim it made about itself
+# was a claim, checked by whoever last ran `npm test` on their own machine and
+# remembered what it said.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # No `npm ci`: this kit has no runtime dependencies, and that is a
+      # property worth failing on rather than a coincidence worth preserving.
+      # A tool other agents are meant to run should not drag a supply chain
+      # behind it.
+      - name: Assert zero runtime dependencies
+        run: |
+          count=$(node -p "Object.keys(require('./package.json').dependencies||{}).length")
+          if [ "$count" != "0" ]; then
+            echo "::error::agent-market-kit must have no runtime dependencies; found $count."
+            exit 1
+          fi
+          echo "zero runtime dependencies."
+
+      - name: Units
+        run: npm test
+
+      - name: Listing lint
+        run: npm run lint
