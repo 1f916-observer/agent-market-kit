@@ -6,6 +6,7 @@
 // are worth being told about.
 
 import { lint, artifactUrls } from "./listing-lint.mjs";
+import { deriveBoundary, assignArms, composition, overlapCap } from "./arm-audit.mjs";
 
 let pass = 0, fail = 0;
 const eq = (name, got, want) => {
@@ -107,6 +108,70 @@ eq("declared artifacts and in-text artifacts are merged without duplicates",
 
 eq("no artifacts is empty, not a failure",
   artifactUrls({ acceptance: { statement: "recompute the figure in c123 and say whether it holds" } }), []);
+
+/* arm-audit — the composition rules, each one a reading that has misled somebody */
+
+const day = 86400000;
+const member = (delay) => ({ citizen_id: delay, created_at: 0, delay });
+
+eq("the boundary is the far side of the largest multiplicative jump",
+  (() => { const b = deriveBoundary([100, 200, 215, 1203, 13911, 20000]); return [b.from, b.to]; })(),
+  [1203, 13911]);
+
+// THE LIMITATION, written down as a test rather than as a caveat nobody reads.
+// A ratio rule is not immune to the tail: three points with a sparse gap
+// between them beat an 11.56x jump near the floor outright. The live
+// distribution is safe from this only because it is DENSE — 707 delays, and
+// every tail step smaller than the winner. So the honest guard is not the rule,
+// it is publishing the runner-up beside the winner, which `margin` does.
+eq("a sparse tail beats a near-floor ratio — the rule does not protect you, the density does",
+  deriveBoundary([1, 1203, 13911, 900000000, 1812584209]).to, 900000000);
+
+eq("the runner-up is reported so a reader can see how decisive the winner is",
+  (() => { const b = deriveBoundary([100, 200, 215, 1203, 13911, 20000]); return [b.to, b.runner_up.to]; })(),
+  [13911, 1203]);
+
+eq("a winner barely ahead of its runner-up is marked as not decisive",
+  deriveBoundary([10, 20, 100, 500]).margin < 1.2, true);
+
+eq("a delay of zero cannot carry a ratio and is skipped, not divided by",
+  deriveBoundary([0, 0, 4, 40, 41]).to, 40);
+
+eq("a distribution with no positive pair fails loudly rather than returning a threshold",
+  (() => { try { deriveBoundary([0, 0, 0]); return "returned"; } catch { return "threw"; } })(), "threw");
+
+eq("too few delays to derive anything is an error, not a default",
+  (() => { try { deriveBoundary([5, 10]); return "returned"; } catch { return "threw"; } })(), "threw");
+
+eq("the boundary value itself lands in sought, not door",
+  (() => {
+    const cohort = [{ citizen_id: 1, created_at: 0 }, { citizen_id: 2, created_at: 0 }, { citizen_id: 3, created_at: 0 }];
+    const binds = new Map([[1, { created_at: 1202 }], [2, { created_at: 13911 }]]);
+    const a = assignArms(cohort, binds, 13911);
+    return [a.door.length, a.sought.length, a.none.length];
+  })(), [1, 1, 1]);
+
+// The label said "later". The bands are what says how much later.
+eq("composition bands the arm by when its defining act landed",
+  composition([member(30000), member(120000), member(2 * day), member(10 * day)]).bands
+    .filter((b) => b.n).map((b) => [b.label, b.n]),
+  [["under 1 min", 1], ["1 - 10 min", 1], ["1 - 7 d", 1], ["7 - 14 d", 1]]);
+
+eq("an arm with no bound members has an empty composition rather than a divide by zero",
+  (() => { const c = composition([{ delay: null }]); return [c.n, c.median, c.bands.every((b) => b.share === 0)]; })(),
+  [0, null, true]);
+
+// #5106's trap in a new coat: an act inside the outcome window scores the
+// outcome by construction. The cap is a ceiling, so it counts presence.
+eq("members whose defining act falls inside the outcome window are the cap",
+  (() => { const o = overlapCap([member(day), member(8 * day), member(20 * day)], 7 * day, 14 * day); return [o.inside, o.n]; })(),
+  [1, 3]);
+
+eq("an act on the closing instant of the window is outside it",
+  overlapCap([member(14 * day)], 7 * day, 14 * day).inside, 0);
+
+eq("an arm whose act can never fall inside the window has a cap of zero",
+  overlapCap([member(25), member(1203)], 7 * day, 14 * day).points, 0);
 
 console.log(`${pass} passed, ${fail} failed`);
 process.exitCode = fail ? 1 : 0;
