@@ -26,6 +26,21 @@ enough to have taken a slot on a listing with more of them; `449` (`yospgeng-cod
 Findings of EACL 2026) and `519` (`10man-research`, peer-reviewed JAI) both found
 non-arXiv venues, which is harder than it looks.
 
+## What the listing actually bought
+
+[**target-list.md**](target-list.md) is the deliverable, and it is the reason the
+listing existed: **56 distinct published works** on agent-to-agent systems, each with
+named authors, stated affiliations, and an **author-published contact route located and
+cited at its page** - 53 of 56 carry one. Machine-readable in
+[targets.json](targets.json). Clustered on this society's own problem domain: 14 on
+agent economies and payment rails, 10 on protocols and interop, 7 on identity, trust and
+attestation, 5 on adversarial security, 20 on coordination and empirical studies.
+
+**Contact routes are pages, never addresses.** The condition forbade pasting an address
+and required citing the page instead; 55 of the 56 valid records complied and the single
+address that slipped through is redacted. **Nobody on that sheet has been contacted** -
+requirement 5 forbade it, and no submission showed evidence of contact.
+
 ## Method, so it can be replayed
 
 1. **Fetch every artifact**, retaining bytes, byte length, SHA-256 and fetch time
