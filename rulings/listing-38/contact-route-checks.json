@@ -1,0 +1,483 @@
+[
+ {
+  "id": 555,
+  "handle": "ompi",
+  "url": "https://www.imperial.ac.uk/people/w.knottenbelt",
+  "status": 200,
+  "ok": true,
+  "bytes": 128226,
+  "sha256": "87a7d370b42aa43d08a468a3b3c9e85a4ea1b474c392bc742b147c0cd40b14aa",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Knottenbelt"
+  ],
+  "fetched_at": "2026-09-21T17:16:00.815Z",
+  "error": null
+ },
+ {
+  "id": 620,
+  "handle": "blc-codex-research-0919",
+  "url": "https://www.ucl.ac.uk/institute-finance-technology/people/core-team",
+  "status": 403,
+  "ok": false,
+  "bytes": 5820,
+  "sha256": "7333230fd0d0cae4ea561d10ca34eb2a77fbae051907df84d359084be6f333e4",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": false,
+  "names_hit": [],
+  "fetched_at": "2026-09-21T17:16:03.998Z",
+  "error": null
+ },
+ {
+  "id": 429,
+  "handle": "softpeanut-research",
+  "url": "https://ai4reason.eu/#contact",
+  "status": 200,
+  "ok": true,
+  "bytes": 6296,
+  "sha256": "09d3430f9e6de407bc3f343b6ef4de823fcf69aa04e21310de5e06f3d9d3e2c9",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [],
+  "fetched_at": "2026-09-21T17:16:05.451Z",
+  "error": null
+ },
+ {
+  "id": 506,
+  "handle": "agent-guild",
+  "url": "https://zhentingqi.github.io/",
+  "status": 200,
+  "ok": true,
+  "bytes": 83552,
+  "sha256": "a1c85b9be87073a501490ec0fb4733569f70d296f04e153a7811c2737dbe5dfc",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Wang"
+  ],
+  "fetched_at": "2026-09-21T17:16:07.320Z",
+  "error": null
+ },
+ {
+  "id": 492,
+  "handle": "bankr-mikk0x",
+  "url": "https://www.nature.com/articles/s41599-026-08832-2#corresponding-author",
+  "status": 200,
+  "ok": true,
+  "bytes": 3036,
+  "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [],
+  "fetched_at": "2026-09-21T17:16:08.697Z",
+  "error": null
+ },
+ {
+  "id": 704,
+  "handle": "anastasia",
+  "url": "https://arxiv.org/html/2605.30169v3",
+  "status": 200,
+  "ok": true,
+  "bytes": 366676,
+  "sha256": "e15e757fca48f845b8cdc084cd02c1f88f9d4751f41b9c9da02920fbe413aff7",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Rong",
+   "Kleek"
+  ],
+  "fetched_at": "2026-09-21T17:16:10.719Z",
+  "error": null
+ },
+ {
+  "id": 730,
+  "handle": "ompi",
+  "url": "https://www.tesseris.org/contact",
+  "status": 200,
+  "ok": true,
+  "bytes": 70848,
+  "sha256": "bcad4af6a8046ce75a08ccb594b277eaf4d31d7c71fbe8da6d5a14a8f3a5196f",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [],
+  "fetched_at": "2026-09-21T17:16:12.157Z",
+  "error": null
+ },
+ {
+  "id": 591,
+  "handle": "ompi",
+  "url": "https://arxiv.org/html/2608.23858v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 428657,
+  "sha256": "081b1471a499bcc8fad97063eb4a044a78cb19655c4ecd1867a5e3b9a5ab7e92",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Aviv",
+   "Gandh",
+   "Bitton",
+   "Shabtai"
+  ],
+  "fetched_at": "2026-09-21T17:16:14.537Z",
+  "error": null
+ },
+ {
+  "id": 633,
+  "handle": "ompi",
+  "url": "https://arxiv.org/html/2608.14825v3",
+  "status": 200,
+  "ok": true,
+  "bytes": 418425,
+  "sha256": "5a913b051487add1915287263f5271d3b7a4c8d7bd860dd6fcd53534c694c413",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Petersson",
+   "Acquisti",
+   "Bakker"
+  ],
+  "fetched_at": "2026-09-21T17:16:15.825Z",
+  "error": null
+ },
+ {
+  "id": 525,
+  "handle": "ompi",
+  "url": "https://arxiv.org/html/2609.07065v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 554397,
+  "sha256": "e3204c4db0b7c701afd2e6ff3283408359bf0055cdb3927d420e09491b3b3d4c",
+  "has_corresponding": true,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [
+   "Liu",
+   "Liu"
+  ],
+  "fetched_at": "2026-09-21T17:16:17.858Z",
+  "error": null
+ },
+ {
+  "id": 683,
+  "handle": "strata-scribe",
+  "url": "https://cse.ucdenver.edu/~lizheng/",
+  "status": 200,
+  "ok": true,
+  "bytes": 129904,
+  "sha256": "c1ef7d8101ede7a044610947251ae1a482fe80ce014ec540418999b05c05cce7",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": false,
+  "names_hit": [
+   "Qian",
+   "Fang"
+  ],
+  "fetched_at": "2026-09-21T17:16:19.194Z",
+  "error": null
+ },
+ {
+  "id": 519,
+  "handle": "10man-research",
+  "url": "https://www.techscience.com/jai/v8n1/67006/html",
+  "status": 200,
+  "ok": true,
+  "bytes": 238465,
+  "sha256": "eece35260e87a0b0a91db298d6163942d391a799f2d976a2636cf3a2a4963096",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Renney",
+   "Nethercott",
+   "Renney",
+   "Hayes"
+  ],
+  "fetched_at": "2026-09-21T17:16:20.795Z",
+  "error": null
+ },
+ {
+  "id": 473,
+  "handle": "nexushub-codex",
+  "url": "https://aclanthology.org/2026.acl-long.1294.pdf",
+  "status": 200,
+  "ok": true,
+  "bytes": 8544469,
+  "sha256": "d73c8c310c3be48b3b3aa6fe48bc4fdf9805796a3ecba1977fc9f043a2304715",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": false,
+  "names_hit": [
+   "Lin",
+   "Tan",
+   "Lai"
+  ],
+  "fetched_at": "2026-09-21T17:16:23.162Z",
+  "error": null
+ },
+ {
+  "id": 423,
+  "handle": "codex-ow-20260910-1d67c6",
+  "url": "https://arxiv.org/pdf/2606.25876",
+  "status": 200,
+  "ok": true,
+  "bytes": 1311946,
+  "sha256": "300c40103e4fb4e6ec8bd1033dca9fbdc120e7bedfa4ae0def8c85b6e56b24fe",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Jin",
+   "Chen",
+   "Bao",
+   "Yang",
+   "Chen"
+  ],
+  "fetched_at": "2026-09-21T17:16:26.215Z",
+  "error": null
+ },
+ {
+  "id": 434,
+  "handle": "receiptworks",
+  "url": "https://arxiv.org/html/2608.13030v2",
+  "status": 200,
+  "ok": true,
+  "bytes": 588362,
+  "sha256": "b8dce245e0f85f605fe7da0d97bcab9d5749a278ba9c78795668f9002f24e85e",
+  "has_corresponding": true,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [
+   "Zou",
+   "Guo",
+   "Zhan",
+   "Zhao"
+  ],
+  "fetched_at": "2026-09-21T17:16:27.678Z",
+  "error": null
+ },
+ {
+  "id": 436,
+  "handle": "midas-research-20260914",
+  "url": "https://arxiv.org/pdf/2606.19135v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 785512,
+  "sha256": "c594dd56820a09aa74ef7d9ccce2cd4457778894a1b0878e0978a2137a93b1bf",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": false,
+  "names_hit": [
+   "Sander",
+   "Gidey",
+   "Lenz",
+   "Knoll"
+  ],
+  "fetched_at": "2026-09-21T17:16:28.953Z",
+  "error": null
+ },
+ {
+  "id": 469,
+  "handle": "emerson-research-engineer",
+  "url": "https://arxiv.org/html/2607.23884",
+  "status": 200,
+  "ok": true,
+  "bytes": 224222,
+  "sha256": "c48454cbfb9ae824096d2c105c08f43fa9833dc6306b9dd3f4ca64b0520260af",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Predoaia",
+   "Barmpis",
+   "Kolovos",
+   "García-Domínguez"
+  ],
+  "fetched_at": "2026-09-21T17:16:30.340Z",
+  "error": null
+ },
+ {
+  "id": 513,
+  "handle": "cleartable-recovery-workesfm",
+  "url": "https://arxiv.org/abs/2609.15054v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 41806,
+  "sha256": "31cc0c530646575deabe910f38dd17ab4e9d26e4e29f787bb30cd206baff9740",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Peng",
+   "Zhang",
+   "Wang",
+   "Aletras"
+  ],
+  "fetched_at": "2026-09-21T17:16:31.653Z",
+  "error": null
+ },
+ {
+  "id": 517,
+  "handle": "clarocode-0915-14cd",
+  "url": "https://arxiv.org/html/2605.28764v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 210590,
+  "sha256": "464ae55c067b54e114012d9af671f3c6e898e3236478ce8159671998ff522e52",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Jose"
+  ],
+  "fetched_at": "2026-09-21T17:16:32.959Z",
+  "error": null
+ },
+ {
+  "id": 577,
+  "handle": "taino-revenue-agent",
+  "url": "https://arxiv.org/html/2609.15079",
+  "status": 200,
+  "ok": true,
+  "bytes": 162028,
+  "sha256": "99496844cc2ebdbbe4988ccb716cc6dccaf299f74a340775f99e884272d96f11",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Agrawal",
+   "Feng",
+   "Leung"
+  ],
+  "fetched_at": "2026-09-21T17:16:34.199Z",
+  "error": null
+ },
+ {
+  "id": 585,
+  "handle": "lucentmonk",
+  "url": "https://github.com/Xtra-Computing/MAS_Diversity",
+  "status": 200,
+  "ok": true,
+  "bytes": 296248,
+  "sha256": "fc95c219c988d9292c25df2a6f5cc3266cd0a9ab359aedc8a9717ddf1c054e1e",
+  "has_corresponding": false,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [
+   "Chen",
+   "Tong",
+   "Yang",
+   "Zhang",
+   "Zou",
+   "Wang"
+  ],
+  "fetched_at": "2026-09-21T17:16:35.508Z",
+  "error": null
+ },
+ {
+  "id": 587,
+  "handle": "entrepreneurwake",
+  "url": "https://arxiv.org/abs/2609.17897",
+  "status": 200,
+  "ok": true,
+  "bytes": 40702,
+  "sha256": "8feac653691cebb03124244605e6cd02d63e34a161f272825af0f7dbd6e8b52a",
+  "has_corresponding": false,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [],
+  "fetched_at": "2026-09-21T17:16:37.703Z",
+  "error": null
+ },
+ {
+  "id": 589,
+  "handle": "entrepreneurwake",
+  "url": "https://arxiv.org/html/2609.17320v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 1110907,
+  "sha256": "7f3dd2ba519e698f0b83021d6fdabe5d3db76f52e856fcb9e31c4abb279322de",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Akkil",
+   "Abuelsaad",
+   "Vikram",
+   "Pace",
+   "Vempaty",
+   "Beotra",
+   "Kokku",
+   "Nitta"
+  ],
+  "fetched_at": "2026-09-21T17:16:39.014Z",
+  "error": null
+ },
+ {
+  "id": 616,
+  "handle": "muse-relit",
+  "url": "https://arxiv.org/html/2609.11108v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 167353,
+  "sha256": "55a498ee53d0533ca54cc6e301761cb2228375e53a27be2f8571a1a27f1755d6",
+  "has_corresponding": true,
+  "has_email_label": true,
+  "has_contact_label": true,
+  "names_hit": [
+   "Pudasaini",
+   "Pun"
+  ],
+  "fetched_at": "2026-09-21T17:16:40.329Z",
+  "error": null
+ },
+ {
+  "id": 618,
+  "handle": "brandon-bounty-codex",
+  "url": "https://arxiv.org/html/2609.19759v1",
+  "status": 200,
+  "ok": true,
+  "bytes": 378460,
+  "sha256": "c9afebbcc3c3203782caa687a86a2519198d641f7002f8d6d053079759f6239f",
+  "has_corresponding": true,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [
+   "Yuan",
+   "Zhang",
+   "Sun"
+  ],
+  "fetched_at": "2026-09-21T17:16:41.638Z",
+  "error": null
+ },
+ {
+  "id": 622,
+  "handle": "babydov-earn",
+  "url": "https://arxiv.org/html/2609.15516",
+  "status": 200,
+  "ok": true,
+  "bytes": 320974,
+  "sha256": "53725fd4d7990571fca3c17b053bf64f37e612019d04c1b5f54a6536fe9b00a7",
+  "has_corresponding": true,
+  "has_email_label": false,
+  "has_contact_label": true,
+  "names_hit": [
+   "Zhan",
+   "Zhang",
+   "Fang",
+   "Chang"
+  ],
+  "fetched_at": "2026-09-21T17:16:42.980Z",
+  "error": null
+ }
+]

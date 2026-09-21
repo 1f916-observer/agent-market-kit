@@ -7,6 +7,10 @@
 
 import { lint, artifactUrls } from "./listing-lint.mjs";
 import { deriveBoundary, assignArms, composition, overlapCap } from "./arm-audit.mjs";
+import {
+  rawUrl, looksRendered, classifyDate, inWindow, extractRecord,
+  workKey, quoteOnly, countWords, quoteMatch,
+} from "./source-check.mjs";
 
 let pass = 0, fail = 0;
 const eq = (name, got, want) => {
@@ -172,6 +176,84 @@ eq("an act on the closing instant of the window is outside it",
 
 eq("an arm whose act can never fall inside the window has a cap of zero",
   overlapCap([member(25), member(1203)], 7 * day, 14 * day).points, 0);
+
+/* source-check: the three defects the listing-38 judging pass produced against
+   real submissions before anyone was rejected. Each test fails if the bug returns. */
+
+// DEFECT 1: artifact and note concatenated before JSON.parse. The join makes a
+// valid JSON artifact unparseable and four complete records scored 0 of 8.
+{
+  const artifact = JSON.stringify({
+    work_url: "https://arxiv.org/abs/2606.26028",
+    authors: ["Xihan Xiong", "Zelin Li"],
+    topic_quote: "We present the first empirical study of ERC-8004",
+    relationship_disclosure: "None known.",
+  });
+  const note = "Sourcing record for the ERC-8004 study; see the artifact.";
+  eq("a JSON artifact parses when each source is read on its own",
+    (() => { const r = extractRecord([artifact, note]); return [r.work_url, r.authors, !!r.topic_quote]; })(),
+    ["https://arxiv.org/abs/2606.26028", "Xihan Xiong; Zelin Li", true]);
+
+  eq("concatenating the sources first is what broke it",
+    Object.keys(extractRecord([artifact + "\n\n---\n\n" + note])).length >= 3, true);
+}
+
+eq("a record written as markdown key lines still parses",
+  extractRecord(["**work_url**: https://arxiv.org/abs/2609.17320\n- authors: A. Author\n"]).work_url,
+  "https://arxiv.org/abs/2609.17320");
+
+// DEFECT 2: a year-only date read as January 1 invents a window failure.
+// 2026 straddles a 2026-03-01 window start, so the only honest answer is
+// "undetermined" - four submissions were nearly rejected on this.
+eq("a year-only date keeps its precision", classifyDate("2026").precision, "year");
+eq("a full date keeps its precision", classifyDate("2026/09/14").precision, "day");
+
+const WSTART = Date.UTC(2026, 2, 1), WEND = Date.UTC(2026, 8, 21);
+eq("a year-only date straddling the window start is undetermined, never out",
+  inWindow("2026", WSTART, WEND), "undetermined");
+eq("a month-only date wholly inside the window is in",
+  inWindow("2026-06", WSTART, WEND), "in");
+eq("a date before the window is out", inWindow("2023/08/16", WSTART, WEND), "out");
+eq("a year wholly before the window is out", inWindow("2023", WSTART, WEND), "out");
+eq("a missing date is undetermined, not out", inWindow(null, WSTART, WEND), "undetermined");
+
+// DEFECT 3: a gist URL fetched as rendered HTML returns page chrome, not the record.
+eq("a gist page URL resolves to its raw content",
+  rawUrl("https://gist.github.com/YospGeng/75e4f47f018b3a5d93f399ba7a111c1e"),
+  "https://gist.githubusercontent.com/YospGeng/75e4f47f018b3a5d93f399ba7a111c1e/raw/");
+eq("a pinned gist revision keeps the revision",
+  rawUrl("https://gist.github.com/dxz2199/dd1e23fb5b3921ed3d88e340c7a19eb7/676a8cd3f0ea6feade08d0c9a7ea8f1a073417a0"),
+  "https://gist.githubusercontent.com/dxz2199/dd1e23fb5b3921ed3d88e340c7a19eb7/raw/676a8cd3f0ea6feade08d0c9a7ea8f1a073417a0");
+eq("a github blob URL resolves to raw",
+  rawUrl("https://github.com/o/r/blob/main/rec.json"),
+  "https://raw.githubusercontent.com/o/r/main/rec.json");
+eq("an ordinary URL is left alone",
+  rawUrl("https://arxiv.org/abs/2609.07065"), "https://arxiv.org/abs/2609.07065");
+eq("rendered HTML is recognisable as not being the record",
+  [looksRendered("<!DOCTYPE html><html>"), looksRendered('{"work_url":"x"}')], [true, false]);
+
+// A quote field carrying the submitter's own annotation is not a fabricated quote
+// and not an over-long one. Counting the annotation did both on listing 38.
+eq("an annotated quote field yields the quote alone",
+  quoteOnly('"we propose SAIGE, a lightweight multi-agent collaboration mechanism." Source: the abstract at https://arxiv.org/abs/2609.19759v1. This is 14 whitespace-separated words.'),
+  "we propose SAIGE, a lightweight multi-agent collaboration mechanism.");
+eq("the word cap is measured on the quote, not on the annotation",
+  countWords(quoteOnly('"a b c d e" - 5 words, from the abstract, https://example.org/x')), 5);
+eq("an annotated exact quote still matches the source exactly",
+  quoteMatch('"agents compete via auctions for the right to act" (from the abstract)',
+    "In this work agents compete via auctions for the right to act and accumulate wealth.").exact, true);
+eq("a quote absent from the source is reported as partial, with how much matched",
+  (() => { const m = quoteMatch("agents compete via auctions for nothing at all",
+    "In this work agents compete via auctions for the right to act."); return [m.exact, m.run > 0]; })(),
+  [false, true]);
+eq("curly quotes and en dashes do not break an exact match",
+  quoteMatch("“the agent’s cross-domain role”", "we study the agent's cross‑domain role here").exact, true);
+
+eq("a work key is the arXiv id when one is present",
+  workKey("see https://arxiv.org/pdf/2606.26028v2 for the study"), "arxiv:2606.26028");
+eq("a work key falls back to the DOI",
+  workKey("published at DOI 10.1145/3805689.3806748."), "doi:10.1145/3805689.3806748");
+eq("a citation with neither has no key", workKey("https://example.com/paper"), null);
 
 console.log(`${pass} passed, ${fail} failed`);
 process.exitCode = fail ? 1 : 0;
