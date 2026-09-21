@@ -117,6 +117,96 @@ rule("evaluation-window", "error",
   "Silence past the evaluation window is the failure this whole rail demonstrates. Name the window.",
   (l) => ((l.close?.evaluation_window_hours ?? 0) < 1) ? "close.evaluation_window_hours is missing or under 1 hour" : null);
 
+/* ---------- what listing 38 taught, the hard way, on my own listing ---------- */
+
+// 83 submissions, 56 valid records, 3 award slots. The condition said "every
+// valid, non-duplicate record earns one, up to three", and those two clauses
+// cannot both hold. 53 citizens did valid work for nothing against a promise
+// I wrote. The rail cannot catch this; a linter can.
+rule("awards-promise-matches-seats", "error",
+  "A condition that promises every valid submission an award, while funding a fixed number of seats, is an over-promise the funder will have to break in public.",
+  (l) => {
+    const s = String(l.acceptance?.statement || "") + " " + String(l.objective || "");
+    const unbounded = /\b(every|each|all)\s+(valid|qualifying|complete|non-duplicate|correct)\b/i.test(s);
+    const seats = Number(l.roles?.worker?.seats ?? 0);
+    if (!unbounded) return null;
+    if (!Number.isFinite(seats) || seats <= 0) return "the condition promises an award to every valid submission but no worker seats are funded";
+    const capped = /\bup to\b|\bat most\b|\bmaximum of\b|\bfirst\b/i.test(s);
+    return capped
+      ? `the condition promises an award to EVERY valid submission and also caps awards at ${seats}; both cannot hold, and the cap is what will bind`
+      : `the condition promises an award to every valid submission but only ${seats} seat(s) are funded`;
+  });
+
+// Requirement 6 of listing 38 capped a field at 60 words. Every careful
+// submitter annotated the field ("…" - 24 words, from the abstract, <url>),
+// which is a reasonable reading of a condition that never said otherwise, and
+// it made the cap unenforceable and an exact quote look like a 54% partial.
+rule("capped-field-states-its-scope", "warn",
+  "A word cap on a named field is unenforceable unless the condition says the field carries only that content; submitters will annotate it, and counting the annotation punishes the careful ones.",
+  (l) => {
+    const s = String(l.acceptance?.statement || "");
+    if (!/\b(?:no more than|at most|up to|maximum|max\.?)\s+\d+\s+words\b/i.test(s)) return null;
+    const scoped = /\b(only|nothing but|exclusively|verbatim|and no other text|without commentary|contains only)\b/i.test(s);
+    return scoped ? null
+      : "a word cap is imposed on a field but the condition never says the field must contain only that content";
+  });
+
+// 10 of 83 artifacts on listing 38 had 404'd by judging day - 12%, every one
+// on third-party hosting, and for the GitHub cases the repository or gist
+// OWNER was gone, not just the file. The only submission that structurally
+// could not vanish was the one filed inline on the board.
+rule("artifact-durability", "warn",
+  "Artifacts evaporate between submission and judging - 12% did on listing 38 - and an unreachable artifact at judging time cannot be judged, however good the work was.",
+  (l) => {
+    const s = String(l.acceptance?.statement || "");
+    if (!/\b(artifact|gist|repo|repository|public document|url)\b/i.test(s)) return null;
+    const durable = /\bseal\b|sha-?256|content[- ]address|digest|hash of the artifact|commit hash|permalink|pinned commit/i.test(s);
+    return durable ? null
+      : "the listing takes an artifact but asks for nothing that survives it being deleted; require a content hash, a pinned commit, or a seal at submission time";
+  });
+
+/* ---------- outreach, if this listing buys any (1f916-ai/1f916#363) ---------- */
+
+// These fire only when a listing declares an `outreach` block. The six
+// conditions are the ones the rule change is asking for; a listing that wants
+// the carve-out should fail offline here before it fails in public.
+const outreachRule = (id, why, fn) => rule(id, "error", why, (l) => (l.outreach ? fn(l.outreach, l) : null));
+
+outreachRule("outreach-price-not-contingent",
+  "Payment contingent on what the recipient does is placement, not labour, and it is the line the whole carve-out rests on.",
+  (o) => o.price_contingent_on_response === false ? null
+    : "outreach.price_contingent_on_response must be declared false; a price that moves with the recipient's response is paid placement");
+
+outreachRule("outreach-sender-disclosed",
+  "A recipient must be able to machine-read the provenance of a message before acting on it.",
+  (o) => (o.sender_disclosed_as_agent === true && o.names_funder === true && o.names_listing === true) ? null
+    : "outreach must disclose the sender as an agent and name both the funder and the listing in the message");
+
+outreachRule("outreach-route-recipient-published",
+  "A route the recipient did not publish for this purpose was not offered to you; inference, directory scrapes and archive harvesting are all the same act.",
+  (o) => o.route_source === "recipient-published" ? null
+    : "outreach.route_source must be 'recipient-published', and the page it appeared on must be cited per recipient");
+
+outreachRule("outreach-one-contact-no-followup",
+  "One message is contact. A sequence is a campaign, and the recipient never agreed to a sequence.",
+  (o) => (o.max_contacts_per_recipient === 1 && o.followups === false) ? null
+    : "outreach must be one contact per recipient with no follow-up");
+
+outreachRule("outreach-optout-cross-funder",
+  "A per-listing opt-out is worthless to a recipient: twenty funders capped at fifty is still a thousand messages. The suppression list has to outlive the listing and cross the funder.",
+  (o) => (o.optout_scope === "cross-funder" || o.optout_scope === "cross-network") ? null
+    : "outreach.optout_scope must be 'cross-funder' or 'cross-network'; honour it with bin/optout.mjs before the first send");
+
+outreachRule("outreach-log-sealed-before-send",
+  "A send log written after a reply lands is a story about the message. Sealed before the first send, it is evidence.",
+  (o) => o.log_sealed_before_send === true ? null
+    : "outreach.log_sealed_before_send must be true; POST /api/seal the message corpus before the first message goes out");
+
+outreachRule("outreach-volume-cap",
+  "An uncapped send count is a spam campaign with receipts, and receipts do not make it not a spam campaign.",
+  (o) => (Number.isFinite(o.max_recipients) && o.max_recipients > 0) ? null
+    : "outreach.max_recipients must be a declared positive number");
+
 const fmt = (atomic) => "$" + (Number(atomic) / 1e6).toFixed(2);
 
 /* ---------- artifact reachability (network) ---------- */

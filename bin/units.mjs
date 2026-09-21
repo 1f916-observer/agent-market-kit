@@ -11,6 +11,10 @@ import {
   rawUrl, looksRendered, classifyDate, inWindow, extractRecord,
   workKey, quoteOnly, countWords, quoteMatch,
 } from "./source-check.mjs";
+import {
+  normalizeRoute, routeHash, makeBloom, bloomHas, bloomToJSON, bloomFromJSON,
+  emptyStore, addEntry, isSuppressed,
+} from "./optout.mjs";
 
 let pass = 0, fail = 0;
 const eq = (name, got, want) => {
@@ -254,6 +258,143 @@ eq("a work key is the arXiv id when one is present",
 eq("a work key falls back to the DOI",
   workKey("published at DOI 10.1145/3805689.3806748."), "doi:10.1145/3805689.3806748");
 eq("a citation with neither has no key", workKey("https://example.com/paper"), null);
+
+/* the two defects listing 38 found in its own condition */
+
+eq("a condition promising every valid submission an award, against finite seats, is caught",
+  has({ ...OK(), roles: { worker: { seats: 3, price_atomic: "3000000" } },
+        funding: { ...OK().funding, total_atomic: "9000000" },
+        acceptance: { ...OK().acceptance, statement: "Every valid, non-duplicate record earns one, up to three. Judged together after the deadline." } },
+      "awards-promise-matches-seats"), true);
+
+eq("a condition that caps awards without promising everyone one is fine",
+  has({ ...OK(), acceptance: { ...OK().acceptance, statement: "Up to three awards, judged together after the deadline on merit, by the stated rubric." } },
+      "awards-promise-matches-seats"), false);
+
+eq("a word cap with no scope clause is flagged",
+  has({ ...OK(), acceptance: { ...OK().acceptance, statement: "Quote at most 25 words from the abstract showing the topic match, and link the page you quoted." } },
+      "capped-field-states-its-scope"), true);
+
+eq("a word cap that says the field carries only the quote is not flagged",
+  has({ ...OK(), acceptance: { ...OK().acceptance, statement: "Quote at most 25 words from the abstract; the field must contain only the quote, with its provenance in a separate field." } },
+      "capped-field-states-its-scope"), false);
+
+eq("a listing taking an artifact with nothing that survives deletion is flagged",
+  has({ ...OK(), acceptance: { ...OK().acceptance, statement: "Submit a compact public artifact (repo file, gist, or public document) carrying the required fields." } },
+      "artifact-durability"), true);
+
+eq("asking for a content hash at submission clears the durability rule",
+  has({ ...OK(), acceptance: { ...OK().acceptance, statement: "Submit a compact public artifact (repo file, gist, or public document) and its sha-256 at submission time." } },
+      "artifact-durability"), false);
+
+/* outreach: silent unless the listing declares it buys any */
+
+const OUTREACH_OK = () => ({
+  price_contingent_on_response: false, sender_disclosed_as_agent: true,
+  names_funder: true, names_listing: true, route_source: "recipient-published",
+  max_contacts_per_recipient: 1, followups: false, optout_scope: "cross-funder",
+  log_sealed_before_send: true, max_recipients: 56,
+});
+const OUT_IDS = ["outreach-price-not-contingent", "outreach-sender-disclosed",
+  "outreach-route-recipient-published", "outreach-one-contact-no-followup",
+  "outreach-optout-cross-funder", "outreach-log-sealed-before-send", "outreach-volume-cap"];
+
+eq("the outreach rules are silent on a listing that buys no outreach",
+  ids(OK()).filter((i) => i.startsWith("outreach-")), []);
+
+eq("a fully declared outreach listing passes all seven",
+  ids({ ...OK(), outreach: OUTREACH_OK() }).filter((i) => i.startsWith("outreach-")), []);
+
+eq("payment contingent on a response is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), price_contingent_on_response: true } },
+      "outreach-price-not-contingent"), true);
+
+eq("an undisclosed sender is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), sender_disclosed_as_agent: false } },
+      "outreach-sender-disclosed"), true);
+
+eq("a scraped route is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), route_source: "directory-scrape" } },
+      "outreach-route-recipient-published"), true);
+
+eq("follow-ups are refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), followups: true } },
+      "outreach-one-contact-no-followup"), true);
+
+// the one that matters most: a per-listing opt-out is worthless to a recipient
+eq("a per-listing opt-out scope is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), optout_scope: "per-listing" } },
+      "outreach-optout-cross-funder"), true);
+
+eq("a log sealed after sending is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), log_sealed_before_send: false } },
+      "outreach-log-sealed-before-send"), true);
+
+eq("an uncapped send count is refused",
+  has({ ...OK(), outreach: { ...OUTREACH_OK(), max_recipients: undefined } },
+      "outreach-volume-cap"), true);
+
+/* optout registry */
+
+eq("mailto, bare address and casing all normalise to one route",
+  new Set(["Alice@Example.COM", "mailto:alice@example.com", "mailto:alice@example.com?subject=hi"]
+    .map(normalizeRoute)).size, 1);
+
+eq("sub-addressing is the same mailbox",
+  normalizeRoute("alice+1f916@example.com"), normalizeRoute("alice@example.com"));
+
+eq("gmail dots are the same mailbox, and other hosts' are not",
+  [normalizeRoute("a.b@gmail.com") === normalizeRoute("ab@gmail.com"),
+   normalizeRoute("a.b@example.com") === normalizeRoute("ab@example.com")], [true, false]);
+
+eq("a page route drops fragment, www and tracking params",
+  normalizeRoute("https://www.imperial.ac.uk/people/w.knottenbelt?utm_source=x#contact"),
+  "https://imperial.ac.uk/people/w.knottenbelt");
+
+eq("a non-route returns null", [normalizeRoute(""), normalizeRoute("not a route"), normalizeRoute("a@b")], [null, null, null]);
+
+eq("the store suppresses a route by any of its spellings",
+  (() => { const s = emptyStore(); addEntry(s, "mailto:Alice@Example.com", { basis: "self-request" });
+    return [isSuppressed(s, "alice@example.com"), isSuppressed(s, "bob@example.com")]; })(),
+  [true, false]);
+
+eq("adding the same route twice does not duplicate it",
+  (() => { const s = emptyStore(); addEntry(s, "a@b.com"); addEntry(s, "A@B.COM"); return s.entries.length; })(), 1);
+
+// the registry must never hold a route, so a note that smuggles one is refused
+eq("a note containing a route is refused",
+  (() => { const s = emptyStore();
+    try { addEntry(s, "a@b.com", { note: "asked via a@b.com" }); return "accepted"; }
+    catch (e) { return "refused"; } })(), "refused");
+
+eq("the store holds hashes and no routes",
+  (() => { const s = emptyStore(); addEntry(s, "secret@example.com", { basis: "bounce" });
+    return JSON.stringify(s).includes("secret@example.com"); })(), false);
+
+// bloom: no false negatives ever, and it must not be enumerable
+eq("the bloom filter never misses a member",
+  (() => {
+    const routes = Array.from({ length: 200 }, (_, i) => `r${i}@example.org`);
+    const b = makeBloom(routes.map(routeHash));
+    return routes.every((r) => bloomHas(b, routeHash(r)));
+  })(), true);
+
+eq("the bloom filter's false-positive rate on non-members stays low",
+  (() => {
+    const b = makeBloom(Array.from({ length: 200 }, (_, i) => routeHash(`r${i}@example.org`)));
+    const fp = Array.from({ length: 2000 }, (_, i) => `x${i}@other.test`)
+      .filter((r) => bloomHas(b, routeHash(r))).length;
+    return fp / 2000 < 0.02;
+  })(), true);
+
+eq("the published bloom survives a round trip and carries no routes",
+  (() => {
+    const b = makeBloom([routeHash("keep@example.com")]);
+    const j = bloomToJSON(b);
+    const back = bloomFromJSON(JSON.parse(JSON.stringify(j)));
+    return [bloomHas(back, routeHash("keep@example.com")),
+            JSON.stringify(j).includes("keep@example.com")];
+  })(), [true, false]);
 
 console.log(`${pass} passed, ${fail} failed`);
 process.exitCode = fail ? 1 : 0;

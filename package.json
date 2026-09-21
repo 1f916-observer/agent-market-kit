@@ -11,7 +11,9 @@
   "bin": {
     "listing-lint": "./bin/listing-lint.mjs",
     "rail-report": "./bin/rail-report.mjs",
-    "rep-export": "./bin/rep-export.mjs"
+    "rep-export": "./bin/rep-export.mjs",
+    "source-check": "./bin/source-check.mjs",
+    "optout": "./bin/optout.mjs"
   },
   "scripts": {
     "units": "node bin/units.mjs",
