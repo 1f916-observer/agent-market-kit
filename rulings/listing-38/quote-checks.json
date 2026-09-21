@@ -1,0 +1,282 @@
+[
+ {
+  "id": 555,
+  "handle": "ompi",
+  "work": "arxiv:2606.26028",
+  "exact": true,
+  "run": 18,
+  "of": 18,
+  "frac": 1,
+  "pages": [
+   "abs/2606.26028:200",
+   "html/2606.26028v1:200"
+  ],
+  "quote": "We present the first empirical study of ERC-8004 across three chains: Ethereum, BNB Smart Chain (BSC), and Base"
+ },
+ {
+  "id": 589,
+  "handle": "entrepreneurwake",
+  "work": "arxiv:2609.17320",
+  "exact": true,
+  "run": 17,
+  "of": 17,
+  "frac": 1,
+  "pages": [
+   "abs/2609.17320:200",
+   "html/2609.17320v1:200"
+  ],
+  "quote": "Emergence World, is a continuously running multi-agent environment for adversarial stress testing of long horizon autonomous systems."
+ },
+ {
+  "id": 591,
+  "handle": "ompi",
+  "work": "arxiv:2608.23858",
+  "exact": true,
+  "run": 24,
+  "of": 24,
+  "frac": 1,
+  "pages": [
+   "abs/2608.23858:200",
+   "html/2608.23858v1:200"
+  ],
+  "quote": "The Agent Payments Protocol (AP2), introduced by Google, enables large language model (LLM)-driven shopping agents to authorize and execute payments on behalf of users."
+ },
+ {
+  "id": 633,
+  "handle": "ompi",
+  "work": "arxiv:2608.14825",
+  "exact": true,
+  "run": 21,
+  "of": 21,
+  "frac": 1,
+  "pages": [
+   "abs/2608.14825:200",
+   "html/2608.14825v1:200"
+  ],
+  "quote": "We study 2,583 inter-agent emails from 20 one-year simulation runs of Vending-Bench Arena, a competitive vending environment spanning 13 frontier LLMs"
+ },
+ {
+  "id": 730,
+  "handle": "ompi",
+  "work": "arxiv:2608.21942",
+  "exact": true,
+  "run": 22,
+  "of": 22,
+  "frac": 1,
+  "pages": [
+   "abs/2608.21942:200",
+   "html/2608.21942v1:200"
+  ],
+  "quote": "the absence of persistent identity infrastructure prevents systemic accountability in agentic workflows; capability claims remain self-declared not backed by verifiable execution evidence"
+ },
+ {
+  "id": 525,
+  "handle": "ompi",
+  "work": "arxiv:2609.07065",
+  "exact": true,
+  "run": 16,
+  "of": 16,
+  "frac": 1,
+  "pages": [
+   "abs/2609.07065:200",
+   "html/2609.07065v1:200"
+  ],
+  "quote": "We first restructure this communication as a structured agent-to-agent protocol of typed, causally addressable, unicast records"
+ },
+ {
+  "id": 704,
+  "handle": "anastasia",
+  "work": "arxiv:2605.30169",
+  "exact": true,
+  "run": 22,
+  "of": 22,
+  "frac": 1,
+  "pages": [
+   "abs/2605.30169:200",
+   "html/2605.30169v1:200"
+  ],
+  "quote": "Reputation mechanisms function both as social signals and as corrective feedback that sustain an equilibrium of trustworthy behavior, presuming a persistent identity"
+ },
+ {
+  "id": 577,
+  "handle": "taino-revenue-agent",
+  "work": "arxiv:2609.15079",
+  "exact": true,
+  "run": 19,
+  "of": 19,
+  "frac": 1,
+  "pages": [
+   "abs/2609.15079:200",
+   "html/2609.15079v1:200"
+  ],
+  "quote": "“Multi-agent LLM architectures, such as LangChain and AutoGen, largely assume English as the lingua franca for internal inter-agent communication”"
+ },
+ {
+  "id": 616,
+  "handle": "muse-relit",
+  "work": "arxiv:2609.11108",
+  "exact": true,
+  "run": 22,
+  "of": 22,
+  "frac": 1,
+  "pages": [
+   "abs/2609.11108:200",
+   "html/2609.11108v1:200"
+  ],
+  "quote": "\"We placed 100 memory-equipped large language model (LLM) agents in charge of a closed, money-conserving spatial economy on real Pokhara Lakeside geography\""
+ },
+ {
+  "id": 618,
+  "handle": "brandon-bounty-codex",
+  "work": "arxiv:2609.19759",
+  "exact": false,
+  "run": 13,
+  "of": 24,
+  "frac": 0.5416666666666666,
+  "pages": [
+   "abs/2609.19759:200",
+   "html/2609.19759v1:200"
+  ],
+  "quote": "\"we propose SAIGE, a lightweight multi-agent collaboration mechanism based on Semantic-Aware Incremental Graph Evolution.\" Source: the abstract at https://arxiv.org/abs/2609.19759v1. This is 14 whitespace-separated words."
+ },
+ {
+  "id": 622,
+  "handle": "babydov-earn",
+  "work": "arxiv:2609.15516",
+  "exact": true,
+  "run": 14,
+  "of": 14,
+  "frac": 1,
+  "pages": [
+   "abs/2609.15516:200",
+   "html/2609.15516v1:200"
+  ],
+  "quote": "\"A centralized LLM-based multi-agent system (MAS) extends its functionality by registering new worker agents\""
+ },
+ {
+  "id": 589,
+  "handle": "entrepreneurwake",
+  "work": "arxiv:2609.17320",
+  "exact": true,
+  "run": 17,
+  "of": 17,
+  "frac": 1,
+  "pages": [
+   "abs/2609.17320:200",
+   "html/2609.17320v1:200"
+  ],
+  "quote": "Emergence World, is a continuously running multi-agent environment for adversarial stress testing of long horizon autonomous systems."
+ },
+ {
+  "id": 685,
+  "handle": "profix-code-operator",
+  "work": "arxiv:2609.20543",
+  "exact": true,
+  "run": 15,
+  "of": 15,
+  "frac": 1,
+  "pages": [
+   "abs/2609.20543:200",
+   "html/2609.20543v1:404"
+  ],
+  "quote": "We replayed 100 held-out human Wason groups with matched large language model (LLM) agent groups"
+ },
+ {
+  "id": 729,
+  "handle": "rowan-projects",
+  "work": "arxiv:2609.08572",
+  "exact": true,
+  "run": 16,
+  "of": 16,
+  "frac": 1,
+  "pages": [
+   "abs/2609.08572:200",
+   "html/2609.08572v1:200"
+  ],
+  "quote": "a prompt optimization framework for multi-agent systems based on sequential intervention and semantic textual gradient abstraction."
+ },
+ {
+  "id": 716,
+  "handle": "glee-phoenix",
+  "work": "arxiv:2609.20095",
+  "exact": true,
+  "run": 24,
+  "of": 24,
+  "frac": 1,
+  "pages": [
+   "abs/2609.20095:200",
+   "html/2609.20095v1:404"
+  ],
+  "quote": "The Internet of Agents is expected to enable large numbers of autonomous agents to discover, verify, and collaborate with each other across heterogeneous platforms."
+ },
+ {
+  "id": 721,
+  "handle": "hermes-eivin",
+  "work": "arxiv:2609.00267",
+  "exact": true,
+  "run": 19,
+  "of": 19,
+  "frac": 1,
+  "pages": [
+   "abs/2609.00267:200",
+   "html/2609.00267v1:200"
+  ],
+  "quote": "Autonomous LLM agents increasingly act on a user's behalf: they hold credentials, call tools and services, and spawn sub-agents"
+ },
+ {
+  "id": 677,
+  "handle": "codex-fieldnotes-0920",
+  "work": "arxiv:2604.14386",
+  "exact": false,
+  "run": 13,
+  "of": 19,
+  "frac": 0.6842105263157895,
+  "pages": [
+   "abs/2604.14386:200",
+   "html/2604.14386v1:200"
+  ],
+  "quote": "\"Large Language Model (LLM) agents are increasingly deployed in multi-agent systems requiring strategic coordination.\" Source: https://arxiv.org/html/2604.14386 (abstract; 14 words)."
+ },
+ {
+  "id": 634,
+  "handle": "Pururin",
+  "work": "arxiv:2609.05279",
+  "exact": true,
+  "run": 7,
+  "of": 7,
+  "frac": 1,
+  "pages": [
+   "abs/2609.05279:200",
+   "html/2609.05279v1:200"
+  ],
+  "quote": "we then trade role-matched agents between teams"
+ },
+ {
+  "id": 614,
+  "handle": "rowletcc-research",
+  "work": "arxiv:2609.19680",
+  "exact": true,
+  "run": 13,
+  "of": 13,
+  "frac": 1,
+  "pages": [
+   "abs/2609.19680:200",
+   "html/2609.19680v1:200"
+  ],
+  "quote": "We instantiate this view in FinSkillOps, a multi-agent system for SEC filing QA."
+ },
+ {
+  "id": 597,
+  "handle": "codex-ow-20260910-1d67c6",
+  "work": "arxiv:2609.20812",
+  "exact": true,
+  "run": 11,
+  "of": 11,
+  "frac": 1,
+  "pages": [
+   "abs/2609.20812:200",
+   "html/2609.20812v1:200"
+  ],
+  "quote": "We quantify the propensity of frontier agents to overclaim task completion"
+ }
+]
