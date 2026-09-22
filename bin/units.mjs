@@ -15,6 +15,7 @@ import {
   normalizeRoute, routeHash, makeBloom, bloomHas, bloomToJSON, bloomFromJSON,
   emptyStore, addEntry, isSuppressed,
 } from "./optout.mjs";
+import { parsePreimage, validatePreimage, CONTRACTS } from "./interop.mjs";
 
 let pass = 0, fail = 0;
 const eq = (name, got, want) => {
@@ -395,6 +396,59 @@ eq("the published bloom survives a round trip and carries no routes",
     return [bloomHas(back, routeHash("keep@example.com")),
             JSON.stringify(j).includes("keep@example.com")];
   })(), [true, false]);
+
+/* interop: the bytes a second society must reproduce. Every fixture below is a
+   real preimage read from the live registry's own builders on 2026-09-22. */
+
+const LISTING_PI = "1f916.listing.v1:demo:8a2cc0673b1c428315fe84c0138d95c3ddda30baf81e7d9aa821f1ca47098193:1000000:0:0:8453:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913:1790553600";
+const PAYOUT_PI = "1f916.payout.v1:demo:listing-38:3000000:8453:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913:0x0000000000000000000000000000000000000001:1790553600";
+const FUNDER_PI = "1f916.payout-funder.v1:4813ae0b78aa077f24aa28f1bcf67ff07190ef19ed14739612e27f1db3e3b2f6:8453:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913:0x5fd67460440f44235d62edfe53a7f38ca26d993ca515ce77af5807a14687ba6b:557:0x465bcb555de8e2634c529b12c7ee5dfc733ee4f0:0x5ea77a35a04f38c4806003658465cf9a7d999475:3000000:undeclared";
+
+eq("the three live preimages are all well-formed",
+  [LISTING_PI, PAYOUT_PI, FUNDER_PI].map(validatePreimage), [[], [], []]);
+
+eq("a listing preimage parses into its named fields",
+  (() => { const f = parsePreimage(LISTING_PI).fields;
+    return [f.handle, f.total_needed_atomic, f.chain_id, f.expiry]; })(),
+  ["demo", "1000000", "8453", "1790553600"]);
+
+eq("a payout preimage keeps the row it binds against",
+  parsePreimage(PAYOUT_PI).fields.row, "listing-38");
+
+// the funder settles their OWN payment, so relationship is literally "undeclared"
+eq("a funder recording their own payment signs 'undeclared' as the relationship",
+  parsePreimage(FUNDER_PI).fields.relationship, "undeclared");
+
+eq("the funder statement carries the log_index that disambiguates a bundled transaction",
+  parsePreimage(FUNDER_PI).fields.log_index, "557");
+
+// the unit bug this rail actually produces: expiry is SECONDS, everything else ms
+eq("a millisecond expiry is caught",
+  validatePreimage(LISTING_PI.replace(":1790553600", ":1790553600000"))
+    .some((p) => /milliseconds/.test(p)), true);
+
+// a checksummed address hashes differently and verifies against nothing
+eq("an EIP-55 checksummed address in the preimage is caught",
+  validatePreimage(PAYOUT_PI.replace("0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "0x833589fCd6EDb6E08f4c7C32D4f71b54bdA02913")).some((p) => /lowercase/.test(p)), true);
+
+eq("a wrong field count is caught",
+  validatePreimage("1f916.payout.v1:demo:listing-38:3000000").some((p) => /expected 7 fields/.test(p)), true);
+
+eq("a decimal amount is caught",
+  validatePreimage(PAYOUT_PI.replace(":3000000:", ":3.000000:")).some((p) => /base-10 digits/.test(p)), true);
+
+eq("a handle carrying the separator is caught",
+  validatePreimage(PAYOUT_PI.replace("demo:listing-38", "de:mo:listing-38"))
+    .length > 0, true);
+
+eq("something that is not a 1f916 preimage is refused",
+  validatePreimage("hello:world"), ["not a 1f916 domain-separated preimage"]);
+
+// the verdict format was NOT readable without verifier authorization, and the
+// spec says so rather than guessing. If someone later fills it in, this goes red.
+eq("an unread format is declared unread rather than invented",
+  [CONTRACTS["1f916.verdict.v1"].verified, CONTRACTS["1f916.verdict.v1"].fields], [false, null]);
 
 console.log(`${pass} passed, ${fail} failed`);
 process.exitCode = fail ? 1 : 0;
