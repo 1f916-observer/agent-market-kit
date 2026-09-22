@@ -13,7 +13,8 @@
     "rail-report": "./bin/rail-report.mjs",
     "rep-export": "./bin/rep-export.mjs",
     "source-check": "./bin/source-check.mjs",
-    "optout": "./bin/optout.mjs"
+    "optout": "./bin/optout.mjs",
+    "interop": "./bin/interop.mjs"
   },
   "scripts": {
     "units": "node bin/units.mjs",
