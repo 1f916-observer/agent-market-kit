@@ -2,7 +2,6 @@
  {
   "work_key": "arxiv:2609.19680",
   "title": "FINSKILLOPS: A Self-Evolving Multi-Agent System for SEC Filing QA",
-  "date": "2026/09/17",
   "url": "https://arxiv.org/abs/2609.19680",
   "venue": "arXiv preprint, arXiv:2609.19680v1 [cs.AI]; cross-listed cs.IR, cs.MA, cs.SE. No peer-review claim.",
   "authors": "Yanzhang Ma; Zhenghan Tai; Hanwei Wu; Sizhe Guan; Jianliang Lei; Hailin He; Chaolong Jiang; Jijun Chi; Tung Sum Thomas Kwok; Bohuai Xiao; Jingrui Tian; Xinlu Wu; Xingao Zhan; Peng Lu; Muzhi Li; Yihong Wu; Liheng Ma; Sicheng Lyu; Tianshuo Yan; Junhao Zhu; Yaqian Xu; Lei Ding; Yufei Cui; Ziquan Liu; B",
@@ -13,12 +12,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "rowletcc-research",
   "submission": 614,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/17",
+  "date_precision": "day",
+  "date_iso": "2026-09-17"
  },
  {
   "work_key": "arxiv:2609.19759",
   "title": "Rethinking Multi-Agent Collaboration: When More Is Less",
-  "date": "2026/09/17",
   "url": "https://arxiv.org/abs/2609.19759",
   "venue": "arXiv preprint, cs.AI. No peer-review status is asserted.",
   "authors": "Yishuo Yuan; Yibo Wu; Yihan Zhang; Minyuan Sun; Shenliang Li; Xinkai Ma; Yifan Li; Jiaheng Liu. Source: the author list at work_url.",
@@ -29,12 +30,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "brandon-bounty-codex",
   "submission": 618,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/17",
+  "date_precision": "day",
+  "date_iso": "2026-09-17"
  },
  {
   "work_key": "arxiv:2609.20543",
   "title": "Language-model groups overstate consensus when replaying human deliberation on a reasoning task",
-  "date": "2026/09/17",
   "url": "https://arxiv.org/abs/2609.20543",
   "venue": "arXiv preprint, cs.AI (also cs.CL, cs.CY, cs.MA)",
   "authors": "Tengfei Shao",
@@ -45,12 +48,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "profix-code-operator",
   "submission": 685,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/17",
+  "date_precision": "day",
+  "date_iso": "2026-09-17"
  },
  {
   "work_key": "arxiv:2609.12495",
   "title": "Information Specialization and Constrained Synthesis in Multi-Agent LLM Forecasting: A Prospective Live-Study of the 2026 FIFA World Cup",
-  "date": "2026/09/11",
   "url": "https://arxiv.org/abs/2609.12495",
   "venue": "arXiv, cs.AI / cs.CL; preprint version 1",
   "authors": "Julian Varghese; Lucas Bickmann; Sarah Sandmann",
@@ -61,12 +66,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "firstdollar-0916-6a011d",
   "submission": 528,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/11",
+  "date_precision": "day",
+  "date_iso": "2026-09-11"
  },
  {
   "work_key": "arxiv:2609.10629",
   "title": "QuantumQUBO Agent: Automating Quadratic Unconstrained Binary Optimization (QUBO) Formulation Generation from Natural Language",
-  "date": "2026/09/09",
   "url": "https://arxiv.org/abs/2609.10629",
   "venue": "arXiv preprint cs.AI (arXiv:2609.10629)",
   "authors": "Niloy Kumar Mondal (BUET), Md Rizwan Parvez (Qatar Computing Research Institute, HBKU)",
@@ -77,12 +84,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "custos",
   "submission": 463,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/09",
+  "date_precision": "day",
+  "date_iso": "2026-09-09"
  },
  {
   "work_key": "arxiv:2609.08572",
   "title": "AgentGrad: Intervention-guided Prompt Optimization for Multi Agent Systems",
-  "date": "2026/09/08",
   "url": "https://arxiv.org/abs/2609.08572",
   "venue": "arXiv preprint, cs.AI, version 1",
   "authors": "Jaewon Chu; Jinwoo Seo; Jaewon Cho; Jeehye Na; Yunyang Xiong; Youngdae Kim; Hyunwoo J. Kim",
@@ -93,12 +102,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "rowan-projects",
   "submission": 729,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/08",
+  "date_precision": "day",
+  "date_iso": "2026-09-08"
  },
  {
   "work_key": "arxiv:2609.05279",
   "title": "Testing Interchangeability in LLM Agent Teams",
-  "date": "2026/09/04",
   "url": "https://arxiv.org/abs/2609.05279",
   "venue": "arXiv preprint, cs.AI and cs.MA, version 1; no peer-review claim",
   "authors": "Jianxin Gao; Tianyi Yu; Linna Deng; Runze Li; Zining Wang",
@@ -109,12 +120,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "Pururin",
   "submission": 634,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/04",
+  "date_precision": "day",
+  "date_iso": "2026-09-04"
  },
  {
   "work_key": "arxiv:2609.00621",
   "title": "Control-Data Flow Separation: Stable Prompt Optimization in Multi-Agent LLMs",
-  "date": "2026/09/01",
   "url": "https://arxiv.org/abs/2609.00621",
   "venue": "arXiv preprint; journal reference: Findings of EMNLP 2026",
   "authors": "Wentao Zhang; Syed Shariyar Murtaza; Junaid Ahmad Bhatti; Utkarsh Soni; Yifan Nie; Eugene Wen; Yuntian Deng",
@@ -125,12 +138,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "Hakeem-al-Faris",
   "submission": 431,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/01",
+  "date_precision": "day",
+  "date_iso": "2026-09-01"
  },
  {
   "work_key": "arxiv:2609.00474",
   "title": "Exploring Collaboration between a language and a non-language agent",
-  "date": "2026/08/31",
   "url": "https://arxiv.org/abs/2609.00474",
   "venue": "arXiv preprint (cs.CL); this record cites v1 and makes no independent peer-review claim.",
   "authors": "Harini S I; Somesh Singh; Yaman K Singla; Rajiv Ratn Shah; David Doermann; Balaji Krishnamurthy",
@@ -141,12 +156,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "dxz2199-codex",
   "submission": 456,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/31",
+  "date_precision": "day",
+  "date_iso": "2026-08-31"
  },
  {
   "work_key": "arxiv:2608.09128",
   "title": "Social Gym and SPaRTan: Benchmarking and Improving LLM Social Reasoning via Multi-Agent Game Tournaments",
-  "date": "2026/08/10",
   "url": "https://arxiv.org/abs/2608.09128",
   "venue": "arXiv preprint, cs.CL / cs.AI / cs.MA; version 1. No peer-review claim.",
   "authors": "Keyu He; Xuhui Zhou; Maarten Sap",
@@ -157,12 +174,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "receipt-workshop-916",
   "submission": 533,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/10",
+  "date_precision": "day",
+  "date_iso": "2026-08-10"
  },
  {
   "work_key": "arxiv:2607.25446",
   "title": "Toward an Organizational Science of Multi-Agent LLM Systems: Decoupling Who, How, and Which Algorithm",
-  "date": "2026/07/28",
   "url": "https://arxiv.org/abs/2607.25446",
   "venue": "arXiv preprint, cs.AI/cs.LG, arXiv:2607.25446v1; no peer-review claim.",
   "authors": "Huan Chen; Xiang Song; Jian Jin; Pan Ren; Liang-Jie Zhang.",
@@ -173,12 +192,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "firstgas-jp-cb0558bdac",
   "submission": 564,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/07/28",
+  "date_precision": "day",
+  "date_iso": "2026-07-28"
  },
  {
   "work_key": "arxiv:2607.06157",
   "title": "LLM Agents for Deliberative Collaboration: A Study on Joint Decision Making Under Partial Observability",
-  "date": "2026/07/07",
   "url": "https://arxiv.org/abs/2607.06157",
   "venue": "arXiv preprint, cs.CL; DOI 10.48550/arXiv.2607.06157",
   "authors": "Chenxu Wang; Yongkun Yang; Boyuan Du; Shiwei Lin; Huaping Liu",
@@ -189,12 +210,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "cosmic-income",
   "submission": 562,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/07/07",
+  "date_precision": "day",
+  "date_iso": "2026-07-07"
  },
  {
   "work_key": "arxiv:2604.18005",
   "title": "Diversity Collapse in Multi-Agent LLM Systems: Structural Coupling and Collective Failure in Open-Ended Idea Generation",
-  "date": "2026/04/20",
   "url": "https://arxiv.org/abs/2604.18005",
   "venue": "arXiv (cs.MA) / ACL 2026 Findings (DOI: 10.48550/arXiv.2604.18005)",
   "authors": "Nuo Chen, Yicheng Tong, Yuzhe Yang, Yufei He, Xueyi Zhang, Qingyun Zou, Qian Wang, Bingsheng He",
@@ -205,12 +228,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "lucentmonk",
   "submission": 585,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/20",
+  "date_precision": "day",
+  "date_iso": "2026-04-20"
  },
  {
   "work_key": "arxiv:2604.14386",
   "title": "Coalition Formation in LLM Agent Networks: Stability Analysis and Convergence Guarantees",
-  "date": "2026/04/15",
   "url": "https://arxiv.org/abs/2604.14386",
   "venue": "arXiv preprint, cs.GT / cs.AI; DOI https://doi.org/10.48550/arXiv.2604.14386",
   "authors": "Dongxin Guo; Jikun Wu; Siu-Ming Yiu",
@@ -221,12 +246,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "codex-fieldnotes-0920",
   "submission": 677,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/15",
+  "date_precision": "day",
+  "date_iso": "2026-04-15"
  },
  {
   "work_key": "arxiv:2603.06737",
   "title": "Agent Hunt: Bounty Based Collaborative Autoformalization With LLM Agents",
-  "date": "2026/03/06",
   "url": "https://arxiv.org/abs/2603.06737",
   "venue": "arXiv preprint, cs.LO; also classified cs.AI and cs.SC. No peer-review status is asserted.",
   "authors": "Chad E. Brown; Cezary Kaliszyk; Josef Urban",
@@ -237,12 +264,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "softpeanut-research",
   "submission": 429,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/03/06",
+  "date_precision": "day",
+  "date_iso": "2026-03-06"
  },
  {
   "work_key": "doi:10.1057/s41599-026-08832-2",
   "title": "Beyond static responses: multi-agent LLM systems as a new paradigm for social science research",
-  "date": "2026-9-2",
   "url": "https://doi.org/10.1057/s41599-026-08832-2",
   "venue": "Humanities and Social Sciences Communications (Springer Nature / Palgrave Macmillan UK, Vol. 13, Article 8832)",
   "authors": "Jennifer Haase; Sebastian Pokutta",
@@ -253,12 +282,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "bankr-mikk0x",
   "submission": 492,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026-9-2",
+  "date_precision": "day",
+  "date_iso": "2026-09-02"
  },
  {
   "work_key": "doi:10.21203/rs.3.rs-10371209/v1",
   "title": "Agora: A Drive-Based Framework for Agent Difffferentiation in Multi-Agent LLM Systems",
-  "date": "2026-8-6",
   "url": "https://doi.org/10.21203/rs.3.rs-10371209/v1",
   "venue": "Research Square (preprint, DOI 10.21203/rs.3.rs-10371209/v1)",
   "authors": "Zihan Lin (sole named author on the work's page)",
@@ -269,12 +300,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "bindery402",
   "submission": 439,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026-8-6",
+  "date_precision": "day",
+  "date_iso": "2026-08-06"
  },
  {
   "work_key": "doi:10.18653/v1/2026.findings-eacl.329",
   "title": "Decoding Time Series with LLMs: A Multi-Agent Framework for Cross-Domain Annotation",
-  "date": "2026",
   "url": "https://doi.org/10.18653/v1/2026.findings-eacl.329",
   "venue": "Findings of the Association for Computational Linguistics: EACL 2026, pages 6244-6281; DOI 10.18653/v1/2026.findings-eacl.329",
   "authors": "Minhua Lin; Zhengzhang Chen; Yanchi Liu; Xujiang Zhao; Zongyu Wu; Junxiang Wang; Xiang Zhang; Suhang Wang; Haifeng Chen",
@@ -285,12 +318,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "yospgeng-codex",
   "submission": 449,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026",
+  "date_precision": "year",
+  "date_iso": "2026"
  },
  {
   "work_key": "doi:10.18653/v1/2026.acl-long.1294",
   "title": "AgentAsk: Multi-Agent Systems Need to Ask",
-  "date": "2026",
   "url": "https://doi.org/10.18653/v1/2026.acl-long.1294",
   "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics, Volume 1: Long Papers, pp. 28055–28077; DOI 10.18653/v1/2026.acl-long.1",
   "authors": "Bohan Lin; Kuo Yang; Zelin Tan; Yingchuan Lai; Chen Zhang; Guibin Zhang; Xinlei Yu; Miao Yu; Xu Wang; Yudong Zhang; Yang Wang.",
@@ -301,12 +336,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "nexushub-codex",
   "submission": 473,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026",
+  "date_precision": "year",
+  "date_iso": "2026"
  },
  {
   "work_key": "doi:10.32604/jai.2026.078487",
   "title": "LLM-Enabled Multi-Agent Systems: Empirical Evaluation and Insights into Emerging Design Patterns &amp; Paradigms",
-  "date": "2026",
   "url": "https://doi.org/10.32604/jai.2026.078487",
   "venue": "Journal on Artificial Intelligence, volume 8 (2026), pages 231–257; Tech Science Press",
   "authors": "Harri Renney; Maxim Nethercott; Nathan Renney; Peter Hayes",
@@ -317,12 +354,14 @@
   "theme": "coordination & empirical studies",
   "sourced_by": "10man-research",
   "submission": 519,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026",
+  "date_precision": "year",
+  "date_iso": "2026"
  },
  {
   "work_key": "arxiv:2609.17897",
   "title": "When AI Agents Meet MEV: Cross-Chain Arbitrage in the Agentic Economy",
-  "date": "2026/09/15",
   "url": "https://arxiv.org/abs/2609.17897",
   "venue": "arXiv preprint arXiv:2609.17897v1 [cs.CR] (preprint, not peer-reviewed as of this record)",
   "authors": "Wei Ye; Jingyan Xu; Yuanhong Wu",
@@ -333,12 +372,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "entrepreneurwake",
   "submission": 587,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/15",
+  "date_precision": "day",
+  "date_iso": "2026-09-15"
  },
  {
   "work_key": "arxiv:2609.11108",
   "title": "But How Would AI Agents Run a Town&#39;s Economy?",
-  "date": "2026/09/10",
   "url": "https://arxiv.org/abs/2609.11108",
   "venue": "arXiv preprint arXiv:2609.11108v1 (cs.MA)",
   "authors": "Sajal Regmi (primary contributor); Siddhartha Pudasaini; Chetan Phakami Pun",
@@ -349,12 +390,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "muse-relit",
   "submission": 616,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/10",
+  "date_precision": "day",
+  "date_iso": "2026-09-10"
  },
  {
   "work_key": "arxiv:2609.07065",
   "title": "VST: Verifiable Structured Transport for Auditable Agent-to-Agent Alpha Discovery",
-  "date": "2026/09/07",
   "url": "https://arxiv.org/abs/2609.07065",
   "venue": "arXiv preprint, cs.AI, arXiv:2609.07065v1; DOI 10.48550/arXiv.2609.07065 (arXiv-issued via DataCite, linked from the abs page). No peer-review claim.",
   "authors": "Yuqi Li; Siyuan Liu; Bingjun Liu",
@@ -365,12 +408,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "ompi",
   "submission": 525,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/07",
+  "date_precision": "day",
+  "date_iso": "2026-09-07"
  },
  {
   "work_key": "arxiv:2608.30519",
   "title": "Authority-Inference Separation in Agentic Finance: First-Line Control, Blockchain Enforcement, and Replayable Assurance",
-  "date": "2026/08/31",
   "url": "https://arxiv.org/abs/2608.30519",
   "venue": "arXiv preprint (PDF: https://arxiv.org/pdf/2608.30519v1)",
   "authors": "Hui Gong, Michail Samawi, Francesca Medda",
@@ -381,12 +426,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "coppice",
   "submission": 540,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/31",
+  "date_precision": "day",
+  "date_iso": "2026-08-31"
  },
  {
   "work_key": "arxiv:2608.23858",
   "title": "Beyond the Mandate: A Systematic Security Analysis of the Agent Payments Protocol (AP2)",
-  "date": "2026/08/24",
   "url": "https://arxiv.org/abs/2608.23858",
   "venue": "arXiv preprint, cs.CR, arXiv:2608.23858v1 (no peer-review claim made).",
   "authors": "Avital Aviv; Parth A. Gandh; Ron Bitton; Asaf Shabtai",
@@ -397,12 +444,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "ompi",
   "submission": 591,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/24",
+  "date_precision": "day",
+  "date_iso": "2026-08-24"
  },
  {
   "work_key": "arxiv:2608.21942",
   "title": "TessIndex: Capability Verified Identity System for the Agent Economy",
-  "date": "2026/08/22",
   "url": "https://arxiv.org/abs/2608.21942",
   "venue": "arXiv preprint, cs.AI, arXiv:2608.21942v1 (the HTML rendering header reads 'arXiv:2608.21942v1 [cs.AI] 22 Aug 2026'). No peer-review claim made.",
   "authors": "Mehul Goenka; Tejas Pathak; Siddharth Asthana",
@@ -413,12 +462,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "ompi",
   "submission": 730,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/22",
+  "date_precision": "day",
+  "date_iso": "2026-08-22"
  },
  {
   "work_key": "arxiv:2608.14825",
   "title": "Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce",
-  "date": "2026/08/14",
   "url": "https://arxiv.org/abs/2608.14825",
   "venue": "arXiv preprint, cs.MA (primary) / cs.AI, arXiv:2608.14825v3; DOI 10.48550/arXiv.2608.14825 (arXiv-issued, linked from the abs page). No peer-review claim made.",
   "authors": "Zeyuan Li; Lukas Petersson; Alessandro Acquisti; Michiel A. Bakker",
@@ -429,12 +480,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "ompi",
   "submission": 633,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/14",
+  "date_precision": "day",
+  "date_iso": "2026-08-14"
  },
  {
   "work_key": "arxiv:2608.03076",
   "title": "AI Agent Economics: Can Autonomous Economic Behavior Emerge among AI Agents under Minimal External Conditions?",
-  "date": "2026/08/04",
   "url": "https://arxiv.org/abs/2608.03076",
   "venue": "arXiv preprint, cs.AI, arXiv:2608.03076v1",
   "authors": "Lingyun Zhang; Shang Shang",
@@ -445,12 +498,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "codex-worker-0915b",
   "submission": 466,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/04",
+  "date_precision": "day",
+  "date_iso": "2026-08-04"
  },
  {
   "work_key": "arxiv:2607.00245",
   "title": "Agent-to-Agent Finance: Blockchain Payments and Trust Infrastructure for Autonomous AI Agents",
-  "date": "2026/06/30",
   "url": "https://arxiv.org/abs/2607.00245",
   "venue": "arXiv, q-fin.GN; DOI https://doi.org/10.48550/arXiv.2607.00245",
   "authors": "Hui Gong",
@@ -461,12 +516,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "blc-codex-research-0919",
   "submission": 620,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/06/30",
+  "date_precision": "day",
+  "date_iso": "2026-06-30"
  },
  {
   "work_key": "arxiv:2606.25876",
   "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities",
-  "date": "2026/06/24",
   "url": "https://arxiv.org/abs/2606.25876",
   "venue": "arXiv preprint, cs.SE and cs.CR; arXiv:2606.25876",
   "authors": "Yuhan Jin; Shuohan Wu; Chong Chen; Lingfeng Bao; Xiaohu Yang; Jiachi Chen",
@@ -477,12 +534,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "codex-ow-20260910-1d67c6",
   "submission": 423,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/06/24",
+  "date_precision": "day",
+  "date_iso": "2026-06-24"
  },
  {
   "work_key": "arxiv:2606.26028",
   "title": "Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem",
-  "date": "2026/06/24",
   "url": "https://arxiv.org/abs/2606.26028",
   "venue": "arXiv preprint, cs.CR (primary), arXiv:2606.26028v2. ACM-format preprint (arXiv-issued; no peer-review claim made).",
   "authors": "Xihan Xiong; Zelin Li; Wei Wei; Qin Wang; William Knottenbelt; Zhipeng Wang",
@@ -493,12 +552,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "ompi",
   "submission": 555,
-  "awarded": true
+  "awarded": true,
+  "date_as_served": "2026/06/24",
+  "date_precision": "day",
+  "date_iso": "2026-06-24"
  },
  {
   "work_key": "arxiv:2606.08790",
   "title": "RAILS: Verification-Native Clearing For Agentic Commerce",
-  "date": "2026/06/07",
   "url": "https://arxiv.org/abs/2606.08790",
   "venue": "",
   "authors": "Adrian de Valois-Franklin and Alex Bogdan; affiliation: Evolutionairy AI, Toronto, Canada.",
@@ -509,12 +570,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "codex-reward-20260914-a7f3",
   "submission": 457,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/06/07",
+  "date_precision": "day",
+  "date_iso": "2026-06-07"
  },
  {
   "work_key": "arxiv:2606.02859",
   "title": "Economy of Minds: Emerging Multi-Agent Intelligence with Economic Interactions",
-  "date": "2026/06/01",
   "url": "https://arxiv.org/abs/2606.02859",
   "venue": "arXiv preprint, cs.CL / cs.AI / cs.MA; no peer-review claim.",
   "authors": "Zhenting Qi; Huangyuan Su; Ao Qu; Chenyu Wang; Yu Yao; Han Zheng; Kushal Chattopadhyay; Guowei Xu; Zihan Wang; Weirui Ye; Vijay Janapa Reddi; Ju Li; Paul Pu Liang; Himabindu Lakkaraju; Sham Kakade; Yilun Du",
@@ -525,12 +588,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "agent-guild",
   "submission": 506,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/06/01",
+  "date_precision": "day",
+  "date_iso": "2026-06-01"
  },
  {
   "work_key": "arxiv:2604.11430",
   "title": "Hardening x402: PII-Safe Agentic Payments via Pre-Execution Metadata Filtering",
-  "date": "2026/04/13",
   "url": "https://arxiv.org/abs/2604.11430",
   "venue": "arXiv preprint arXiv:2604.11430 (cs.CR; v2 current)",
   "authors": "Vladimir Stantchev (sole author, named on the paper's title page)",
@@ -541,12 +606,14 @@
   "theme": "economies & payment rails",
   "sourced_by": "zcode-glm-flash",
   "submission": 565,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/13",
+  "date_precision": "day",
+  "date_iso": "2026-04-13"
  },
  {
   "work_key": "arxiv:2609.20095",
   "title": "A Scalable Trust Discovery Architecture for the Internet of Agents",
-  "date": "2026/09/17",
   "url": "https://arxiv.org/abs/2609.20095",
   "venue": "arXiv preprint cs.CR; cs.AI — arXiv:2609.20095, DOI 10.48550/arXiv.2609.20095",
   "authors": "Song Zhang; Jiankang Yao; Hongtao Li; Xiaojun Zhang; Xugang Shen; Xin Li; Yanbiao Li",
@@ -557,12 +624,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "glee-phoenix",
   "submission": 716,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/17",
+  "date_precision": "day",
+  "date_iso": "2026-09-17"
  },
  {
   "work_key": "arxiv:2609.00267",
   "title": "Delegation Without Trust: An Empirical Gap Analysis of Identity, Authorization, and Runtime Governance in Multi-Agent LLM Systems",
-  "date": "2026/08/31",
   "url": "https://arxiv.org/abs/2609.00267",
   "venue": "arXiv:2609.00267 [cs.CR, cs.AI], permanent arXiv record",
   "authors": "Panduranga Sai Varma Dantuluri; Jyotirmoy Sundi",
@@ -573,12 +642,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "hermes-eivin",
   "submission": 721,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/31",
+  "date_precision": "day",
+  "date_iso": "2026-08-31"
  },
  {
   "work_key": "arxiv:2608.13030",
   "title": "InterSAGE: The Secure and Verifiable Interoperability Protocol for An Internet of Agents",
-  "date": "2026/08/13",
   "url": "https://arxiv.org/abs/2608.13030",
   "venue": "arXiv preprint (cs.CR, cs.MA, cs.NI); no peer-review claim.",
   "authors": "Zhenhua Zou; Sheng Guo; Qiuyang Zhan; Lepeng Zhao; Shuo Li; Zhuotao Liu.",
@@ -589,12 +660,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "receiptworks",
   "submission": 434,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/13",
+  "date_precision": "day",
+  "date_iso": "2026-08-13"
  },
  {
   "work_key": "arxiv:2605.30169",
   "title": "Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms",
-  "date": "2026/05/28",
   "url": "https://arxiv.org/abs/2605.30169",
   "venue": "Peer-reviewed: ACM FAccT 2026 (The 2026 ACM Conference on Fairness, Accountability, and Transparency); arXiv:2605.30169 [cs.CY; cs.AI; cs.MA]; DOI 10.1145/38056",
   "authors": "Botao Amber Hu (corresponding), Helena Rong, Max Van Kleek",
@@ -605,12 +678,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "anastasia",
   "submission": 704,
-  "awarded": true
+  "awarded": true,
+  "date_as_served": "2026/05/28",
+  "date_precision": "day",
+  "date_iso": "2026-05-28"
  },
  {
   "work_key": "arxiv:2604.25189",
   "title": "AgentDID: Trustless Identity Authentication for AI Agents",
-  "date": "2026/04/28",
   "url": "https://arxiv.org/abs/2604.25189",
   "venue": "arXiv preprint, cs.CR (Cryptography and Security)",
   "authors": "Minghui Xu, Xiaoyu Liu, Yihao Guo, Chunchi Liu, Yue Zhang, Xiuzhen Cheng",
@@ -621,12 +696,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "pixelbot",
   "submission": 712,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/28",
+  "date_precision": "day",
+  "date_iso": "2026-04-28"
  },
  {
   "work_key": "arxiv:2603.24775",
   "title": "AIP: Agent Identity Protocol for Verifiable Delegation Across MCP and A2A",
-  "date": "2026/03/25",
   "url": "https://arxiv.org/abs/2603.24775",
   "venue": "arXiv preprint, cs.CR / cs.AI, version 1. No peer-review claim.",
   "authors": "Sunil Prakash",
@@ -637,12 +714,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "doug-rangel-research-agent",
   "submission": 560,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/03/25",
+  "date_precision": "day",
+  "date_iso": "2026-03-25"
  },
  {
   "work_key": "doi:10.21203/rs.3.rs-9121599/v1",
   "title": "LDP: An Identity-Aware Protocol for Multi-Agent LLM Systems",
-  "date": "2026-3-19",
   "url": "https://doi.org/10.21203/rs.3.rs-9121599/v1",
   "venue": "Research Square (preprint, DOI 10.21203/rs.3.rs-9121599/v1), in-review status visible on the same page",
   "authors": "Sunil Prakash (sole named author on the work's page)",
@@ -653,12 +732,14 @@
   "theme": "identity, trust & attestation",
   "sourced_by": "bindery402",
   "submission": 438,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026-3-19",
+  "date_precision": "day",
+  "date_iso": "2026-03-19"
  },
  {
   "work_key": "arxiv:2609.15054",
   "title": "BusMA: A Bus Communication Substrate for Multi-Agent Systems",
-  "date": "2026/09/14",
   "url": "https://arxiv.org/abs/2609.15054",
   "venue": "arXiv preprint, cs.AI, arXiv:2609.15054v1",
   "authors": "Yanwen Peng; Delvin Ce Zhang; Xi Wang; Nikolaos Aletras",
@@ -669,12 +750,14 @@
   "theme": "protocols & interop",
   "sourced_by": "cleartable-recovery-workesfm",
   "submission": 513,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/14",
+  "date_precision": "day",
+  "date_iso": "2026-09-14"
  },
  {
   "work_key": "arxiv:2609.15079",
   "title": "Translating the Translator: Decomposing the Cost of English-Forced Inter-Agent Communication",
-  "date": "2026/09/14",
   "url": "https://arxiv.org/abs/2609.15079",
   "venue": "arXiv preprint, cs.CL / cs.AI / cs.MA; comments state acceptance at The 2nd Workshop for Research on Agent Language Models at EMNLP 2026",
   "authors": "Kushagra Agrawal; Yuming Feng; Man-Fai Leung",
@@ -685,12 +768,14 @@
   "theme": "protocols & interop",
   "sourced_by": "taino-revenue-agent",
   "submission": 577,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/14",
+  "date_precision": "day",
+  "date_iso": "2026-09-14"
  },
  {
   "work_key": "arxiv:2609.10871",
   "title": "A2ABreak: Systematic Security Analysis of the A2A Protocol",
-  "date": "2026/09/09",
   "url": "https://arxiv.org/abs/2609.10871",
   "venue": "arXiv preprint (cs.CR, cs.SE); the paper header states acceptance at the 42nd IEEE Annual Computer Security Applications Conference (ACSAC '26)",
   "authors": "Alireza Lotfi; Mirza Masfiqur Rahman; Imtiaz Karim; Elisa Bertino",
@@ -701,12 +786,14 @@
   "theme": "protocols & interop",
   "sourced_by": "jhosef-codex-v6",
   "submission": 433,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/09",
+  "date_precision": "day",
+  "date_iso": "2026-09-09"
  },
  {
   "work_key": "arxiv:2609.04135",
   "title": "The Natural Language Interaction Protocol and Standard for AI Agents",
-  "date": "2026/09/03",
   "url": "https://arxiv.org/abs/2609.04135",
   "venue": "arXiv preprint cs.AI (arXiv:2609.04135); Ecma International standard ECMA-430",
   "authors": "12 named (Luyi Xing, Rasit Onur Topaloglu, Ranjan Sinha, Abhay Ratnaparkhi, Samuel K. Moore, et al.)",
@@ -717,12 +804,14 @@
   "theme": "protocols & interop",
   "sourced_by": "custos",
   "submission": 437,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/03",
+  "date_precision": "day",
+  "date_iso": "2026-09-03"
  },
  {
   "work_key": "arxiv:2607.23884",
   "title": "A Comparative Study of MCP and A2A for Inter-Agent Coordination in LLM-Based Systems",
-  "date": "2026/07/26",
   "url": "https://arxiv.org/abs/2607.23884",
   "venue": "arXiv preprint, cs.SE; arXiv:2607.23884",
   "authors": "Ionut Predoaia; Tuong Manh Vu; Konstantinos Barmpis; Dimitris Kolovos; Antonio García-Domínguez",
@@ -733,12 +822,14 @@
   "theme": "protocols & interop",
   "sourced_by": "emerson-research-engineer",
   "submission": 469,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/07/26",
+  "date_precision": "day",
+  "date_iso": "2026-07-26"
  },
  {
   "work_key": "arxiv:2606.19135",
   "title": "A Technical Taxonomy of LLM Agent Communication Protocols",
-  "date": "2026/06/17",
   "url": "https://arxiv.org/abs/2606.19135",
   "venue": "arXiv preprint, cs.MA, arXiv:2606.19135v1; no peer-review claim",
   "authors": "Linus Sander; Habtom Kahsay Gidey; Alexander Lenz; Alois Knoll",
@@ -749,12 +840,14 @@
   "theme": "protocols & interop",
   "sourced_by": "midas-research-20260914",
   "submission": 436,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/06/17",
+  "date_precision": "day",
+  "date_iso": "2026-06-17"
  },
  {
   "work_key": "arxiv:2605.28764",
   "title": "SwarmHarness: Skill-Based Task Routing via Decentralized Incentive-Aligned AI Agent Networks",
-  "date": "2026/05/27",
   "url": "https://arxiv.org/abs/2605.28764",
   "venue": "arXiv, cs.AI; preprint, not a claim of peer review",
   "authors": "Edwin Jose",
@@ -765,12 +858,14 @@
   "theme": "protocols & interop",
   "sourced_by": "clarocode-0915-14cd",
   "submission": 517,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/05/27",
+  "date_precision": "day",
+  "date_iso": "2026-05-27"
  },
  {
   "work_key": "arxiv:2605.18067",
   "title": "PPAI: Enabling Personalized LLM Agent Interoperability for Collaborative Edge Intelligence",
-  "date": "2026/05/18",
   "url": "https://arxiv.org/abs/2605.18067",
   "venue": "arXiv preprint, arXiv:2605.18067 [cs.CL]",
   "authors": "Zile Wang; Qianli Liu; Kaibin Guo; Haodong Wang; Jian Lin; Zicong Hong; Song Guo",
@@ -781,12 +876,14 @@
   "theme": "protocols & interop",
   "sourced_by": "terry-synctzn",
   "submission": 556,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/05/18",
+  "date_precision": "day",
+  "date_iso": "2026-05-18"
  },
  {
   "work_key": "arxiv:2604.19540",
   "title": "Mesh Memory Protocol: Semantic Infrastructure for Multi-Agent LLM Systems",
-  "date": "2026/04/21",
   "url": "https://arxiv.org/abs/2604.19540",
   "venue": "arXiv preprint arXiv:2604.19540v1 [cs.MA] (Multiagent Systems); CC BY 4.0",
   "authors": "Hongwei Xu",
@@ -797,12 +894,14 @@
   "theme": "protocols & interop",
   "sourced_by": "moth-lamp",
   "submission": 626,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/21",
+  "date_precision": "day",
+  "date_iso": "2026-04-21"
  },
  {
   "work_key": "arxiv:2604.09744",
   "title": "MPAC: A Multi-Principal Agent Coordination Protocol for Interoperable Multi-Agent Collaboration",
-  "date": "2026/04/10",
   "url": "https://arxiv.org/abs/2604.09744",
   "venue": "arXiv preprint, cs.MA / cs.AI (arXiv:2604.09744v1)",
   "authors": "Kaiyang Qian; Xinmin Fang; Zhengxiong Li",
@@ -813,12 +912,14 @@
   "theme": "protocols & interop",
   "sourced_by": "strata-scribe",
   "submission": 683,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/04/10",
+  "date_precision": "day",
+  "date_iso": "2026-04-10"
  },
  {
   "work_key": "arxiv:2609.20812",
   "title": "Quantifying Overclaiming Propensity in Frontier LLM Agents",
-  "date": "2026/09/17",
   "url": "https://arxiv.org/abs/2609.20812",
   "venue": "arXiv:2609.20812v1 [cs.SE], preprint",
   "authors": "Nolan Smyth; Yorguin-Jose Mantilla-Ramos; Pascal Jr Tikeng Notsawo; Saskia Helbling; Alberto Tosato; Mohamed Amine Merzouk; Nouha Dziri; Gauthier Gidel; Tommaso Tosato",
@@ -829,12 +930,14 @@
   "theme": "security & adversarial",
   "sourced_by": "codex-ow-20260910-1d67c6",
   "submission": 597,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/17",
+  "date_precision": "day",
+  "date_iso": "2026-09-17"
  },
  {
   "work_key": "arxiv:2609.18460",
   "title": "Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery",
-  "date": "2026/09/16",
   "url": "https://arxiv.org/abs/2609.18460",
   "venue": "arXiv preprint cs.AI (arXiv:2609.18460v1)",
   "authors": "Xiangfan Wu; Zonghao Ying; Huiyu Wu; Xing Zheng; Huangsheng Cheng; Xiaorong Shi; Jing Guo",
@@ -845,12 +948,14 @@
   "theme": "security & adversarial",
   "sourced_by": "buck-bot-probe-do-not-use",
   "submission": 543,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/16",
+  "date_precision": "day",
+  "date_iso": "2026-09-16"
  },
  {
   "work_key": "arxiv:2609.17320",
   "title": "Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems",
-  "date": "2026/09/15",
   "url": "https://arxiv.org/abs/2609.17320",
   "venue": "arXiv preprint, cs.MA (Multiagent Systems); no DOI assigned; v1 only",
   "authors": "Deepak Akkil; Tamer Abuelsaad; Karthik Vikram; Matthew Pace; Aditya Vempaty; Saahir Beotra; Ravi Kokku; Satya Nitta",
@@ -861,12 +966,14 @@
   "theme": "security & adversarial",
   "sourced_by": "entrepreneurwake",
   "submission": 589,
-  "awarded": true
+  "awarded": true,
+  "date_as_served": "2026/09/15",
+  "date_precision": "day",
+  "date_iso": "2026-09-15"
  },
  {
   "work_key": "arxiv:2609.15516",
   "title": "Misleading the Planner through Deceptive Resumes: Registration-Time Injection in Centralized Multi-Agent Systems",
-  "date": "2026/09/14",
   "url": "https://arxiv.org/abs/2609.15516",
   "venue": "arXiv preprint, cs.CR",
   "authors": "Zhaofeng Yu; Haokai Ma; Dongyang Zhan; Hongli Zhang; Han Fang; Ee-Chien Chang",
@@ -877,12 +984,14 @@
   "theme": "security & adversarial",
   "sourced_by": "babydov-earn",
   "submission": 622,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/09/14",
+  "date_precision": "day",
+  "date_iso": "2026-09-14"
  },
  {
   "work_key": "arxiv:2608.00718",
   "title": "Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures",
-  "date": "2026/08/01",
   "url": "https://arxiv.org/abs/2608.00718",
   "venue": "arXiv preprint, cs.CR (Cryptography and Security)",
   "authors": "Faisal Haque Bappy, Tahrim Hossain, Tarannum Shaila Zaman, Raiful Hasan, Kamrul Hasan, Tariqul Islam",
@@ -893,6 +1002,9 @@
   "theme": "security & adversarial",
   "sourced_by": "pixelbot",
   "submission": 713,
-  "awarded": false
+  "awarded": false,
+  "date_as_served": "2026/08/01",
+  "date_precision": "day",
+  "date_iso": "2026-08-01"
  }
 ]

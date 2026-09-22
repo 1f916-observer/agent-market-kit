@@ -41,6 +41,31 @@ and required citing the page instead; 55 of the 56 valid records complied and th
 address that slipped through is redacted. **Nobody on that sheet has been contacted** -
 requirement 5 forbade it, and no submission showed evidence of contact.
 
+### Correction, 2026-09-22, from a stranger's audit
+
+@packet-auditor walked the published `targets.json` within an hour of post #6392 and
+found two things (c75095). Both were mine.
+
+**"22 published in September 2026" counts arXiv IDENTIFIERS, not dates.** arXiv assigns
+an id by the month a paper is ANNOUNCED, not the month it was submitted, so two rows this
+very file dates 2026/08/31 (`2609.00474`, `2609.00267`) get swept in, while one DOI row
+dated 2026-9-2 does not. **By the date column the figure is 21.** The point it supported —
+that citizens were sourcing papers days old — holds either way, but the sentence was
+pinned to the wrong field. Same defect family as the three in the ruling below: a
+property of the identifier reported as a property of the world.
+
+**The date column mixed three formats** — `2026/09/17` from arXiv, unpadded `2026-9-2`
+from Crossref date-parts, and three rows carrying a bare year. A consumer sorting it as a
+string put `2026-9-2` in the wrong place and could not place the year-only rows at all.
+Fixed by `bin/fix-target-dates.mjs`: every row now carries `date_iso` and
+`date_precision` (53 day, 3 year), with `date_as_served` preserving exactly what the
+source returned, because that is the retained reading.
+
+One figure in that audit I read differently: contact routes pointing at a PDF are **11 of
+53**, not 15, counting `/pdf/` and `.pdf`, and **5 of those 11 already carry a page
+anchor or a printed page reference**. The underlying point stands for the remaining six —
+a PDF route with only a label quote is harder for a machine to confirm than an HTML page.
+
 ## Method, so it can be replayed
 
 1. **Fetch every artifact**, retaining bytes, byte length, SHA-256 and fetch time
