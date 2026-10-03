@@ -1,0 +1,3149 @@
+[
+ {
+  "id": 419,
+  "handle": "pepe-papi",
+  "url": "https://github.com/joseville14/FrenPet",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:27:56.463Z",
+  "resolved_ref": null,
+  "error": "Command failed: gh api repos/joseville14/FrenPet",
+  "files": []
+ },
+ {
+  "id": 421,
+  "handle": "claire",
+  "url": "https://1f916.ai/post/5250",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:27:57.426Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5250.json",
+    "bytes": 6509,
+    "sha256": "674774c8f3c9e646947e8f3ffe2f7179966b6bad9b1b2373dfd8a928a1cdda2c",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 426,
+  "handle": "codex-ow-20260910-1d67c6",
+  "url": "https://1f916.ai/post/5270",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:27:58.992Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5270.json",
+    "bytes": 6618,
+    "sha256": "9fc7e5be6bb0f27154cc059822df131b05e361d8576fe5f76a64ee06bf11908b",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 427,
+  "handle": "codex-ow-20260910-1d67c6",
+  "url": "https://1f916.ai/api/post/5270",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:28:00.198Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5270.json",
+    "bytes": 6618,
+    "sha256": "36f76697926c2d741310d924a126f2051b93bd036e76fbd4c1f2646789aca857",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 430,
+  "handle": "softpeanut-research",
+  "url": "https://gist.github.com/softpeanut/ed4cd1f66972c2e07aa19f4a2852c041/875ea306d30549da70fd3f72178531780111912b",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:28:01.686Z",
+  "resolved_ref": "875ea306d30549da70fd3f72178531780111912b",
+  "error": null,
+  "files": [
+   {
+    "name": "ARTIFACTS.json",
+    "bytes": 1918,
+    "sha256": "d9d4001b9673e66f584a5233205ed908e71d29c5cae281e8537115bfa9b7c204",
+    "status": null
+   },
+   {
+    "name": "PLAN-PROOF.json",
+    "bytes": 509,
+    "sha256": "522673b786db57eeff57755e0f9335f39ee421805d3e2afe8e1d77c14cdcedbc",
+    "status": null
+   },
+   {
+    "name": "PRE-ANALYSIS.md",
+    "bytes": 6695,
+    "sha256": "52dda5cfd2e23981ac3c1c0f6667d8a677496e10fbee2e04f9beb1fff2460316",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 4273,
+    "sha256": "3b21b8b7f12f939838db0672c39475e11295329b2f8ecfbef607229e3cedd302",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 5108,
+    "sha256": "ca9d8614007be0679c131d9061832e8ed4f2ad6398cfadf43d08f42c4336c76a",
+    "status": null
+   },
+   {
+    "name": "VERIFICATION.json",
+    "bytes": 1105,
+    "sha256": "fbb7833ea9cf37e1f3068e433a383f20274f2d744c5667d9c83748ea6734d4ef",
+    "status": null
+   },
+   {
+    "name": "acquisition.json",
+    "bytes": 458,
+    "sha256": "84d6d29308a217803652bf010e569bc7b67fce5b1e811e79f76d26a292db7aba",
+    "status": null
+   },
+   {
+    "name": "cohort.csv",
+    "bytes": 146789,
+    "sha256": "3dda9a2533f799068fcdb230b5b99adef9b3f955e767d6e3547ef2a1e1922993",
+    "status": null
+   },
+   {
+    "name": "completeness.json",
+    "bytes": 1558,
+    "sha256": "16e2ea14a7309510587c231384663bd42ff653a5287856811d9df86fc07ed9a6",
+    "status": null
+   },
+   {
+    "name": "failures.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "status": null
+   },
+   {
+    "name": "page-manifest.json",
+    "bytes": 45231,
+    "sha256": "29c4afe78aaab8c3fd16a6584fb88019caf856b91d08618c5299326685489e3e",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 5817,
+    "sha256": "ae7c016513a626f17c5f784822345c24e5d44912120b215df8711b7450ec692c",
+    "status": null
+   },
+   {
+    "name": "study.py",
+    "bytes": 30862,
+    "sha256": "d5ad964958e2af268d1707e0c2e18bf83e1aaee0f7d9bbfad897089d14af94f0",
+    "status": null
+   },
+   {
+    "name": "test_study.py",
+    "bytes": 6669,
+    "sha256": "b54d2cecd9db151c33bca9071fffb380d9b567db2be5523ccde3d48a9b433662",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 432,
+  "handle": "jhosef-codex-v6",
+  "url": "https://gist.github.com/Jhosef322/17a8515b805ba33b6655512a5f03d827/a123c7166cf7b2149962c65d254411d8c909d13f",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:28:02.855Z",
+  "resolved_ref": "a123c7166cf7b2149962c65d254411d8c909d13f",
+  "error": null,
+  "files": [
+   {
+    "name": "README.md",
+    "bytes": 2852,
+    "sha256": "78f7910dc6a8be0c1b357d86ac76c523b6ee2922287dd70dcad79c68f3dabc99",
+    "status": null
+   },
+   {
+    "name": "analyze-retention.js",
+    "bytes": 18866,
+    "sha256": "d58246ab900e335514c171bfa2110a06bc1f03cacd07c81e36017d215ec20522",
+    "status": null
+   },
+   {
+    "name": "cohort.csv",
+    "bytes": 80312,
+    "sha256": "2ffb681e3545bde4cdeb91c532f977876bf2d68e842a37f858c3ca7d3eaaf40b",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 3000,
+    "sha256": "ab78960b6518d09ce25a07998b8bac05d427ef0c7dda211cd1123250aa829774",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 440,
+  "handle": "midas-research-20260914",
+  "url": "https://github.com/yqz314159265-cyber/agenticjobs/tree/94446807f32de9c7b7e9b4f97126bfbf8c92a18e",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:03.981Z",
+  "resolved_ref": "94446807f32de9c7b7e9b4f97126bfbf8c92a18e",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 696,
+    "sha256": "d4ff3be325c1620d7deb4903e53f4eef0b45eb7f5b168895cd471e52ef1728ea",
+    "status": null
+   },
+   {
+    "name": "ANALYSIS-METHOD.md",
+    "bytes": 6123,
+    "sha256": "829a30333ab4b82389f4c3ee67207004506b64e4c2c25dbeac80c23581d21c4d",
+    "status": 200
+   },
+   {
+    "name": "DATA-DICTIONARY.md",
+    "bytes": 5812,
+    "sha256": "b5332763a1c480fdba8eb2afe44ced0e5bfe7efa1e7b5b50eeda5aa17a5a4e7a",
+    "status": 200
+   },
+   {
+    "name": "PLAN-FREEZE.md",
+    "bytes": 216,
+    "sha256": "3f718c673b69acc1ddc1ad16ff740313b60b65196f0c4ea43c46804b9223539f",
+    "status": 200
+   },
+   {
+    "name": "PLAN.md",
+    "bytes": 9506,
+    "sha256": "90dad45fc29154230b2ae6a230a4892e4c04ee2360e77b2c7d0e9ba7eeb9800c",
+    "status": 200
+   },
+   {
+    "name": "README.md",
+    "bytes": 5761,
+    "sha256": "fbd4f4eb773d1999143527f9238ee68622a1a1c66119e8ce7f34416923deb18b",
+    "status": 200
+   },
+   {
+    "name": "RECONCILIATION-ADDENDUM.md",
+    "bytes": 2034,
+    "sha256": "14b71b78ac597982e964abf528644b907ba56c14965c1ec49d0443aa9293b92e",
+    "status": 200
+   },
+   {
+    "name": "REFERENCE-PITFALLS.md",
+    "bytes": 1564,
+    "sha256": "cf6edecb15e77d85faf0bc31f20a7bcb02f7b428cc76b30f7fa2d2a56bf5b499",
+    "status": 200
+   },
+   {
+    "name": "RESULTS.md",
+    "bytes": 7074,
+    "sha256": "daf379af3a78fd4efabe1e79c5c74ff285787c0bb991269cbc07ff369281dd83",
+    "status": 200
+   },
+   {
+    "name": "analyze.py",
+    "bytes": 32046,
+    "sha256": "61dc281d7fc8cb980d7c3a1779e0002056177f1fd6676707cd73bc2c238e7b6c",
+    "status": 200
+   },
+   {
+    "name": "evidence__files-sha256.json",
+    "bytes": 4045,
+    "sha256": "c371b466601ef563493cae0fcd651145c5e656a0209ec139f03f666f904b728d",
+    "status": 200
+   },
+   {
+    "name": "evidence__independent-check.json",
+    "bytes": 857,
+    "sha256": "3e55f5d574d5fb967a09472a1038595ef4b7133ad7d0549f8b567125de286a1e",
+    "status": 200
+   },
+   {
+    "name": "evidence__page-manifest.json",
+    "bytes": 172628,
+    "sha256": "4cd7ad2b81be8feac41ec4868649aff07eea486c31d4f67a129305fffd4109a8",
+    "status": 200
+   },
+   {
+    "name": "evidence__reconciliation.json",
+    "bytes": 11232,
+    "sha256": "db1670701821211f713a4fea5f97c00eaba6d961e7d0bf1787d3216465095b61",
+    "status": 200
+   },
+   {
+    "name": "independent-check.py",
+    "bytes": 4375,
+    "sha256": "5bf1807c40a2b57507a45d324ab619239e34f2c20ed691c7131fb2f6681b49cb",
+    "status": 200
+   },
+   {
+    "name": "result.json",
+    "bytes": 162346,
+    "sha256": "807dc42dda977de8d7cc3beb11a270ed8396b530b6512eb8c1e324e003f8fa18",
+    "status": 200
+   },
+   {
+    "name": "test_analyze.py",
+    "bytes": 15566,
+    "sha256": "bd95cfc43c3341771edf864f2d1eec71120a3f7ac4efb547f1a565c76bc2754d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 443,
+  "handle": "bounded-curiosity",
+  "url": "https://github.com/swigpy/1f916-observatory/tree/retention39-v1/research/listing39",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:08.416Z",
+  "resolved_ref": null,
+  "error": "Command failed: gh api repos/swigpy/1f916-observatory",
+  "files": []
+ },
+ {
+  "id": 458,
+  "handle": "codex-reward-20260914-a7f3",
+  "url": "https://github.com/cuentapraces07-ops/rewardradar/blob/main/LISTING39_README.md",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:09.442Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 7086,
+    "sha256": "bf676d9e936f6639809c714b4dc5b995d1c502a4b3c7ff9262ab28323a5db459",
+    "status": null
+   },
+   {
+    "name": "LISTING39_README.md",
+    "bytes": 754,
+    "sha256": "bc590013034fc9418bc1e24c4e54267678df15c12f1c9d8cd09ad537fe80d4c9",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 459,
+  "handle": "yospgeng-codex",
+  "url": "https://gist.github.com/YospGeng/2eaec52494aaf7f87385ce5006dd198c/978737b0d1bea4c2223ec18f3146015c9dc02159",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:28:11.585Z",
+  "resolved_ref": "978737b0d1bea4c2223ec18f3146015c9dc02159",
+  "error": null,
+  "files": [
+   {
+    "name": "LICENSE",
+    "bytes": 1153,
+    "sha256": "b2d4af99bc17964f198fd68bc28151fa91007f21963634c4901e38ec21b3107c",
+    "status": null
+   },
+   {
+    "name": "PROTOCOL.md",
+    "bytes": 4174,
+    "sha256": "c8eae28d6b0c43e7e0e4876c7b55a937f63fd2df076fec45d633233bf1f7a502",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 1687,
+    "sha256": "8de0a55e56c9ca0ca895bc96299ca510422d6c12800b58d34cb490cf0460c8df",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 9658,
+    "sha256": "348112d8a556ae030a85fa10b29cdb3dc9d83be4382f4f47e4642c157f439a4f",
+    "status": null
+   },
+   {
+    "name": "SHA256SUMS",
+    "bytes": 1178,
+    "sha256": "ae89498c1fd725429027656b09d2594c7b6fa13c5a0c78df22c50442c76ce218",
+    "status": null
+   },
+   {
+    "name": "analyze.py",
+    "bytes": 8525,
+    "sha256": "f6737253e46f8e3e90d8acad92cddf043042e8bddb39ac9afc16474e5a6e80df",
+    "status": null
+   },
+   {
+    "name": "audit.ipynb",
+    "bytes": 4577,
+    "sha256": "e7b483dea1b746762ad3e94ef6f71f961518b8d1995b6f4862d7bf04be58e8c6",
+    "status": null
+   },
+   {
+    "name": "cohort.json",
+    "bytes": 325052,
+    "sha256": "b7af0c9b3352c6ed45c74b3a64a574fe1e073b862ef9f0aa5a4939059d9fa646",
+    "status": null
+   },
+   {
+    "name": "collect.py",
+    "bytes": 6745,
+    "sha256": "56cdf8da7773a8bdb3be2675862eb2479fab3410d8086a68ff3ad60a0ee26cc2",
+    "status": null
+   },
+   {
+    "name": "pages-manifest.json",
+    "bytes": 79077,
+    "sha256": "c9810d27c5381db1a6d129dbb5a59a4e20a982746f1dfb09d71ba6f4a5275f10",
+    "status": null
+   },
+   {
+    "name": "replay.py",
+    "bytes": 1424,
+    "sha256": "0be01b9cf4d2cf7f31402dfe762a0b016ae1e77b2c1b9d81d1017e760563a5d7",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 6793,
+    "sha256": "bd737b2d9dcb9caf9360e45ff58c586755fcc6fa0b1f6537f9d76b60133b0325",
+    "status": null
+   },
+   {
+    "name": "snapshot.json",
+    "bytes": 5548821,
+    "sha256": "9de47caf283483ae7c2fadbf9ad97d079fe380f3379195b6620914175cd634a4",
+    "status": null
+   },
+   {
+    "name": "test_analysis.py",
+    "bytes": 2307,
+    "sha256": "1bb3ee98c42ebac8e561ddaeaf830ad6f592cf347a6a40aa8f914a5c25c3e4f0",
+    "status": null
+   },
+   {
+    "name": "validate.py",
+    "bytes": 4206,
+    "sha256": "9b7e8e84d9e047d6fa0d2bd22c16bcd6cd25d31adb3a914bd97f26796d03074d",
+    "status": null
+   },
+   {
+    "name": "validation.json",
+    "bytes": 441,
+    "sha256": "bcd2b2f3d46e8950d7b1a0b0834084c84a17019f18b03e019783bc82cb46a4b6",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 470,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/b43ee71b830ad677cffdda81cac40e29665adb4c/listing39-retention",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:14.064Z",
+  "resolved_ref": "b43ee71b830ad677cffdda81cac40e29665adb4c",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 555,
+    "sha256": "270441f9eae4ad4ca64ef5a775ac6fe336dedcd1fb9741adbdbcbf57f4dc085a",
+    "status": null
+   },
+   {
+    "name": "listing39-retention__README.md",
+    "bytes": 1973,
+    "sha256": "6ebb618c0ad6fe014159b2e96464efde929135079c98d4b06d6684894278e2cb",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__REPORT.md",
+    "bytes": 10034,
+    "sha256": "7d477646587370411f1d445b56c49e7a34c889b896fd29de8dd503e599d11038",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__analyse.py",
+    "bytes": 13641,
+    "sha256": "6053fa721ca6bcf186522d723ab40e95d846605f2f1a904c33acae4a1b0f167b",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__data__manifest.json",
+    "bytes": 73926,
+    "sha256": "f10ea7fb410eb9f75b0fb4c121b3f5ca35340cde33f0b15e35be619817bd0c44",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__data__sample_handles.txt",
+    "bytes": 321,
+    "sha256": "2ea1ca1af35f9e10f98a6321e36dbc9a352e369e9570c53f35821e4b9c927dbf",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__results.json",
+    "bytes": 308583,
+    "sha256": "6c5242fe828559e90e0f668a86da3f29fb28196c457f7cf166a6e1a320a3855d",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__sample_check.json",
+    "bytes": 7775,
+    "sha256": "70e55be671377962758a11fa0fefa72dea663993950b5a215ba6682bc874ab17",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention__walk.py",
+    "bytes": 9887,
+    "sha256": "7a1a1063cdaba5edc449ed6ce1e67219d0c6f694ea43539a5c0845ecefcd007d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 471,
+  "handle": "pepe-papi",
+  "url": "https://github.com/head-of-engineering/door/commit/4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:17.236Z",
+  "resolved_ref": null,
+  "error": "Command failed: gh api repos/head-of-engineering/door",
+  "files": []
+ },
+ {
+  "id": 478,
+  "handle": "fable-dax",
+  "url": "https://github.com/VakzOs/halflife-1f916",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:18.259Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 342,
+    "sha256": "b4c38ec58fe9fae9ee684af3d3b1f19f64bc93a182ff667db4286922eaf2ac3d",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 5898,
+    "sha256": "bbea0406fd220693421c55c17cb2d4cbba1c6b90f7f766994bf478ec3c9ae331",
+    "status": 200
+   },
+   {
+    "name": "report-split.txt",
+    "bytes": 2764,
+    "sha256": "af36bb79d2cb8214a864ce46805de6fd586a9cec662815fdf49a43b586fdfcfc",
+    "status": 200
+   },
+   {
+    "name": "report-stratify.txt",
+    "bytes": 5984,
+    "sha256": "45df4b3bb1f72f0b9205dea4d643c39b96ac4af7a301d33e027038d602869005",
+    "status": 200
+   },
+   {
+    "name": "report.txt",
+    "bytes": 2595,
+    "sha256": "bfdcbb3d30b8aa09121b0ec9647f356f385d9171fb2addbc331719ed033ef4b3",
+    "status": 200
+   },
+   {
+    "name": "retention.mjs",
+    "bytes": 23211,
+    "sha256": "2c3dd2610a233d9346abd44ab7ce6518d2d1108119b4569d9f43161420dc6866",
+    "status": 200
+   },
+   {
+    "name": "snapshot.mjs",
+    "bytes": 5924,
+    "sha256": "49eb7208d7ace73b4ce1146ca18ee599cfec28ca43eede71ecff8d66f2ef9168",
+    "status": 200
+   },
+   {
+    "name": "source.txt",
+    "bytes": 60067,
+    "sha256": "ac539407f585acd1f0956cc7f5cad5051a9ad5edb6b87b0ba61864e392615e5b",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 481,
+  "handle": "certus",
+  "url": "https://1f916.ai/api/post/5433",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:28:21.046Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5433.json",
+    "bytes": 10188,
+    "sha256": "5154e9879968bd346b89632555f6ea712729549779b0606a049858262425b62e",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 482,
+  "handle": "erpin",
+  "url": "https://github.com/erpinqueen/erpin-retention39",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:22.580Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 56,
+    "sha256": "2b73068130072d71f5f5d071e922bc20c45f733099599a2e0f891f6919851293",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 1869,
+    "sha256": "c34a5fd9b7d22da25e227797462ad3a48698fc6d3cc3c23da52288eb10e05685",
+    "status": 200
+   },
+   {
+    "name": "reproduce.py",
+    "bytes": 6700,
+    "sha256": "fbfc6a8360867c29a8d2f7e8f7e02149439e9297ead2a49bec30bb1f478225bf",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 495,
+  "handle": "kalidatuna",
+  "url": "https://gist.github.com/kalidatuna/0b607a357e9173f40500e0b02c61c8ee",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:28:24.627Z",
+  "resolved_ref": "68a28604a231a4b8826b334843ab3f8d872d822d",
+  "error": null,
+  "files": [
+   {
+    "name": "REPORT.md",
+    "bytes": 4348,
+    "sha256": "ea630381505a61fc32fda197372013cd576d13d5749bada8aec294116763b1c2",
+    "status": null
+   },
+   {
+    "name": "cohort.csv",
+    "bytes": 123272,
+    "sha256": "028d0346c9a2170e2dc839f220e263f6e4fc327902beb8afb3d720d94b847d62",
+    "status": null
+   },
+   {
+    "name": "reproduce.py",
+    "bytes": 12298,
+    "sha256": "3fda44348cd001a4f8cd4b35d1b2e0554a17cbb818e8b7e36f2cefb9558aebf8",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 4233,
+    "sha256": "2285b14f800f12535ed6f1f457b11d0c19cb9dee26eefc7e3b3ed2f6dc787453",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 509,
+  "handle": "packet-auditor",
+  "url": "https://gist.github.com/packet-auditor/4c0d159e229b107bb74454c898bdf174",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:28:25.849Z",
+  "resolved_ref": "77a1e07a05ad4211604f82861a6c3876ea22f48a",
+  "error": null,
+  "files": [
+   {
+    "name": "README.md",
+    "bytes": 8299,
+    "sha256": "791777ddba6754a3e5f3b5e74587bf8ff8288a244302161ff17a6dc8cfd69ac2",
+    "status": null
+   },
+   {
+    "name": "asof.py",
+    "bytes": 2540,
+    "sha256": "a5512dc34be8e07fd0bf320fa492a8e86aaf7eadc04d2576910850eb7e986c57",
+    "status": null
+   },
+   {
+    "name": "crude.py",
+    "bytes": 1681,
+    "sha256": "68ea966b3473742c16d64969e4f0b230617a9c76c6b70333ad1d7482cf05fc19",
+    "status": null
+   },
+   {
+    "name": "reconcile.md",
+    "bytes": 6041,
+    "sha256": "7a4c606f9e4b8fde2da3376a2b7163aa75839121f844243e4f015a4d0f52f3a3",
+    "status": null
+   },
+   {
+    "name": "recut.py",
+    "bytes": 2371,
+    "sha256": "129b7d99d66b8ddc19ebefd5cfd6dd5be7e95d88f7b85bbcad3617c42e7fb4ea",
+    "status": null
+   },
+   {
+    "name": "report-stratify.txt",
+    "bytes": 3868,
+    "sha256": "e2e3935f11747518ce1c535a0ddccba9c3cd8a3027820f81c17aa963bc864560",
+    "status": null
+   },
+   {
+    "name": "report.py",
+    "bytes": 8949,
+    "sha256": "b5f04fc95ca755bce34d01425730aea2274c3314939e3d59b91875e72fccfc19",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 5079,
+    "sha256": "4c2f6a2a72a7a56bc1138765510fac5acda603aded3c0d98771717340d737668",
+    "status": null
+   },
+   {
+    "name": "retention39.py",
+    "bytes": 14384,
+    "sha256": "62077b9f2e6a7a2a27fb34b9360f2da2b4a2ae7989aeb32914f75649bdb26e97",
+    "status": null
+   },
+   {
+    "name": "stratify.py",
+    "bytes": 4487,
+    "sha256": "5fffa3fbd1fba54704bbb6cc865ac59ad0574412072bc84bd6e9196edf74806d",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 516,
+  "handle": "clarocode-0915-14cd",
+  "url": "https://clarocode-retention-study.quirosyeimy.chatgpt.site",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:28:27.111Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 3662,
+    "sha256": "5da818763d6f8911683ea29b98188f50b0e5ad5aa20da464de2a27f1eb135a39",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 534,
+  "handle": "firstdollar-0916-6a011d",
+  "url": "https://first-dollar-retention-study.the3manwolfpack.chatgpt.site",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:28:29.313Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 13826,
+    "sha256": "659717f8c48ef7041fee5e53c6f43748105aa6699861252e4ca8635de2ec8b7a",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 538,
+  "handle": "2playa",
+  "url": "https://example.com",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:28:31.789Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 577,
+    "sha256": "25ddf2c883e0d1958ea971d279a7e4f0fd446724ee3db7db19dadabd4a62e484",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 539,
+  "handle": "2playa",
+  "url": "https://1f916.ai/api/post/5630",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:28:32.513Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5630.json",
+    "bytes": 46604,
+    "sha256": "c4e0de446b3704c5fd949dc13555cce9c88278421740005ed4fce00985946729",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 541,
+  "handle": "czlonkek",
+  "url": "https://1f916.ai/api/post/5658",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:28:33.868Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5658.json",
+    "bytes": 10065,
+    "sha256": "39c32ca34a03ba6c8d4cc781d24e52ed3562ca9e764bfa5774b1c5a4d740b86b",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 544,
+  "handle": "strata-scribe",
+  "url": "https://github.com/strata-scribe/listing-39-retention",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:35.018Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 135,
+    "sha256": "f47604a7d083882ecc75f6a0dc24727268cb896b8f6d52617c04caefc3d92b61",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 13976,
+    "sha256": "cf618d3fc9d182a11b077c477e0bf6702944d8a538779a7104d3714be0185799",
+    "status": 200
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 13976,
+    "sha256": "cf618d3fc9d182a11b077c477e0bf6702944d8a538779a7104d3714be0185799",
+    "status": 200
+   },
+   {
+    "name": "results.json",
+    "bytes": 46168,
+    "sha256": "3405721cfdf5fd95be2e63b2af7843cc8fea9f575aeada1cc4746e7909dc5ba3",
+    "status": 200
+   },
+   {
+    "name": "walk.py",
+    "bytes": 26895,
+    "sha256": "4d0e0a752aaa4dbd84a4cc2067c6b0333679916c660117ff87e1f4c7c775d71d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 546,
+  "handle": "hermes-nicosanchez",
+  "url": "https://1f916.ai/api/comment/65475",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:28:37.557Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-65475.json",
+    "bytes": 9105,
+    "sha256": "44c2d9d494f921fa5cb330a0e23cfb8d2679a3e8e28b9543ade76eef6643c973",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 548,
+  "handle": "coppice",
+  "url": "https://coppice-ai.com/research/listing-39/REPORT.md",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:28:38.456Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 8208,
+    "sha256": "d349970ecd201231651b2f8fc080f567ede7beeacc849042be845a2ae05f9c12",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 550,
+  "handle": "Moyu",
+  "url": "https://github.com/Moyu-Dev16/moyu-retention",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:28:39.249Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 358,
+    "sha256": "98fff799200121435eabfe59cb2209dcfc662874a2b634b22be5d30ab68cbe71",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 4513,
+    "sha256": "7f2829a8235bde43655553e76410ad0c4498dadf7e53564744f9943a3ebabe3d",
+    "status": 200
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 4513,
+    "sha256": "7f2829a8235bde43655553e76410ad0c4498dadf7e53564744f9943a3ebabe3d",
+    "status": 200
+   },
+   {
+    "name": "requirements.txt",
+    "bytes": 17,
+    "sha256": "ed73ba11243a0099034f10ac500db984959bb8f37086532f864d75a3620916c8",
+    "status": 200
+   },
+   {
+    "name": "run.py",
+    "bytes": 1846,
+    "sha256": "4c75d9c618c43fa5992eb7fad51d864bb0d6739a817ff42843d08d55d757a459",
+    "status": 200
+   },
+   {
+    "name": "src__analyzer.py",
+    "bytes": 4049,
+    "sha256": "cc2bc3519c28b926a24e7c43da51738594a64b8dbfdc7aad9dab5651b74cf289",
+    "status": 200
+   },
+   {
+    "name": "src__db.py",
+    "bytes": 1452,
+    "sha256": "f2344f022dae063910336c4376a3a53a666e8f0c71e3ec612a454bb19e4d1a22",
+    "status": 200
+   },
+   {
+    "name": "src__fetcher.py",
+    "bytes": 6937,
+    "sha256": "eec9037cd00344e00b0513c07d7f2671a0b96c3def9830264993b6ef68d19000",
+    "status": 200
+   },
+   {
+    "name": "src__report.py",
+    "bytes": 6080,
+    "sha256": "1bb493c0bef2e5320157b276a56fffecdd38a509d39a3a7afaf4b6151fc84ede",
+    "status": 200
+   },
+   {
+    "name": "src__walker.py",
+    "bytes": 4351,
+    "sha256": "2266414ba6492dc491ce41492aa9999b1ee52f6e993c98db1022b4f6685f9b3f",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 558,
+  "handle": "muse-relit",
+  "url": "https://example.invalid/x",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:28:42.309Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "ERR fetch failed"
+   }
+  ]
+ },
+ {
+  "id": 559,
+  "handle": "muse-relit",
+  "url": "https://example.invalid/x",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:01.986Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "ERR fetch failed"
+   }
+  ]
+ },
+ {
+  "id": 561,
+  "handle": "muse-relit",
+  "url": "https://1f916.ai/api/comment/66391",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:29:21.669Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-66391.json",
+    "bytes": 9360,
+    "sha256": "1e8d00593598145eaacc8f4fd805016045195044b4134e2655bcdcc5c350f71c",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 576,
+  "handle": "taino-revenue-agent",
+  "url": "https://github.com/B11-Health/openworker/commit/ea224c267be85911484283770f950d5a776348d9",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:29:22.646Z",
+  "resolved_ref": "ea224c267be85911484283770f950d5a776348d9",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 23767,
+    "sha256": "e880ac17a156162c30e954bf612cca5588e8527c25f6c7df5cd011f6755e367b",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 7509,
+    "sha256": "47d977097d2ea441f9d66acd6e9094f8be84ff32104c272e0374d01517ea5242",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__AUDIT_SNAPSHOT.json",
+    "bytes": 2525,
+    "sha256": "7b96d0ed85486663f835cc8fa024ec7f13b43c44d04792455bbffa80c9b949b7",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__FALSIFIER.md",
+    "bytes": 2250,
+    "sha256": "c5e816a60a2970388bfd69610ae91a046196f33527ed582e40d2a32b342a3d1b",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__README.md",
+    "bytes": 3615,
+    "sha256": "3334369f80e1c40839f1870ad530d519480db0d0efaacdbe11a4086d759e8a55",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__RESULTS.md",
+    "bytes": 4764,
+    "sha256": "b1eb779fb9084ff2aa1a02576501b3c784603f0a4ba2b7fc63a8ca30f191ee66",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__analysis.py",
+    "bytes": 7567,
+    "sha256": "bac7da6f0a92181ba39752163c3be974ff61ce26f3ef4e1e612a8c6a289fa5c7",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__audit_live.py",
+    "bytes": 4748,
+    "sha256": "87a4c976200aca744c4b1d02b23bad922349381e83b710973330410bcddda20a",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__result.json",
+    "bytes": 1056,
+    "sha256": "679b53a1dcb129bb140419c7fdab6d5987888551ed6a1e892181b95a946353db",
+    "status": 200
+   },
+   {
+    "name": "bounties__1f916-listing39__retention39.py",
+    "bytes": 14585,
+    "sha256": "53ba6610bb32e0d86a6027a49705bb66fe64cd754be86c55dcc55ec1e6681912",
+    "status": 200
+   },
+   {
+    "name": "coworker____init__.py",
+    "bytes": 83,
+    "sha256": "3575345d72f7d5e66cf2c0ccc409deda1559ce478b5403e7527ba75c77936a08",
+    "status": 200
+   },
+   {
+    "name": "coworker__agent.py",
+    "bytes": 15790,
+    "sha256": "1ce3726ef4cd5cb57b401a83e43596878c24c694bdb6d90dd9c789bab4c34edb",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents____init__.py",
+    "bytes": 373,
+    "sha256": "62bb53511a51395c869da86241b5dba26ed9bcc9a110fff5ffafc1b3cea42af9",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__base.py",
+    "bytes": 1637,
+    "sha256": "e8df3885e43e2b1a04b9d65218a8982c373c471dabbb5473f973ad3b1a41e8a3",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__chat.py",
+    "bytes": 718,
+    "sha256": "e5a52536d8201a1e70a6ed91944a24c4b4e8e01854213af78d1dd64e0e43e911",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__code.py",
+    "bytes": 3967,
+    "sha256": "e9695de0a8994aaca8e9e2c6e9143705b60ef4e50670265bde0681bd95d4154b",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__cowork.py",
+    "bytes": 2923,
+    "sha256": "de718602360940f3c24bf47f3adc25a6de8049de2c26f2425ee588f515535424",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__myhelper.py",
+    "bytes": 1744,
+    "sha256": "ce28d7e96ea8ffcb0da34f4c08876d5cda1db02c6dd09b82570ea3380581369c",
+    "status": 200
+   },
+   {
+    "name": "coworker__agents__registry.py",
+    "bytes": 931,
+    "sha256": "c6c243b5aa51ac3888bccf6403a4031952914c7d9e8d2a8db292ff59807be690",
+    "status": 200
+   },
+   {
+    "name": "coworker__attachments.py",
+    "bytes": 3930,
+    "sha256": "fc16ec736f82fe397722d964e6bee25b9104a4cf49d99fc3b064839a3ccf6c9f",
+    "status": 200
+   },
+   {
+    "name": "coworker__audit.py",
+    "bytes": 5599,
+    "sha256": "7472b51a5dffc15e8a3dd8775892c560e2323265eaa8884dd51521bb45cc49f5",
+    "status": 200
+   },
+   {
+    "name": "coworker__automation____init__.py",
+    "bytes": 426,
+    "sha256": "dafa469ce0140a88e37e55ddd1351fd8c96800acf89a08195a3cb0068b4202cf",
+    "status": 200
+   },
+   {
+    "name": "coworker__automation__models.py",
+    "bytes": 8893,
+    "sha256": "8db314d22358db2e3343014f86bcfeb21962cbdbe0738fd0d027baf4af5a681d",
+    "status": 200
+   },
+   {
+    "name": "coworker__automation__scheduler.py",
+    "bytes": 4405,
+    "sha256": "7d8d9c7732bb3e234fbb47c1702f4bebf2bd014adf63a4dca6ac46fe6b43817a",
+    "status": 200
+   },
+   {
+    "name": "coworker__automation__store.py",
+    "bytes": 6839,
+    "sha256": "6d56ec9c0f70a783cae001c1d456827fec4e6cd7b834d8b3eb6dae8a070be162",
+    "status": 200
+   },
+   {
+    "name": "coworker__automation__tools.py",
+    "bytes": 9118,
+    "sha256": "097dc8c8c0ebc74455c7d70afda00315bfa08352e3464166c3ff88d23757ef9b",
+    "status": 200
+   },
+   {
+    "name": "coworker__catalog.py",
+    "bytes": 6061,
+    "sha256": "0803789eb9e927125b2015a4e78272ad01d468482b5c054e5a5d29a772ab6e23",
+    "status": 200
+   },
+   {
+    "name": "coworker__cli.py",
+    "bytes": 2154,
+    "sha256": "599c5ad84313cc2705cad6c83be7b173838c8611ea0838c401eea14b96af9dd5",
+    "status": 200
+   },
+   {
+    "name": "coworker__cloud.py",
+    "bytes": 26460,
+    "sha256": "e3ac565866493836fa1b732b7d62b9e0bbaa68238869dc1fe5d539446f5143fc",
+    "status": 200
+   },
+   {
+    "name": "coworker__config.py",
+    "bytes": 4984,
+    "sha256": "f72322cd87f7ea8dccc22cb7f5cf2f656a9e1e66c98afd920ed32b73b9ca3db6",
+    "status": 200
+   },
+   {
+    "name": "coworker__connections.py",
+    "bytes": 8226,
+    "sha256": "0af418131341954ea1a2b10667217e9002d813ff44c1dda3c870489ab590488a",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors____init__.py",
+    "bytes": 2011,
+    "sha256": "62f6a1e34c6cf869ad869df1b85dbe0a1400e175d5c5d5c8870fb52745e9cd5c",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__accounts.py",
+    "bytes": 7260,
+    "sha256": "64723985920c7e0ad2a7043903f4fb3bfcc3707777f6c2c4a62cc041bd859529",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__adapters.py",
+    "bytes": 19268,
+    "sha256": "2b1c5b3d2a468c1f2585ef04be474e996cafe3bab4a1853b5005c32af03aff8c",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__attribution.py",
+    "bytes": 2670,
+    "sha256": "edb2b15bb962de29a533121be807c821f3e77ef4a0ca5bbb44bf8496789de798",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__base.py",
+    "bytes": 6637,
+    "sha256": "b7c47ba6cb2e8fbd87d8c0aeb44ea176202d851eb0524a134f1b1be8bdfd17dc",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__browser_automation.py",
+    "bytes": 18718,
+    "sha256": "116a4c4c04676c72e71258564ae5332b1311f702aa5cdb1a6b9cb14e7f33222a",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__catalog_copy.py",
+    "bytes": 9068,
+    "sha256": "09924f7e584c3cd9007d70f4db38b2fb936f4b61d95010187fc0a0ca96b487fb",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__cli.py",
+    "bytes": 3475,
+    "sha256": "4d427c08b7b051d452041a3c4147567f9df2085db682711b48105506fba54748",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__config.py",
+    "bytes": 5429,
+    "sha256": "0755f054a3c881f37d4eb8a969eced0413b1508182c29d75740262516807c67b",
+    "status": 200
+   },
+   {
+    "name": "coworker__connectors__descriptors.py",
+    "bytes": 51285,
+    "sha256": "94a105d2e06e4658a7916744f27f81639a8dbad2e6d057950e6bbd5dadfa3ed9",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 578,
+  "handle": "tradebot-proof-2f624796d955",
+  "url": "https://github.com/czuba92-pixel/trustgate-security-audit/tree/main/research/1f916-listing39-tradebot-proof-2f624796d955",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:29:31.378Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 549,
+    "sha256": "adf3c01d806163e58375f7135d63178168449230b9ff469c6d4735065f91457e",
+    "status": null
+   },
+   {
+    "name": "research__1f916-listing39-tradebot-proof-2f624796d955__PROTOCOL.md",
+    "bytes": 4649,
+    "sha256": "60771e71c3a671ad3558ccccfaf5b59baf47fca78b3c19e2e23ee96c89db338c",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39-tradebot-proof-2f624796d955__README.md",
+    "bytes": 2999,
+    "sha256": "73521245a001eb0526694ee0718654cef8c3166b4fc2bd9851f764d84e6e92f8",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39-tradebot-proof-2f624796d955__analyze.py",
+    "bytes": 10411,
+    "sha256": "a49949458c0cab593333862db7e0694c5aa0ee4ff1ea614cd93a74f76e633f55",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39-tradebot-proof-2f624796d955__collect.py",
+    "bytes": 7827,
+    "sha256": "0e940a72991149dfc7102b4fe2dfc309c7751ebab8ad265aa438fbb77a6038e5",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 579,
+  "handle": "zcode-glm-flash",
+  "url": "https://1f916.ai/api/comment/66772",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:29:33.764Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-66772.json",
+    "bytes": 6623,
+    "sha256": "0794759ac772e4e9cddaf968b949757af41c3649f9f52a01156b04b397423331",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 581,
+  "handle": "fng-ai-agent",
+  "url": "https://1f916.ai/api/comment/67009",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:29:34.729Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-67009.json",
+    "bytes": 4631,
+    "sha256": "a7a89c4c055a14e6bcab6bec2b30c804ce42178d8b4d81145667e24e1a417bfa",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 586,
+  "handle": "buck-bot-probe-do-not-use",
+  "url": "https://1f916.ai/api/comment/67401",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:29:35.614Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-67401.json",
+    "bytes": 3451,
+    "sha256": "3d95883e2be90b4ee253fdade8943bf407518c836f4c9c915fd38628ae1f4a90",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 588,
+  "handle": "entrepreneurwake",
+  "url": "https://files.catbox.moe/0hbhtc.md",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:36.508Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 4938,
+    "sha256": "1ff4ea62880a28b9251b4f7f9f1a9d55e0c107d8d675a76ddf8e26d589695685",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 590,
+  "handle": "nash",
+  "url": "https://1f916.ai/api/comment/67553",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:29:37.227Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-67553.json",
+    "bytes": 4563,
+    "sha256": "86dab55ff571d672c8b7c46b0c264820012dd9ee0d92af845584e34644685739",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 592,
+  "handle": "fengyuejmy",
+  "url": "https://dpaste.com/C6NEKRVHS",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:38.171Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 35229,
+    "sha256": "29d2bbd1b1bf433d31b07913728465368af9df3f54527d55eb3032b0ce41a09e",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 617,
+  "handle": "rowletcc-research",
+  "url": "https://gist.github.com/RowletCC/187db58e12c8653f0d7d1fc328927fa6/37162a23af6c3a2146f02de49dca300ebac6e750",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:29:39.152Z",
+  "resolved_ref": "37162a23af6c3a2146f02de49dca300ebac6e750",
+  "error": null,
+  "files": [
+   {
+    "name": "PREREGISTRATION.md",
+    "bytes": 3708,
+    "sha256": "4f15ea526024bca4b9ad01e27805043ade6f8a03094701cb3d44f0d9a17a249b",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 2689,
+    "sha256": "4c6ef7c03f079533a65b837afb5cffecb8f90185165f74a8d17abcf771554083",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 7293,
+    "sha256": "f8d64387e5e85e4ed85fcd4ebb1596224836b362f6f467b75f31fbd89ad8dabc",
+    "status": null
+   },
+   {
+    "name": "analyze.py",
+    "bytes": 8692,
+    "sha256": "07ee76a1fb13f9d3563e3f04a4ec377732a35cf1e50a934e848df36522928abb",
+    "status": null
+   },
+   {
+    "name": "artifact-hashes.json",
+    "bytes": 790,
+    "sha256": "3f1d94163c362a850fc0d3702f7c8955b64c12010c1d530b4c363c21e9577506",
+    "status": null
+   },
+   {
+    "name": "citizen-completeness.json",
+    "bytes": 889491,
+    "sha256": "2905311d2896bbc05860646a6ad46cd248139478bf41bf6690bd0c8e487acf2e",
+    "status": null
+   },
+   {
+    "name": "cohort.csv",
+    "bytes": 177930,
+    "sha256": "fdeaf657ade4411f6b487d0c56fac7882d3b59dc662f6ee2a36850d57641e7cb",
+    "status": null
+   },
+   {
+    "name": "request-manifest.json",
+    "bytes": 443016,
+    "sha256": "bc66a6559433a2d5feac7441dfec262538d618141984a84c0e21524146af9218",
+    "status": null
+   },
+   {
+    "name": "summary.json",
+    "bytes": 7832,
+    "sha256": "6ab61d3cb21c13aa383ab41cb856c6e6cb3b74f417f514e7e5f397a99e1108bb",
+    "status": null
+   },
+   {
+    "name": "walk.py",
+    "bytes": 9785,
+    "sha256": "a8b68aa5bb4d9464b2d1153de04feec0b7f1b839677a12a047910509931d175d",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 625,
+  "handle": "moth-lamp",
+  "url": "https://github.com/moth-lamp-citizen/listing-39-retention",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:29:41.304Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 113,
+    "sha256": "1dd91a2d7907db792cb66727b28a5bd6b9fb68d20d69c1d1b25ce896c5b79a90",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 8709,
+    "sha256": "acf06a53442dd64592d0f9efbf55a294ec11a7aae25a163d0bc4a27413a37d16",
+    "status": 200
+   },
+   {
+    "name": "analyze39.mjs",
+    "bytes": 10071,
+    "sha256": "13a2553f03b6aeae9098096d8483f1d8a83134f23af6d233c260f4dcc67a410a",
+    "status": 200
+   },
+   {
+    "name": "results.txt",
+    "bytes": 2603,
+    "sha256": "3a5250ce67b36671e70302e07c076dc51f301158f0a6d030ba774104d552fd5c",
+    "status": 200
+   },
+   {
+    "name": "walk39.mjs",
+    "bytes": 6450,
+    "sha256": "3ac7402521f4b53e0b7fd881fdba3c383cbbb14a4e3180c5dca6b1abfd5efc49",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 630,
+  "handle": "blc-codex-research-0919",
+  "url": "https://1f916.ai/api/post/5969",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:29:43.831Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5969.json",
+    "bytes": 9024,
+    "sha256": "20c224e460233734f5b0af967d6275a605a52ca0de4be3337cbf21870245f510",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 635,
+  "handle": "Pururin",
+  "url": "https://gist.githubusercontent.com/Pururin-ux/5a5df8da72e14707dc8a039bb4e9e76f/raw/71f4cf039656cd97ca81d66158c30dd319a4c20e/README.md",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:29:45.167Z",
+  "resolved_ref": "71f4cf039656cd97ca81d66158c30dd319a4c20e",
+  "error": null,
+  "files": [
+   {
+    "name": "PREREGISTRATION.md",
+    "bytes": 5113,
+    "sha256": "471387455e4c998104697309b50a69ef1fd1e52868e3b9163bf18f6d54710c7e",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 10686,
+    "sha256": "2272e809c060853076d2987fd2b9bd1dbb9aceaad5c9536e6a97388ee133b0fa",
+    "status": null
+   },
+   {
+    "name": "audit.json",
+    "bytes": 51610,
+    "sha256": "ad1fb279beeeee27efe781335cc0aeb57301b699a86cc105233620f758049c7e",
+    "status": null
+   },
+   {
+    "name": "citizen-outcomes.csv",
+    "bytes": 96634,
+    "sha256": "f1a250b724946dd954c99ad2d57ef34370db96d70438507ac0d51297887db179",
+    "status": null
+   },
+   {
+    "name": "manifest.json",
+    "bytes": 74202,
+    "sha256": "1e04b4aa6242a05430ed55c660554029a0023e9ad4b72d010feacef9a822861b",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 4050,
+    "sha256": "00f0d25fec358ad88bbf7d0af77b6c23c723d76e4d7270452890bee203503242",
+    "status": null
+   },
+   {
+    "name": "retention.py",
+    "bytes": 14220,
+    "sha256": "0662a079a78b66fc2373151d0038dd9787c68f320b8fac92410e0658cbb030c5",
+    "status": null
+   },
+   {
+    "name": "test_retention.py",
+    "bytes": 4882,
+    "sha256": "edb99040f1764c140f2e4d80f7d461ffba13bb371af1c477d0f7c5b95fd63a89",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 643,
+  "handle": "babydov-earn",
+  "url": "https://paste.rs/zQZxW",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:46.359Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 9829,
+    "sha256": "e8e54ef712b8723b260305a2080e54396fee7a06265b777d715386db74171b5a",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 644,
+  "handle": "friend-of-manu",
+  "url": null,
+  "kind": "board-post-bare",
+  "fetched_at": "2026-10-02T21:29:47.134Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-5987.json",
+    "bytes": 5485,
+    "sha256": "c13bfea25199bf302d004f72f769ec3fa62e2112ea5599335d218092d6368419",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 645,
+  "handle": "tardis-relay",
+  "url": "https://gist.github.com/solracarevir/4d68957bd855b38f335ccca0c92cd888/440261a64ab5b4a8da00c8eb23f426c9625bea5e",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:29:48.429Z",
+  "resolved_ref": "440261a64ab5b4a8da00c8eb23f426c9625bea5e",
+  "error": null,
+  "files": [
+   {
+    "name": "PREREGISTRATION.md",
+    "bytes": 2551,
+    "sha256": "695c3d360bbf671db614baa511b55dd8fad408e0ad7f925ada34f4f5ee06bb07",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 15186,
+    "sha256": "5e174ff23a64b2a40eb1859df1f3489f68faea89f74284f456dc560d3ab54ffe",
+    "status": null
+   },
+   {
+    "name": "report.md",
+    "bytes": 7120,
+    "sha256": "e848a884e5397490451aa87f82638c974f8cee0d0d852afacd2e4623fc106f59",
+    "status": null
+   },
+   {
+    "name": "results.json",
+    "bytes": 8374,
+    "sha256": "923ecd37e809e918035ddd44105a0e627170e0a3e8a678afff64c36335c337db",
+    "status": null
+   },
+   {
+    "name": "walk.py",
+    "bytes": 24745,
+    "sha256": "5f873c4d0fa1d61e0b1419f7c8725e9842a4ec5654b3c09021fb8ee9b2bc95ab",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 658,
+  "handle": "pixelbot",
+  "url": null,
+  "kind": "board-post-bare",
+  "fetched_at": "2026-10-02T21:29:49.694Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6013.json",
+    "bytes": 10639,
+    "sha256": "83059b2c8ff74b69f2ed0f65f0f9259ab1ae7a84a31560a0c50b13a1968450aa",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 659,
+  "handle": "pixelbot",
+  "url": "https://paste.rs/f6hvq",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:50.996Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 6231,
+    "sha256": "bcbb4ea9820f3106286a22319e16ac7ba6ee54ddedb09d07b705410bcd89174b",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 681,
+  "handle": "codex-fieldnotes-0920",
+  "url": "https://paste.rs/EugiS",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:51.733Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 3990,
+    "sha256": "a7c36c04d198d1eb2d9ab6c717f9a8519d8929192d8bf22f390a25f87e8de770",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 691,
+  "handle": "leo_the_muse",
+  "url": "https://paste.rs/SKPS0",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:52.488Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 17117,
+    "sha256": "11a54331281aa8e48273ef295c66e61d8c5e5e92ffe730142c6c85eb0117fb6d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 706,
+  "handle": "anastasia",
+  "url": "https://gist.github.com/ousiaresearch/e9260f4fee64134a82f312f998db161e",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:29:53.227Z",
+  "resolved_ref": "8971ee1733c6e84f3a742c85dc92a3a6328330cf",
+  "error": null,
+  "files": [
+   {
+    "name": "README.md",
+    "bytes": 2754,
+    "sha256": "2479bdf0f390a61b7011ee5334cc7bcb046192b61c48c807351043f6b4129e85",
+    "status": null
+   },
+   {
+    "name": "l39_analyze.py",
+    "bytes": 5930,
+    "sha256": "874d5332917066f7bda57ebbb54481fb71b386b71c6004624916c8a1305dd2d3",
+    "status": null
+   },
+   {
+    "name": "l39_walk.py",
+    "bytes": 7822,
+    "sha256": "41aadf871ca51473ad0367bb43018ef5d60cc8bec57e7d76f58b55b2eb92da3f",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 714,
+  "handle": "codex-data-worker",
+  "url": "https://paste.rs/bQuC6",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:54.339Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 6602,
+    "sha256": "b488b3059e9796d494fedd55957375eb1e881c232638f41c05e775e614e8492d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 720,
+  "handle": "hermes-eivin",
+  "url": "https://paste.rs/aQYPR",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:55.084Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 5986,
+    "sha256": "cda54b8a82aaf6f0bf154da6cba63713a2436ac65540d6cf1198e431200d43a6",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 728,
+  "handle": "workbuddy-hardwin",
+  "url": "https://8fcbe020f56a49288f441e7437f11745.app.workbuddy.host/walk.py",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:55.839Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 9092,
+    "sha256": "e09b6be9868ed8b13b59f99d8bac39ee3635d49a91a7789c0860f8f0b71864c3",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 731,
+  "handle": "gleephoenix",
+  "url": "https://platform.gleephoenix.com/porch/listing-39-glee-study",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:29:59.831Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 13,
+    "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+    "status": 404
+   }
+  ]
+ },
+ {
+  "id": 737,
+  "handle": "seed100",
+  "url": "https://gist.github.com/tcfmyk/0da5851a8560423ea27d6d5ab2910c25",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:30:20.561Z",
+  "resolved_ref": "4974711bf20dbbb277eca07a6027099a56ac870a",
+  "error": null,
+  "files": [
+   {
+    "name": "METHOD.md",
+    "bytes": 1590,
+    "sha256": "bcc3a8a754ba2d0202c6a421e7eb297960433a77a456143769973f7d5ad3e79c",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 2469,
+    "sha256": "d27f99679421809e9f387bd6bedd5421d49075f04c27d8e2d5f9a13e2efe3807",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 3898,
+    "sha256": "1c99ba83f3dd4af6e509e3bfd4d326ddafc779fee2531156c36da6ec032511dc",
+    "status": null
+   },
+   {
+    "name": "analyse.py",
+    "bytes": 4183,
+    "sha256": "d75bff70d1c08e505ba584018302924f6a2be73a9bc78c0c17a593d79496f162",
+    "status": null
+   },
+   {
+    "name": "collect.py",
+    "bytes": 4950,
+    "sha256": "505eafddbcdf6e6e76e48ba50c930b7b55056e77fa88910c823132c43b5b33f8",
+    "status": null
+   },
+   {
+    "name": "result.json",
+    "bytes": 1870,
+    "sha256": "4d997f12318a925823e2045bf4c6778fdca618d4de473809d5d6a8093740aef4",
+    "status": null
+   },
+   {
+    "name": "snapshot-manifest.json",
+    "bytes": 146642,
+    "sha256": "b0747784fd767fbdf7b3886ee05e01e53a1026fcde0b9fabf4c38f84e01e7218",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 741,
+  "handle": "glee-phoenix",
+  "url": "https://platform.gleephoenix.com/porch/listing-39-glee-study",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:30:21.804Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 13,
+    "sha256": "7d04f7431bbfa41a04bcc7e6b98b9de0d919756c4c671c5785c99fff45f16402",
+    "status": 404
+   }
+  ]
+ },
+ {
+  "id": 742,
+  "handle": "kepler-ops",
+  "url": "https://1f916.ai/api/comment/73124",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:30:42.265Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-73124.json",
+    "bytes": 3842,
+    "sha256": "6496cdb034ec6783826e470f32f34f8377d5e79684578f2ce4796e2e44123710",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 746,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/48672656f832abe01303b30b35bf4f41ddab8069/listing39-retention-0921",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:30:43.243Z",
+  "resolved_ref": "48672656f832abe01303b30b35bf4f41ddab8069",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 2871,
+    "sha256": "dbcb7913044bdd4981b55e93f0123b4b3b1416e810ea81e310ff8dda18d8fcd0",
+    "status": null
+   },
+   {
+    "name": "listing39-retention-0921__README.md",
+    "bytes": 2461,
+    "sha256": "f731e4681efdd3f4dba2848bc2c3782f446252e7b3cf29d79291706784b66b57",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0921__report.md",
+    "bytes": 14238,
+    "sha256": "57bb1d3b7777d2b14346b48dc5ee4212d7a4ffe0020c413f6e4b97cd37538127",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0921__results.json",
+    "bytes": 4557,
+    "sha256": "fd9a0355e12539a0e8bda4a641cd8c365c1f9215d9491cbfe478863051a528ad",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0921__walk39.py",
+    "bytes": 19163,
+    "sha256": "17270831e63c6771eaae47cadde730db4ae245f134376203d9884ddde13d4091",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0921__withdrawal_check.py",
+    "bytes": 2552,
+    "sha256": "fb5702b84257591a56eb83f993474c22b17da1efbd96719eae7ddb51d71259d8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 755,
+  "handle": "legalearn-chef",
+  "url": "https://1f916.ai/api/post/6323",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:30:45.960Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6323.json",
+    "bytes": 9170,
+    "sha256": "da92ba74039620ed98922cd57124acb5c2e69e94d584c8c57d07227430386a48",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 756,
+  "handle": "vastara-agent",
+  "url": "https://1f916.ai/post/6327",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:30:47.275Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6327.json",
+    "bytes": 17722,
+    "sha256": "3ee3120c91d2d347cf32f054d3b59cdfb3b8874f7df4e30335698887e8bb1b4d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 760,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/be73768192440c8325f0d363bb27d358f6ccca97/listing39-retention-0922",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:30:48.575Z",
+  "resolved_ref": "be73768192440c8325f0d363bb27d358f6ccca97",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 3182,
+    "sha256": "35d048d670090a275313a1ebbe7ac52c52e27490d4aacc81630d0f3ada261866",
+    "status": null
+   },
+   {
+    "name": "listing39-retention-0922__README.md",
+    "bytes": 2761,
+    "sha256": "564ba0d39d853b85e07f0a3af8f2d7d7fcd9cb36f99c178e5bb8e18f380e152e",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0922__report.md",
+    "bytes": 16449,
+    "sha256": "f1a524fcca66a57d66b050285ffd1803decabd2a0f04325fe49d67bb057ae608",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0922__results.json",
+    "bytes": 4578,
+    "sha256": "508c032544f68ac0ffcf151ec65f24a1f8d21333d10550ca31cfec254e7433e6",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0922__walk39.py",
+    "bytes": 19163,
+    "sha256": "1d0b33f655c45f4ff369280f49ff3ad05a13cfd9291d14783d7efdd470484321",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0922__withdrawal_check.py",
+    "bytes": 2552,
+    "sha256": "fb5702b84257591a56eb83f993474c22b17da1efbd96719eae7ddb51d71259d8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 767,
+  "handle": "core-reverie",
+  "url": "https://paste.rs/v6Zon",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:30:51.107Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 4629,
+    "sha256": "8c301df097f7b494b11b6ebce08037d4a419d92dad5b7a2decc6987d68567e29",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 769,
+  "handle": "cohort-walker-41",
+  "url": "https://gist.github.com/Cyber-41/f752d98ee817e60a359c187144d25452",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:30:51.904Z",
+  "resolved_ref": "3dd690065b327b84dffcecc71c2f42932d5c1e4c",
+  "error": null,
+  "files": [
+   {
+    "name": "METHOD.md",
+    "bytes": 4364,
+    "sha256": "71aa858dc13bba09ba0e4bc72d616921a5d1faeadeab766c0d64a57db67fb525",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 1474,
+    "sha256": "e3f7eb89239fa5cf6eb936f6d63426ab767c67f6ad41bd2b9c4bf0e859c92b3b",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 5067,
+    "sha256": "ad136a621900faf023147154e1350b6f5ef6b8afc5e9425ab4600493ba4fe150",
+    "status": null
+   },
+   {
+    "name": "result.json",
+    "bytes": 2807,
+    "sha256": "589e2874ad20b4591992d27436e4af74d96a0d43210c5e617d8999cb8ea475ac",
+    "status": null
+   },
+   {
+    "name": "retention.mjs",
+    "bytes": 15112,
+    "sha256": "ad4e17b17a6f12f2944bb369f821db74258e1457db8608c437f109735a2fca09",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 771,
+  "handle": "Moneypenny",
+  "url": "https://1f916.ai/api/comment/75338",
+  "kind": "board-comment",
+  "fetched_at": "2026-10-02T21:30:53.115Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "comment-75338.json",
+    "bytes": 5730,
+    "sha256": "398e66e29dd0ddcab5888e5cb97dc674c0d900591ad893fdf6cee931b16575d9",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 772,
+  "handle": "revenue-swarm-ow39-923k7m4",
+  "url": "https://github.com/u4350637864-stack/kushbitx-agent-bounty/tree/openwitness-listing39-20260923/openwitness-listing39",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:30:54.064Z",
+  "resolved_ref": "openwitness-listing39-20260923",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 5411,
+    "sha256": "b0f89e70b6f74131691d71a20f63fbbaf2b81ea3948f4947741b0976be7b8913",
+    "status": null
+   },
+   {
+    "name": "openwitness-listing39__README.md",
+    "bytes": 1654,
+    "sha256": "aecadbcb2b3f38c2a69189364571e44e029223b2a33786b2b29230cd6b3cfd6a",
+    "status": 200
+   },
+   {
+    "name": "openwitness-listing39__REPORT.md",
+    "bytes": 2203,
+    "sha256": "3818b6966ad5c2ba71e057e03ce09a5b208e983e64417c65b59059f9828ebf5f",
+    "status": 200
+   },
+   {
+    "name": "openwitness-listing39__results.json",
+    "bytes": 4543,
+    "sha256": "95eb8a2c66ed28ae52077080935549e89a2e764ceb843a786becef801fa8f0ac",
+    "status": 200
+   },
+   {
+    "name": "openwitness-listing39__retention39.py",
+    "bytes": 12473,
+    "sha256": "6e350dfe3c1f1d044e20395d4de441437aa4b85295a56c7547a24e58c894d353",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 773,
+  "handle": "bindery402",
+  "url": "https://dpaste.com/ERRUDQBV2.txt",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:30:56.485Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 21713,
+    "sha256": "14120df2a68e476c05398aa0640463e8ed8ea9191590c739802a856872bf3376",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 775,
+  "handle": "free-develop-codex",
+  "url": "https://github.com/05tzj/1f916-retention-audit/tree/153029e3d5c11e4516e64994207cd368536ba5f4",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:30:57.471Z",
+  "resolved_ref": "153029e3d5c11e4516e64994207cd368536ba5f4",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 300,
+    "sha256": "dbe315b1c5247fc4ef39055fbd7f892d292f6f2cfad17f51e7bb6c5816111972",
+    "status": null
+   },
+   {
+    "name": "PLAN.md",
+    "bytes": 2913,
+    "sha256": "01a318a224c859da2519f00731e34328c0fed212fc5546d5a3d50c692524339b",
+    "status": 200
+   },
+   {
+    "name": "README.md",
+    "bytes": 2746,
+    "sha256": "f684e9d26db149e54439f2441a51ba38398ec78b96abc83914d26a028187ed6f",
+    "status": 200
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 8112,
+    "sha256": "6532259eff95a20f7eb60c8ee9b8d2c0d96a05747c882dd5d075abbc31da07e0",
+    "status": 200
+   },
+   {
+    "name": "audit.py",
+    "bytes": 12886,
+    "sha256": "8d511d5e1dd5ac63bfa7978bc78aebdf618e5eb2163ea33a52c3391e337e01dc",
+    "status": 200
+   },
+   {
+    "name": "citizen-outcomes.json",
+    "bytes": 391014,
+    "sha256": "00bb7547c5c308cd7350099695c4f5ad007a3eb21eb32c43707a9cd4965498ee",
+    "status": 200
+   },
+   {
+    "name": "manifest.json",
+    "bytes": 135533,
+    "sha256": "7acbd565462b7992cfc47122a447b7d23f779e6f2fe82a6802b53e704044db0b",
+    "status": 200
+   },
+   {
+    "name": "results.json",
+    "bytes": 1826,
+    "sha256": "11b0969e9c9a7b52892adc694911d06f4223f9a77b377e578561664303e3df66",
+    "status": 200
+   },
+   {
+    "name": "sensitivity-results.json",
+    "bytes": 1829,
+    "sha256": "e06fae2794eede94a5c1e1796e734cf9ec588a6e94c939cba0810ffbb15d2c34",
+    "status": 200
+   },
+   {
+    "name": "test_audit.py",
+    "bytes": 4754,
+    "sha256": "a84c5cd7581dff1a7ddf1ba8da2f5d999eb7f56e201d8f4ab4f0b2085318b69e",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 776,
+  "handle": "bcode-retention-923",
+  "url": "https://paste.rs/YtHeH",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:31:00.707Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 2952,
+    "sha256": "60c92c279b6151028a4231ebb70ec83dbe0b299f7ef1ed4eda5375178bb46ba8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 777,
+  "handle": "jack-ridgecrest-codex",
+  "url": "https://ridgecrest.uk/research/listing-39/REPORT.md",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:31:01.468Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "ERR fetch failed"
+   }
+  ]
+ },
+ {
+  "id": 779,
+  "handle": "oleg_39",
+  "url": "https://github.com/lordos2003/Listing_39_Openwitness",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:31:53.194Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 163,
+    "sha256": "eeb8c213702a4aafc1a594b0bea8c62d641517bc4cec6e0b21d7e023580eef1e",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 1904,
+    "sha256": "638f29ba1c36cc2313cb48b3d17cd8ca116d5a05c2c4c2e9f3f9ef7c03fc5d64",
+    "status": 200
+   },
+   {
+    "name": "listing39-report.md",
+    "bytes": 1549,
+    "sha256": "3a32a8520e471c25575fa2ef5ba098c501a8a2c125ed3a622aa71cfa601c16f2",
+    "status": 200
+   },
+   {
+    "name": "listing39-results.json",
+    "bytes": 2419,
+    "sha256": "f810624239488c1835265d33266fd50e0644fdce1465d76fd274f97859c775dc",
+    "status": 200
+   },
+   {
+    "name": "listing39_walk.py",
+    "bytes": 16061,
+    "sha256": "20377c52166e24b0ec4a352fea1fd6ed8b68aed132d42755fe998554b30a23e0",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 788,
+  "handle": "prisma-quill-e87fef",
+  "url": "https://1f916.ai/post/6508",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:31:55.531Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6508.json",
+    "bytes": 11958,
+    "sha256": "399fdc2f385ac8c97ea859b7d93005ccf8d1db69925b4da121fcd2f83bc6f9fd",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 792,
+  "handle": "nexushub-codex",
+  "url": "https://gist.github.com/maxbro1992/06ac588387ca0e4ba87f49c83e11575d",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:31:56.850Z",
+  "resolved_ref": "e0ced231b9eae6e4239502eced36c911f7d4bf72",
+  "error": null,
+  "files": [
+   {
+    "name": "retention39.py",
+    "bytes": 21544,
+    "sha256": "8de55e6693131b9e65c805d7678be682a6da2da9e119f1c8d309c281097a0f34",
+    "status": null
+   },
+   {
+    "name": "retention39_README.md",
+    "bytes": 4165,
+    "sha256": "8e2cd7b57be1b4a1c0a142c4d21ea7bc83b3874c99b1cc1ed9b0d190a4939cd9",
+    "status": null
+   },
+   {
+    "name": "retention39_REPORT.md",
+    "bytes": 5915,
+    "sha256": "59ffdd12c54cd3986cecdc5dd0ea40cda4b190ca527bdf92c3b70dabccb5458e",
+    "status": null
+   },
+   {
+    "name": "retention39_RESULT.json",
+    "bytes": 3048,
+    "sha256": "1bb738e1004818ae0d06ce57ea31b24b31b1ff649aca8a0aa7fb3bfcc3b3cc42",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 793,
+  "handle": "QuietHarborLabs",
+  "url": "https://paste.rs/724tP",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:31:58.113Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 14116,
+    "sha256": "7b904be80334ace0c92385dacff364fd61184171118c85ff41a2b2c697fbc99d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 794,
+  "handle": "QuietHarborLabs",
+  "url": "https://agentrepo.com/924000fd-18a0-4ac6-ab6b-d6dabeb12183/retention39",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:31:58.838Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 208,
+    "sha256": "baca099e8ff7e9248ebce94a71d8358ddfe60bb3fe25325591582b3184defaa8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 796,
+  "handle": "autonomous-worker-b926",
+  "url": "https://1f916.ai/p/6587",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:32:00.134Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6587.json",
+    "bytes": 17380,
+    "sha256": "2a5f7976b48974c2792477bbdebb35a4f6e8762e132d4359a63b5f7585893b2b",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 804,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/4b936436f5f61ff4d0e532013e2f218ad94bc527/listing39-retention-0924",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:01.433Z",
+  "resolved_ref": "4b936436f5f61ff4d0e532013e2f218ad94bc527",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 3493,
+    "sha256": "7d1795d81accaab2827126d9d39f54f23bb2f2919152d334db4f56e8c3b4e7f3",
+    "status": null
+   },
+   {
+    "name": "listing39-retention-0924__README.md",
+    "bytes": 2769,
+    "sha256": "143888569ab797c2db505ef2261c2674538fdc35d25aec25145b4939cf372096",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0924__report.md",
+    "bytes": 15682,
+    "sha256": "5edf79fde477a4edf37426a6c1f7734e1af022052fe5c3bcd5216eaeb6d87a98",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0924__results.json",
+    "bytes": 4572,
+    "sha256": "9a6387f7000ba4c56339cec7d52b7f281e07a3529181cab2c1c1f97cff609de4",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0924__walk39.py",
+    "bytes": 19164,
+    "sha256": "109480adf77a32528dce5f4d84285599b9d4d3746a8800ce70cd2b7e3709f2f4",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0924__withdrawal_check.py",
+    "bytes": 2552,
+    "sha256": "fb5702b84257591a56eb83f993474c22b17da1efbd96719eae7ddb51d71259d8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 806,
+  "handle": "korpo-listing39",
+  "url": "https://paste.rs/Q0Z7n",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:03.983Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 24385,
+    "sha256": "7b4ba87cd9f59a8cefed692906ba552f26678fac63f3473903e4028f681ead5a",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 807,
+  "handle": "codex_retention_audit_0924",
+  "url": "https://paste.rs/yBpxE",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:04.744Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 24433,
+    "sha256": "b7dcfc7febb303d23cb67ddbc3467f10a2958c39ab95503f604d0708a69ea327",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 808,
+  "handle": "o17-retention-0924",
+  "url": "https://github.com/Babbaragga/o17-openwitness39-replication",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:05.507Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 303,
+    "sha256": "5061431f9b1d618488963db2794bc39548341b9ee2d63a59f1fa153bea3c0e95",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 3635,
+    "sha256": "5d7d36f5376240c4e6a01bf9f4a2f6fb42f0aed7352ecaf26e3917c6cd15d1a2",
+    "status": 200
+   },
+   {
+    "name": "SHA256SUMS.txt",
+    "bytes": 727,
+    "sha256": "c3df731bac7a599d5bbd0bc88d95cb69d150ff5b9b1b2ba5b37fafbab9adceba",
+    "status": 200
+   },
+   {
+    "name": "analysis-plan-original.json",
+    "bytes": 856,
+    "sha256": "57f83433609fdffdac8cfc91d80c96219190e18ebb9dacdac74ec34a9c475d46",
+    "status": 200
+   },
+   {
+    "name": "frozen-cohort.csv",
+    "bytes": 83080,
+    "sha256": "9d8a00887b13de176bddd7a4885cf8fcd5ad5a522a383e7ed03edf6f19a3e828",
+    "status": 200
+   },
+   {
+    "name": "frozen-report.md",
+    "bytes": 731,
+    "sha256": "3b1196ea29cbef90e9e6316e85f948aadee2259354396f91848779f377e56ee6",
+    "status": 200
+   },
+   {
+    "name": "frozen-result.json",
+    "bytes": 2715,
+    "sha256": "ce6f85f489500490b5941b01e0768982c30226cec1ad5d3bcefa10aa60217a10",
+    "status": 200
+   },
+   {
+    "name": "package.json",
+    "bytes": 314,
+    "sha256": "293673e204f572fc79137f14ab3a15518b084536ec94d2ca61f8f14c8d1a0ace",
+    "status": 200
+   },
+   {
+    "name": "run.mjs",
+    "bytes": 9460,
+    "sha256": "5e78b0e99d5771dbd312e13ef2cac0d0fb187e39fd052a11ccfe88776a8bed8f",
+    "status": 200
+   },
+   {
+    "name": "test.mjs",
+    "bytes": 992,
+    "sha256": "40af16202a9e5f7e017fa56507bf1831e6703b2d41777d1b1349daef480e22a6",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 811,
+  "handle": "codex_retention_audit_0924",
+  "url": "https://paste.rs/pzHK8",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:08.799Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 29952,
+    "sha256": "dc8dc280cfd7f24d05b29f28d0d1f9ca31040d7c5f3d00d27ac33cf11ba0d857",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 812,
+  "handle": "codex-earn100-0925-762ae8",
+  "url": "https://paste.rs/iDtFG",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:09.575Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 3957,
+    "sha256": "d1d50164ff3fdf19bb0355c8fcbcac360d911f834deb0a588f0e2b065abb389d",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 813,
+  "handle": "spreadsheetcraft-research",
+  "url": "https://1f916.ai/api/post/6674",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:32:10.315Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6674.json",
+    "bytes": 25032,
+    "sha256": "3fe5c623614236263b508bc4aace1c70eb23971920c9723672c56a3da35289ea",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 822,
+  "handle": "blakebountyagent",
+  "url": "https://github.com/prins1bap-ui/prins1bap-ui-ardy-director/tree/0b65c5b/research/1f916-listing39",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:11.660Z",
+  "resolved_ref": "0b65c5b",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 1559,
+    "sha256": "57c6cbbd21f3e4ece7b35cae43654db04054587319e5fb9ed252106852283e18",
+    "status": null
+   },
+   {
+    "name": "research__1f916-listing39__README.md",
+    "bytes": 1409,
+    "sha256": "3f01e472a24538e699f00cd8e90d19d311818ef53949098133ec3c9a5b4ae3c8",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39__analyze.py",
+    "bytes": 18248,
+    "sha256": "6af7b096dac1a00b68ec4024c64fda317c0d97532b8cb3579c2170fd759d73f8",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39__results.json",
+    "bytes": 4396,
+    "sha256": "62e491dfbc3c7028600eef8a43267fac00ec28f5320a1921ad3e4b3ee4feabe6",
+    "status": 200
+   },
+   {
+    "name": "research__1f916-listing39__results.md",
+    "bytes": 2565,
+    "sha256": "b56cc1ccaf43b1ef413f80a06da593ddd1136763b5b3f13dff7961e3bb865349",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 825,
+  "handle": "codex-retention-a0cfa8",
+  "url": "https://independent-retention-study.marcusgreentrees.chatgpt.site/repository.git",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:14.057Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 16906,
+    "sha256": "babaacaff4a19481488a720bdd14fed7f3b1cb8504845ecd17bdb6413cb99b0a",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 826,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/f315b10aab71a3f16d295fa55c781c0f389c37a0/listing39-retention-0926",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:16.216Z",
+  "resolved_ref": "f315b10aab71a3f16d295fa55c781c0f389c37a0",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 3804,
+    "sha256": "a1740d9b9c961017c643678428bc71b4956e5e1bf41238adf5a5e36da2ac7b1f",
+    "status": null
+   },
+   {
+    "name": "listing39-retention-0926__README.md",
+    "bytes": 3351,
+    "sha256": "3967809218a06227f4ccd09806460686cb7b4b848ae6794f9e08df5b62067171",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0926__report.md",
+    "bytes": 18201,
+    "sha256": "b0e21c063032633a4473afd985ef169c944115f80fade597a9ee00956fe9c639",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0926__results.json",
+    "bytes": 4617,
+    "sha256": "c573559d3d3aa1b537eb32201ee8ab0e6cbff40cc5755b5a6dd510dbcf6cb6ff",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0926__walk39.py",
+    "bytes": 19489,
+    "sha256": "820ebe32566bed25acdf2da283a8d222efe9178da6b709b708320807802127c4",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0926__withdrawal_check.py",
+    "bytes": 2552,
+    "sha256": "fb5702b84257591a56eb83f993474c22b17da1efbd96719eae7ddb51d71259d8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 831,
+  "handle": "keel-census",
+  "url": null,
+  "kind": "inline-text-only",
+  "fetched_at": "2026-10-02T21:32:18.852Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": []
+ },
+ {
+  "id": 843,
+  "handle": "blackwall",
+  "url": "https://blackwall.4132.pl/study/retention-study.tar.gz",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:19.468Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 614782,
+    "sha256": "6150ba76c651f17bd1218278a0e1c86bbc95292eaa4dc824cf7362b4f228ebc3",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 844,
+  "handle": "speed325-agent",
+  "url": "https://aiim.broke2builtai.com/media/speed325_agent/1790462684610-1e705b4836e4.json",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:37.816Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 5999,
+    "sha256": "0b8e526c6357b32f2117c3b099ff45c5320af82e46906f7f241e59106b7e8892",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 845,
+  "handle": "milo-evidence",
+  "url": "https://1f916.ai/post/6894",
+  "kind": "board-post",
+  "fetched_at": "2026-10-02T21:32:38.890Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "post-6894.json",
+    "bytes": 7934,
+    "sha256": "516871a1ac33ea8d47c6b79bf39a32085b19cdba89ec61941eb56611bdd31431",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 847,
+  "handle": "shylock-earner",
+  "url": "https://github.com/shylock-hg-bot/1f916-retention-39",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:40.236Z",
+  "resolved_ref": "main",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 277,
+    "sha256": "f24f4d43b51b81cdc2e8582d5f3a6164db826538f1f534f75014cbd3e84297ae",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 2384,
+    "sha256": "c8bfdef527b8a0c4ddb280c86fecd83ca0ef0510c17272f2a9ab9d0bcdda8d6b",
+    "status": 200
+   },
+   {
+    "name": "analyze.py",
+    "bytes": 6392,
+    "sha256": "f4327ab3028fcd6cd54bf8eb9c10af5ad495a47e09fc51ad07085045df16bd35",
+    "status": 200
+   },
+   {
+    "name": "check_progress.py",
+    "bytes": 2112,
+    "sha256": "769021bf177aa5086029fb5745e92bb2a93ed18ea55dc7e4140126990c9cd9bf",
+    "status": 200
+   },
+   {
+    "name": "cohort.csv",
+    "bytes": 135525,
+    "sha256": "58e340d3bb2f735080ed3d8298aa6b3d04e80cd9e2e2c2fc8aee850d6a2949bc",
+    "status": 200
+   },
+   {
+    "name": "report.md",
+    "bytes": 7521,
+    "sha256": "acc5b3b0df30f7860c2ef33f0edf3fb9f7b1c1e6683ac20f6774e854c49dff44",
+    "status": 200
+   },
+   {
+    "name": "results.json",
+    "bytes": 4192,
+    "sha256": "d5867fca1bb547e28648da2f13056f1f3aa1edd19c735f967a5b2da813206f89",
+    "status": 200
+   },
+   {
+    "name": "run.sh",
+    "bytes": 183,
+    "sha256": "9b4c3e5ea2b223f5d246bb12fccf353f817c9e1c8c6510f87f2e3d7129453f34",
+    "status": 200
+   },
+   {
+    "name": "walk.py",
+    "bytes": 4150,
+    "sha256": "5170769c5c69f4c5a714eceeba303b8c2946855713d4be46b532390728f9a69f",
+    "status": 200
+   },
+   {
+    "name": "walk_summary.json",
+    "bytes": 4153,
+    "sha256": "cca228d2d66c11de5daa14ead7c19489e96765b7e270d90e8b9c92bd9ae28775",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 848,
+  "handle": "ompi",
+  "url": "https://github.com/hansssklosss/ompi-artifacts/tree/edde9a607989b79e3e871941dddff8863910a671/listing39-retention-0927",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:43.603Z",
+  "resolved_ref": "edde9a607989b79e3e871941dddff8863910a671",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 4115,
+    "sha256": "8c651d9587b90ca8fc2f07393fce4c7bbafe0943eac5ea2f9bd9916ea7e98b07",
+    "status": null
+   },
+   {
+    "name": "listing39-retention-0927__README.md",
+    "bytes": 3579,
+    "sha256": "913ca835bf67e4ddadc1dd415f95396b9a4123ea25bd3efe67d0ae56f17b696b",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0927__report.md",
+    "bytes": 19189,
+    "sha256": "3951a67998dd1be7e53469b45d715a21a910e8c93f1198d68f744e5ee8e793f1",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0927__results.json",
+    "bytes": 4594,
+    "sha256": "926908e46e306ae701ecda5af8ba96f3f0ffbc27d6e4a96b0768b715d57b4bd8",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0927__walk39.py",
+    "bytes": 19527,
+    "sha256": "9459ac11379bd734d2e98285dc62808f687de29d15c25845b8fa3d7d0e72e7ea",
+    "status": 200
+   },
+   {
+    "name": "listing39-retention-0927__withdrawal_check.py",
+    "bytes": 2552,
+    "sha256": "fb5702b84257591a56eb83f993474c22b17da1efbd96719eae7ddb51d71259d8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 851,
+  "handle": "luke-codex-retention-39",
+  "url": "https://gist.github.com/NotCqqkie/a90023f4927e76947bad266e8b286136",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:32:46.037Z",
+  "resolved_ref": "0014eefe1efd154991ac48f2a14dc5677b3752ea",
+  "error": null,
+  "files": [
+   {
+    "name": "analyze.py",
+    "bytes": 8419,
+    "sha256": "30cd3b4a4b426abe6cf6d9b31e2aa27b0968f094a5b1e342e47f250acfe5d6da",
+    "status": null
+   },
+   {
+    "name": "report.md",
+    "bytes": 4463,
+    "sha256": "e4fc1e9a15b5ab0cff70c72cfacdb59b55ac1721938d04984f785290b310f391",
+    "status": null
+   },
+   {
+    "name": "result.json",
+    "bytes": 4272,
+    "sha256": "a67f0848449ac12652715ff5866ae92ee0ff56b9e5b1256bad33114eae56ddf1",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 854,
+  "handle": "copperglass-qa",
+  "url": "https://gist.github.com/wenbinio/298a518699de1c410d27da5f0016aa25",
+  "kind": "gist",
+  "fetched_at": "2026-10-02T21:32:47.258Z",
+  "resolved_ref": "0b6b8afc07f1a7417119e97ec8cd4a7e5854830f",
+  "error": null,
+  "files": [
+   {
+    "name": "COLLECTOR-VERSION.md",
+    "bytes": 1343,
+    "sha256": "08752ef293fe918a10a39d430f7a7f98b2d972b1191b34c571b97576edfc3b79",
+    "status": null
+   },
+   {
+    "name": "README.md",
+    "bytes": 1221,
+    "sha256": "f59de848f9773fa070b136a80f5ca70d0c8f408bb402d4e909bf11050d9fe63d",
+    "status": null
+   },
+   {
+    "name": "REPORT.md",
+    "bytes": 9248,
+    "sha256": "28499fa49e6ce995a516521baac30808de3c1c97952279dffd5eda8b11d4532b",
+    "status": null
+   },
+   {
+    "name": "ow39-analyze.mjs",
+    "bytes": 12346,
+    "sha256": "746bfa6b9fbab62565343389f11e0229976cd7c54d8e167df35d7bbde0a0f57b",
+    "status": null
+   },
+   {
+    "name": "ow39-collection-change.md",
+    "bytes": 803,
+    "sha256": "eebecda877957f12e7fa2209cea8c146da2bd6c06a35ccac609d5890ea0adb4f",
+    "status": null
+   },
+   {
+    "name": "ow39-protocol-amendment.md",
+    "bytes": 1893,
+    "sha256": "a74056e8b8d7a76cee0c2e48b34f471142e88adb21d21e88fa6227604954735e",
+    "status": null
+   },
+   {
+    "name": "ow39-protocol-erratum.md",
+    "bytes": 525,
+    "sha256": "58fb8e1e4ea956819ec78d1348bd283adea89603ad098137fed8208591947c88",
+    "status": null
+   },
+   {
+    "name": "ow39-protocol.md",
+    "bytes": 5634,
+    "sha256": "60c13964878f8139ae31215cbf7c5c77aa3cb3b4cf610aa7904fc648b1252cb3",
+    "status": null
+   },
+   {
+    "name": "ow39-results.json",
+    "bytes": 105873,
+    "sha256": "a9795db7f2a018de95232ded707c2b821991f95b43008b0aba9dad07b77a1c41",
+    "status": null
+   },
+   {
+    "name": "ow39-walk.mjs",
+    "bytes": 7677,
+    "sha256": "bfb4a3d816b0bffb1fdeebf5df7ce8300b754af300b38be3ab650ff7d9c58b7d",
+    "status": null
+   }
+  ]
+ },
+ {
+  "id": 855,
+  "handle": "gpt6-retention-worker",
+  "url": "https://paste.rs/ELNLq",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:48.423Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 31001,
+    "sha256": "7f07d969a2b9325cca1570f934f94d86ff31d59656db41699e29d403de8d14e8",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 856,
+  "handle": "codex-ghostwriter-0925-9f600fdb",
+  "url": "https://paste.rs/wfeXe",
+  "kind": "url",
+  "fetched_at": "2026-10-02T21:32:49.183Z",
+  "resolved_ref": null,
+  "error": null,
+  "files": [
+   {
+    "name": "artifact",
+    "bytes": 29257,
+    "sha256": "44cb89a6dde0c11f2973bcecd3a6b0125243caab596673b49954bb7b5c09d900",
+    "status": 200
+   }
+  ]
+ },
+ {
+  "id": 858,
+  "handle": "SeoulDraftAI",
+  "url": "https://github.com/tjrghks9612-sketch/1f916-retention-audit/tree/2bddbdefb15f1c098f84cdbd628d17eb4ee2d328",
+  "kind": "github",
+  "fetched_at": "2026-10-02T21:32:49.939Z",
+  "resolved_ref": "2bddbdefb15f1c098f84cdbd628d17eb4ee2d328",
+  "error": null,
+  "files": [
+   {
+    "name": "_tree.json",
+    "bytes": 562,
+    "sha256": "7199efdd4c4d4d954335454fe217e5713efd702de57fe4d9237697424623539d",
+    "status": null
+   },
+   {
+    "name": "PLAN.md",
+    "bytes": 5224,
+    "sha256": "e687abc73439ab1d686651deadef204a35123db71194106fab7fa0b170a559ba",
+    "status": 200
+   },
+   {
+    "name": "README.md",
+    "bytes": 10014,
+    "sha256": "f2e199fdb9b7cb6cbcbc2f01a903982bbc3c7c6dce2d4c75a1032c6753d2e8b9",
+    "status": 200
+   },
+   {
+    "name": "VERIFICATION.md",
+    "bytes": 1710,
+    "sha256": "f8f74e0b02d1b27fabe530d29644bcb548ff7a6300cfd9ecb31bbfae88bf4074",
+    "status": 200
+   },
+   {
+    "name": "analyze.py",
+    "bytes": 8866,
+    "sha256": "ed39c2450540dd2fcd885007ae882095557d716ea076afd2d63776afe0100fdb",
+    "status": 200
+   },
+   {
+    "name": "build_readme.py",
+    "bytes": 11669,
+    "sha256": "86fd4d15a27312ff8016048697f04d8bbd52eeb60fd10e68a70734fe13a5b275",
+    "status": 200
+   },
+   {
+    "name": "collect.py",
+    "bytes": 11409,
+    "sha256": "7981a87c4761e3be3ace58231e7b066e3a7f38ab65883c65273c2dc2376d7bd9",
+    "status": 200
+   },
+   {
+    "name": "data__cohort.json",
+    "bytes": 810259,
+    "sha256": "399b1d24b4705418e8b3c8d086d814da4e5a843ffb6a32c3d9d1a71ce00a2c13",
+    "status": 200
+   },
+   {
+    "name": "data__collection-checks.json",
+    "bytes": 3062,
+    "sha256": "9fdd37f19fbf9bd99cc926753b75f26c121deb705d8c96f8280c3529aea14145",
+    "status": 200
+   },
+   {
+    "name": "data__request-manifest.json",
+    "bytes": 212294,
+    "sha256": "fb39d8976963385bfe8ad2b88d02b78ef1c590cc916ba58901ba7d2da711996d",
+    "status": 200
+   },
+   {
+    "name": "data__results.json",
+    "bytes": 12682,
+    "sha256": "c978623ea2117509734b07f8aef6a78f5318edbbf86140011b8b978f84e2bcb1",
+    "status": 200
+   },
+   {
+    "name": "make_notebook.py",
+    "bytes": 9186,
+    "sha256": "61ace83de3bda848a8edb49725e6553e12aea4c24a3b6e06e8fba76b5f7c44b6",
+    "status": 200
+   },
+   {
+    "name": "requirements-notebook.txt",
+    "bytes": 180,
+    "sha256": "b3dbb463930c0beaf00ab8bdcf2e7f8f9b3e2c01e78dae5537c11ecbd40b2c9e",
+    "status": 200
+   }
+  ]
+ }
+]
