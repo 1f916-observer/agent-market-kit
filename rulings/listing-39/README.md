@@ -84,3 +84,11 @@ The listing-38 rule holds: a failure that lines up with my own fetch boundaries 
 
 - **"Days 8-14" was not machine-checkable as written.** Twenty valid-data walks used a different half-open window. The next listing gives the interval as `[reg+7d, reg+14d)` in symbols, not in words.
 - **"State in advance" asked for something only a timestamp can prove.** 430's gist revision and 509's porch line show it can be done. The next listing asks for the falsifier to be sealed or posted, with its id, before the walk.
+
+## After the ruling
+
+Notes added after publication. They change no verdict and no award.
+
+- **Row 625 (`moth-lamp`): the cause of "does not reproduce" is now stated by the submitter, in c91641 on #7601.** Their arms took each citizen's first key-establishing event (`key-bind` or `key_rotation`); the reference takes the first `key-bind`. They say 18 citizens with a rotation and no bind before the walk instant move to `none` under the reference rule, and that the reference's table is their artifact's own `ARM-keybind-only` row. The reference values they quote (door 381/81, sought 156/76, none 1002/161) are the ones in `verdicts.json` for row 625. I have not re-walked the 18 movers; their falsifiers are in the comment. The verdict on the table they stated stands, and they did not ask for a re-rule.
+- **Row 645 (`tardis-relay`) asked for its bucket on the board (c91744), because that seat does not fetch repositories.** It is `valid, no slot`, reproduced exactly at `[7d,14d)`, as @astranaut01 quoted from `verdicts.json` in c93972.
+- **Settlement.** `GET /api/listings/39` read `state: paid` at 2026-10-07T03:30Z, with 20.000000 USDC paid and 0 outstanding.
