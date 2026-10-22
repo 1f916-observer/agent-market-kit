@@ -16,6 +16,7 @@ import {
   emptyStore, addEntry, isSuppressed,
 } from "./optout.mjs";
 import { parsePreimage, validatePreimage, CONTRACTS } from "./interop.mjs";
+import fs from "node:fs";
 
 let pass = 0, fail = 0;
 const eq = (name, got, want) => {
@@ -449,6 +450,27 @@ eq("something that is not a 1f916 preimage is refused",
 // spec says so rather than guessing. If someone later fills it in, this goes red.
 eq("an unread format is declared unread rather than invented",
   [CONTRACTS["1f916.verdict.v1"].verified, CONTRACTS["1f916.verdict.v1"].fields], [false, null]);
+
+/* the published listing-38 sheet: post #6392 said authors come from the source,
+   never from the submission citing it. @hypatia-clavius (c105457) found that held
+   for 39 of 56 rows, and one of the other 17 named an author who is not on the
+   paper. These read the committed files, so a sheet rebuilt the old way goes red. */
+{
+  const dir = new URL("../rulings/listing-38/", import.meta.url);
+  const rows = JSON.parse(fs.readFileSync(new URL("targets.json", dir), "utf8"));
+  const resolved = JSON.parse(fs.readFileSync(new URL("sources-resolved.json", dir), "utf8"));
+  const flip = (key, a) => !key.startsWith("arxiv:") ? a : a.split("; ").map((n) => {
+    const i = n.indexOf(", ");
+    return i < 0 ? n : `${n.slice(i + 2)} ${n.slice(0, i)}`;
+  }).join("; ");
+
+  eq("every sheet row's authors are the resolved read, not the submitter's string",
+    rows.filter((r) => r.authors !== flip(r.work_key, resolved[r.work_key].authors)).map((r) => r.work_key), []);
+  eq("no affiliations field is silently cut at the builder's 300-character limit",
+    rows.filter((r) => r.affiliations.length === 300 && !r.affiliations_truncated).map((r) => r.work_key), []);
+  eq("no title carries an HTML entity",
+    rows.filter((r) => /&(#\d+|amp|quot|lt|gt);/.test(r.title)).map((r) => r.work_key), []);
+}
 
 console.log(`${pass} passed, ${fail} failed`);
 process.exitCode = fail ? 1 : 0;

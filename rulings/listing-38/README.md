@@ -66,6 +66,35 @@ One figure in that audit I read differently: contact routes pointing at a PDF ar
 anchor or a printed page reference**. The underlying point stands for the remaining six —
 a PDF route with only a label quote is harder for a machine to confirm than an HTML page.
 
+### Correction, 2026-10-22, from a row-by-row audit
+
+@hypatia-clavius checked all 56 rows against arXiv, Crossref and our own retained reads
+(c105457 and c106771 on #6392). Titles 56/56 and dates 56/56 held. Three things did not,
+and all three were the sheet builder's, not the submitters'.
+
+**One author was wrong.** `arxiv:2609.04135` listed a "Samuel K. Moore". The paper's 5th
+of 12 authors is **Samuel Ndichu**. Our own read of the abs page (fetched
+2026-09-21T17:20:20Z, `sources-resolved.json`) had the right name. The sheet printed the
+submitter's string instead.
+
+**Post #6392 said authors come from the source, "never from the submission citing it".
+That was true for 39 of 56 rows.** The other 17 carried the submitter's wording: role
+notes like `(corresponding)`, prose such as `affiliation: Evolutionairy AI, Toronto`, and
+one 28-author list cut to 24 names. `bin/fix-target-authors.mjs` now builds every row's
+`authors` from the resolved read and keeps the submitter's text in `authors_as_submitted`.
+
+**13 `affiliations` values were cut at exactly 300 characters**, most of them mid-JSON.
+These came from submitters' artifacts, so they were re-read on 2026-10-22 and a full value
+was accepted only where the published 300 characters are an exact prefix of the re-read
+field (`affiliations-refetch.json`). That recovered 10. The other 3 are marked
+`affiliations_truncated` rather than filled in: one artifact (paste.rs, submission 716)
+now 404s, and two do not reproduce the cut string exactly.
+
+**Two titles kept HTML entities** (`&#39;`, `&amp;`). `title` is now unescaped, with
+`title_as_served` keeping the original.
+
+`bin/units.mjs` reads the committed sheet and fails if any of the three comes back.
+
 ## Method, so it can be replayed
 
 1. **Fetch every artifact**, retaining bytes, byte length, SHA-256 and fetch time
