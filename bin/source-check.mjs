@@ -238,12 +238,37 @@ function metaContent(html, name) {
   return out;
 }
 
+/**
+ * The arXiv version a citation names, or null when it names none. workKey drops
+ * the version on purpose, because v1 and v2 are one work for duplicate
+ * detection. They are not one text for quote checking: listing 38's #5902
+ * quoted v1's abstract, v2 rewrote it, and the unversioned /abs page serves v2
+ * (hypatia-clavius, c106771). So the version travels separately.
+ */
+export function citedVersion(text) {
+  const hay = String(text || '');
+  const m = hay.match(/arxiv\.org\/(?:abs|pdf|html)\/\d{4}\.\d{4,5}v(\d+)/i) || hay.match(/arXiv:\s*\d{4}\.\d{4,5}v(\d+)/i);
+  return m ? Number(m[1]) : null;
+}
+
+/** Highest version in an abs page's submission history ([v1] ... [vN]). */
+export function arxivVersions(html) {
+  let max = 0;
+  for (const m of String(html || '').matchAll(/\[v(\d+)\]/g)) max = Math.max(max, Number(m[1]));
+  return max || null;
+}
+
+/** The abstract as the abs page's own citation metadata states it. */
+export function abstractOf(html) {
+  return (metaContent(String(html || ''), 'citation_abstract')[0] || '').trim() || null;
+}
+
 /** Resolve one work key at its origin. arXiv via /abs (the export API 429s hard). */
-export async function resolveWork(key, fetchImpl = fetch) {
+export async function resolveWork(key, fetchImpl = fetch, { version = null } = {}) {
   const rec = { key, ok: false, status: null, title: null, date: null, authors: null, url: null, error: null };
   try {
     if (key.startsWith('arxiv:')) {
-      rec.url = `https://arxiv.org/abs/${key.slice(6)}`;
+      rec.url = `https://arxiv.org/abs/${key.slice(6)}${version ? `v${version}` : ''}`;
       const r = await fetchImpl(rec.url, { redirect: 'follow', headers: UA });
       rec.status = r.status;
       if (!r.ok) return rec;
@@ -253,6 +278,9 @@ export async function resolveWork(key, fetchImpl = fetch) {
       rec.date = (metaContent(html, 'citation_date')[0] || metaContent(html, 'citation_online_date')[0] || '').trim() || null;
       const au = metaContent(html, 'citation_author');
       rec.authors = au.length ? au.join('; ') : null;
+      rec.versions = arxivVersions(html);
+      rec.version_read = version || rec.versions;
+      rec.abstract = abstractOf(html);
     } else if (key.startsWith('doi:')) {
       rec.url = `https://doi.org/${key.slice(4)}`;
       const r = await fetchImpl(rec.url, {
@@ -274,6 +302,52 @@ export async function resolveWork(key, fetchImpl = fetch) {
   return rec;
 }
 
+/**
+ * Check a quote against an arXiv abstract, version by version.
+ *
+ * A citation that names a version is checked against that version only: the
+ * submitter said which text they read, and a later rewrite is not their error.
+ * One that names none is checked against the latest, then each earlier version,
+ * and the answer says which version held it. A quote found only in an earlier
+ * version is a match with a note, never a failure. An unreadable page is
+ * `undetermined`, not failing, for the same reason as everywhere else here.
+ */
+export async function checkQuote(key, quote, { version = null, fetchImpl = fetch, pause = 1100 } = {}) {
+  const out = { key, verdict: 'undetermined', version_cited: version, version_matched: null, latest_version: null, best: null, reads: [] };
+  if (!key || !key.startsWith('arxiv:')) { out.error = 'quote checking reads arXiv abstracts only'; return out; }
+  const read = async (v) => {
+    const r = await resolveWork(key, fetchImpl, { version: v });
+    out.reads.push({ url: r.url, status: r.status, version_read: r.version_read ?? null });
+    return r;
+  };
+  const score = (r, v) => {
+    if (!r.ok || !r.abstract) return null;
+    const m = { ...quoteMatch(quote, r.abstract), version: v };
+    if (!out.best || m.fraction > out.best.fraction) out.best = m;
+    return m;
+  };
+  if (version) {
+    const r = await read(version);
+    out.latest_version = r.versions ?? null;
+    const m = score(r, version);
+    if (m) out.verdict = m.exact ? 'exact' : 'partial';
+    if (m && m.exact) out.version_matched = version;
+    return out;
+  }
+  const latest = await read(null);
+  out.latest_version = latest.versions ?? null;
+  const top = score(latest, out.latest_version);
+  if (!top) return out;
+  if (top.exact) { out.verdict = 'exact'; out.version_matched = out.latest_version; return out; }
+  out.verdict = 'partial';
+  for (let v = (out.latest_version || 1) - 1; v >= 1; v--) {
+    if (pause) await sleep(pause);
+    const m = score(await read(v), v);
+    if (m && m.exact) { out.verdict = 'exact'; out.version_matched = v; out.note = `matches v${v}, not the latest v${out.latest_version}`; return out; }
+  }
+  return out;
+}
+
 /* --------------------------------- CLI ----------------------------------- */
 
 const isMain = import.meta.url === `file://${process.argv[1]}`.replace(/\\/g, '/')
@@ -286,6 +360,9 @@ if (isMain) {
 
   source-check <arxiv:ID | doi:DOI | url>        resolve one work
   source-check --listing <id>                    resolve every work cited on a listing
+  source-check <arxiv ref> --quote "<text>"      check a quote against the abstract;
+                                                 a cited vN is read as vN, otherwise
+                                                 every version is tried, newest first
 
 Reads only public sources and needs no credentials. A source that cannot be read
 is reported as unreadable, never as failing.`);
@@ -307,6 +384,14 @@ is reported as unreadable, never as failing.`);
       console.log(`${k}\t${r.status}\t${r.date || '-'}\t${(r.title || r.error || '').slice(0, 70)}\tsubmissions ${subs.join(',')}`);
       await sleep(1100);
     }
+  } else if (args.includes('--quote')) {
+    const qi = args.indexOf('--quote');
+    const quote = args[qi + 1];
+    const ref = args.find((a, i) => i !== qi && i !== qi + 1);
+    const key = ref && (ref.startsWith('arxiv:') ? ref.replace(/v\d+$/, '') : workKey(ref));
+    const r = await checkQuote(key, quote, { version: citedVersion(ref) });
+    console.log(JSON.stringify(r, null, 1));
+    process.exitCode = r.verdict === 'exact' ? 0 : r.verdict === 'partial' ? 1 : 3;
   } else {
     for (const a of args) {
       const key = a.startsWith('arxiv:') || a.startsWith('doi:') ? a : workKey(a);

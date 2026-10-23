@@ -10,6 +10,7 @@ import { deriveBoundary, assignArms, composition, overlapCap } from "./arm-audit
 import {
   rawUrl, looksRendered, classifyDate, inWindow, extractRecord,
   workKey, quoteOnly, countWords, quoteMatch,
+  citedVersion, arxivVersions, abstractOf, checkQuote,
 } from "./source-check.mjs";
 import {
   normalizeRoute, routeHash, makeBloom, bloomHas, bloomToJSON, bloomFromJSON,
@@ -470,6 +471,50 @@ eq("an unread format is declared unread rather than invented",
     rows.filter((r) => r.affiliations.length === 300 && !r.affiliations_truncated).map((r) => r.work_key), []);
   eq("no title carries an HTML entity",
     rows.filter((r) => /&(#\d+|amp|quot|lt|gt);/.test(r.title)).map((r) => r.work_key), []);
+}
+
+/* source-check: arXiv versions. #5902 on listing 38 quoted v1's abstract; v2
+   rewrote it and the unversioned /abs page serves v2, so a checker reading only
+   that page fails a true quote (hypatia-clavius, c106771). */
+{
+  const page = (v, latest, abstract) => `<meta name="citation_title" content="T">
+<meta name="citation_abstract" content="${abstract}">
+<div class="submission-history">${Array.from({ length: latest }, (_, i) =>
+    i + 1 === latest ? `<strong>[v${i + 1}]</strong>` : `<a href="/abs/2609.04135v${i + 1}">[v${i + 1}]</a>`).join(" ")}</div>`;
+  const ABS = { 1: "We study bounded claims between agents.", 2: "We revisit claims between agents with receipts." };
+  const fake = (seen) => async (url) => {
+    seen.push(url);
+    const v = Number((url.match(/v(\d+)$/) || [])[1] || 2);
+    if (!ABS[v]) return { ok: false, status: 404, text: async () => "" };
+    return { ok: true, status: 200, text: async () => page(v, 2, ABS[v]) };
+  };
+
+  eq("a cited arXiv version is read from the citation, and an uncited one is null",
+    [citedVersion("https://arxiv.org/abs/2609.04135v1"), citedVersion("arXiv:2609.04135v3"), citedVersion("https://arxiv.org/abs/2609.04135")],
+    [1, 3, null]);
+  eq("the latest version is the highest [vN] in the submission history",
+    arxivVersions(page(2, 2, "x")), 2);
+  eq("the abstract comes from the page's own citation metadata",
+    abstractOf(page(1, 2, ABS[1])), ABS[1]);
+
+  const seenA = [];
+  const a = await checkQuote("arxiv:2609.04135", "bounded claims between agents", { fetchImpl: fake(seenA), pause: 0 });
+  eq("an uncited quote found only in v1 is a match on v1, not a failure",
+    [a.verdict, a.version_matched, a.latest_version], ["exact", 1, 2]);
+  eq("and it was found by reading the latest page first, then v1",
+    seenA, ["https://arxiv.org/abs/2609.04135", "https://arxiv.org/abs/2609.04135v1"]);
+
+  const seenB = [];
+  const b = await checkQuote("arxiv:2609.04135", "claims between agents with receipts", { version: 2, fetchImpl: fake(seenB), pause: 0 });
+  eq("a cited version is read as that version and nothing else",
+    [b.verdict, b.version_matched, seenB], ["exact", 2, ["https://arxiv.org/abs/2609.04135v2"]]);
+
+  const c = await checkQuote("arxiv:2609.04135", "bounded claims between agents", { version: 2, fetchImpl: fake([]), pause: 0 });
+  eq("a quote from v1 checked against a cited v2 is partial: the citation named the text",
+    [c.verdict, c.version_matched], ["partial", null]);
+
+  const d = await checkQuote("arxiv:2609.04135", "anything", { fetchImpl: async () => ({ ok: false, status: 503, text: async () => "" }), pause: 0 });
+  eq("an unreadable abstract is undetermined, never failing", d.verdict, "undetermined");
 }
 
 console.log(`${pass} passed, ${fail} failed`);
