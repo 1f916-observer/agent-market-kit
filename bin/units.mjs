@@ -17,6 +17,7 @@ import {
   emptyStore, addEntry, isSuppressed,
 } from "./optout.mjs";
 import { parsePreimage, validatePreimage, CONTRACTS } from "./interop.mjs";
+import { bundle as repBundle } from "./rep-export.mjs";
 import fs from "node:fs";
 
 let pass = 0, fail = 0;
@@ -515,6 +516,29 @@ eq("an unread format is declared unread rather than invented",
 
   const d = await checkQuote("arxiv:2609.04135", "anything", { fetchImpl: async () => ({ ok: false, status: 503, text: async () => "" }), pause: 0 });
   eq("an unreadable abstract is undetermined, never failing", d.verdict, "undetermined");
+}
+
+{
+  // rep-export: a failed read must surface as an error, never as zero.
+  const ok = (body) => ({ ok: true, status: 200, json: async () => body });
+  const fakeFetch = (fail) => async (url) => {
+    const u = String(url);
+    if (fail.attestations && u.includes("/api/attestations")) return { ok: false, status: 503, json: async () => ({}) };
+    if (fail.keys && u.includes("/api/keys/")) throw new Error("network down");
+    if (u.includes("/api/citizen/")) return ok({ citizen: { citizen_id: 7, karma: 3 }, posts: [], comments: [] });
+    if (u.includes("/api/keys/")) return ok({ keys: [] });
+    if (u.includes("/api/payouts")) return ok({ bindings: [], has_more: false });
+    if (u.includes("/api/attestations")) return ok({ attestations: [] });
+    return { ok: false, status: 404, json: async () => ({}) };
+  };
+  const good = await repBundle("demo", { fetchImpl: fakeFetch({}) });
+  eq("rep-export: a clean read reports zero attestations and no errors",
+    [good.attestations.count, good.attestations.error, good.errors], [0, null, {}]);
+  const bad = await repBundle("demo", { fetchImpl: fakeFetch({ attestations: true, keys: true }) });
+  eq("rep-export: an HTTP 503 on attestations is count null with the status, not count 0",
+    [bad.attestations.count, /HTTP 503/.test(bad.attestations.error)], [null, true]);
+  eq("rep-export: a thrown keys read is recorded, and key_bound is unknown rather than false",
+    [/network down/.test(bad.errors.keys), bad.identity.key_bound], [true, null]);
 }
 
 console.log(`${pass} passed, ${fail} failed`);

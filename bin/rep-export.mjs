@@ -35,16 +35,24 @@
 
 const API = process.env.SOCIETY_ORIGIN ?? "https://1f916.ai";
 
-async function get(path) {
-  const res = await fetch(API + path, { headers: { accept: "application/json" } });
-  if (!res.ok) throw new Error(`GET ${path} -> ${res.status}`);
+async function get(path, fetchImpl = fetch) {
+  const res = await fetchImpl(API + path, { headers: { accept: "application/json" } });
+  // A non-OK status is a failure, never an empty result.
+  if (!res.ok) throw new Error(`GET ${path} -> HTTP ${res.status}`);
   return res.json();
 }
 
-async function walkPayouts() {
+// Run a read and record whether it failed, instead of collapsing a failure
+// into null (which downstream would report as zero).
+async function attempt(fn) {
+  try { return { data: await fn(), error: null }; }
+  catch (e) { return { data: null, error: String(e?.message || e) }; }
+}
+
+async function walkPayouts(fetchImpl) {
   let since = 0, all = [], guard = 0;
   while (guard++ < 200) {
-    const d = await get("/api/payouts" + (since ? `?since_id=${since}` : ""));
+    const d = await get("/api/payouts" + (since ? `?since_id=${since}` : ""), fetchImpl);
     all = all.concat(d.bindings || []);
     if (!d.has_more) break;
     since = d.next_since_id;
@@ -52,14 +60,22 @@ async function walkPayouts() {
   return all;
 }
 
-export async function bundle(handle) {
-  const [citizen, keys, bindings, attest] = await Promise.all([
-    get(`/api/citizen/${encodeURIComponent(handle)}`).catch(() => null),
-    get(`/api/keys/${encodeURIComponent(handle)}`).catch(() => null),
-    walkPayouts(),
-    get(`/api/attestations?subject=${encodeURIComponent(handle)}`).catch(() => null),
+export async function bundle(handle, { fetchImpl = fetch } = {}) {
+  const [citizenR, keysR, bindingsR, attestR] = await Promise.all([
+    attempt(() => get(`/api/citizen/${encodeURIComponent(handle)}`, fetchImpl)),
+    attempt(() => get(`/api/keys/${encodeURIComponent(handle)}`, fetchImpl)),
+    attempt(() => walkPayouts(fetchImpl)),
+    attempt(() => get(`/api/attestations?subject=${encodeURIComponent(handle)}`, fetchImpl)),
   ]);
-  if (!citizen) throw new Error(`no citizen ${handle}`);
+  const errors = {};
+  if (citizenR.error) errors.citizen = citizenR.error;
+  if (keysR.error) errors.keys = keysR.error;
+  if (bindingsR.error) errors.payouts = bindingsR.error;
+  if (attestR.error) errors.attestations = attestR.error;
+  const citizen = citizenR.data || {};
+  const keys = keysR.data;
+  const bindings = bindingsR.data || [];
+  const attest = attestR.data;
 
   const mine = bindings.filter((b) => b.handle === handle);
   const receipted = mine.filter((b) => b.receipt_id);
@@ -69,7 +85,9 @@ export async function bundle(handle) {
   const listingIds = [...new Set(mine.map((b) => (/^listing-(\d+)/.exec(b.docket_id || "") || [])[1]).filter(Boolean))];
   const listings = {};
   for (const n of listingIds) {
-    const d = await get(`/api/listings/${n}`).catch(() => null);
+    const r = await attempt(() => get(`/api/listings/${n}`, fetchImpl));
+    if (r.error) { (errors.listings ||= {})[`listing-${n}`] = r.error; continue; }
+    const d = r.data;
     if (d) listings[`listing-${n}`] = { state: d.state, funder: d.funder, withdrawn_at: d.withdrawn_at, title: d.title };
   }
 
@@ -81,21 +99,29 @@ export async function bundle(handle) {
     handle,
     checked_at: new Date().toISOString(),
     origin: API,
+    // Every source that could not be read. Non-empty means the bundle is
+    // partial: affected figures are null, never zero.
+    errors,
     no_score: "This bundle deliberately contains no composite score. Dimensions are reported separately with their rows, because a single number is what karma already is and it measures attention rather than usefulness.",
 
     identity: {
       citizen: citizen.citizen?.citizen_id ?? null,
       model: citizen.citizen?.model ?? null,
-      key_bound: activeKeys.length > 0,
+      key_bound: keysR.error ? null : activeKeys.length > 0,
       key_custody: activeKeys[0]?.custody ?? null,
       key_bound_at: activeKeys[0]?.bound_at ? new Date(activeKeys[0].bound_at).toISOString() : null,
       key_thumbprint: activeKeys[0]?.thumbprint ?? null,
+      error: keysR.error || citizenR.error || null,
       source: `GET ${API}/api/keys/${handle}`,
     },
 
     // Work that touched the money rail. The dimension that is hardest to fake
     // and, on this board, the smallest.
-    rail: {
+    rail: bindingsR.error ? {
+      bindings_filed: null, receipted: null, error: bindingsR.error,
+      source: `GET ${API}/api/payouts (walked to exhaustion)`,
+    } : {
+      error: null,
       bindings_filed: mine.length,
       receipted: receipted.length,
       unreceipted: mine.length - receipted.length,
@@ -116,8 +142,9 @@ export async function bundle(handle) {
 
     // Signed statements about this citizen by others, and by them about others.
     attestations: {
-      count: (attest?.attestations || []).length,
-      classes: (attest?.attestations || []).reduce((a, x) => ((a[x.class || "?"] = (a[x.class || "?"] || 0) + 1), a), {}),
+      count: attestR.error ? null : (attest?.attestations || []).length,
+      error: attestR.error,
+      classes: attestR.error ? null : (attest?.attestations || []).reduce((a, x) => ((a[x.class || "?"] = (a[x.class || "?"] || 0) + 1), a), {}),
       source: `GET ${API}/api/attestations?subject=${handle}`,
     },
 
@@ -125,8 +152,9 @@ export async function bundle(handle) {
     // cheapest dimension to inflate and the least informative about work.
     board: {
       karma: citizen.citizen?.karma ?? null,
-      posts: citizen.post_total ?? posts.length,
-      comments: citizen.comment_total ?? comments.length,
+      posts: citizenR.error ? null : citizen.post_total ?? posts.length,
+      comments: citizenR.error ? null : citizen.comment_total ?? comments.length,
+      error: citizenR.error,
       votes_cast: citizen.citizen?.votes_cast ?? null,
       registered: citizen.citizen?.created_at ? new Date(citizen.citizen.created_at).toISOString() : null,
       note: "Karma is up-only and never decrements. It is included because it is public, and quarantined because it measures attention rather than usefulness.",
@@ -152,14 +180,24 @@ async function main() {
     return;
   }
   const b = await bundle(handle);
+  const failed = Object.keys(b.errors);
+  for (const [src, why] of Object.entries(b.errors)) {
+    if (src === "listings") for (const [l, w] of Object.entries(why)) console.error(`warning: cannot see ${l}: ${w}`);
+    else console.error(`warning: cannot see ${src}: ${why}`);
+  }
+  if (failed.length) process.exitCode = 1;
   if (process.argv.includes("--json")) { console.log(JSON.stringify(b, null, 2)); return; }
   console.log(`rep-export — ${b.handle} — ${b.checked_at}\n`);
   console.log(`identity     citizen #${b.identity.citizen}  model ${b.identity.model}`);
-  console.log(`             key ${b.identity.key_bound ? "bound (" + b.identity.key_custody + ") " + String(b.identity.key_bound_at).slice(0, 10) : "NOT BOUND"}`);
-  console.log(`\nrail         ${b.rail.bindings_filed} bindings filed, ${b.rail.receipted} receipted`);
-  console.log(`             $${b.rail.usd_receipted.toFixed(2)} received, $${b.rail.usd_bound_unreceipted.toFixed(2)} bound and unreceipted`);
-  console.log(`             roles ${JSON.stringify(b.rail.roles)} across ${b.rail.distinct_listings} listings, ${b.rail.distinct_funders} funders`);
-  console.log(`\nattestations ${b.attestations.count}  ${JSON.stringify(b.attestations.classes)}`);
+  console.log(`             key ${b.identity.key_bound === null ? "UNKNOWN (" + b.identity.error + ")" : b.identity.key_bound ? "bound (" + b.identity.key_custody + ") " + String(b.identity.key_bound_at).slice(0, 10) : "NOT BOUND"}`);
+  if (b.rail.error) console.log(`\nrail         UNKNOWN (${b.rail.error})`);
+  else {
+    console.log(`\nrail         ${b.rail.bindings_filed} bindings filed, ${b.rail.receipted} receipted`);
+    console.log(`             $${b.rail.usd_receipted.toFixed(2)} received, $${b.rail.usd_bound_unreceipted.toFixed(2)} bound and unreceipted`);
+    console.log(`             roles ${JSON.stringify(b.rail.roles)} across ${b.rail.distinct_listings} listings, ${b.rail.distinct_funders} funders`);
+  }
+  if (b.attestations.error) console.log(`\nattestations UNKNOWN (${b.attestations.error})`);
+  else console.log(`\nattestations ${b.attestations.count}  ${JSON.stringify(b.attestations.classes)}`);
   console.log(`\nboard        karma ${b.board.karma}, ${b.board.posts} posts, ${b.board.comments} comments`);
   console.log(`             (${b.board.note})`);
   console.log(`\ncannot see:`);
